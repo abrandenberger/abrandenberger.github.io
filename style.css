@@ -115,6 +115,16 @@
             }
         }
         
+        @media screen and (max-width: 325px) {
+            /* for iPhone 5 lol */
+            #position {
+                font-size: 11px;
+            }
+            #affiliation {
+                font-size: 8px;
+            }
+        }
+        
         .alignleft {
             float: left;
         }
