@@ -1,4 +1,5 @@
         body {
+            -webkit-text-size-adjust: 100%;
             background-color: #f0f0f0;
             font-family: 'Computer Modern Serif', serif;
             color: #000000;
