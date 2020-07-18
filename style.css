@@ -2,7 +2,7 @@ body {
     background-color: #f0f0f0;
     font-family: 'Computer Modern Serif', serif;
     color: #000000;
-    font-size: 11em;
+    font-size: 11pt;
 }
 
 a {
@@ -90,8 +90,8 @@ h1 {
     font-family: 'Inconsolata', serif;
     font-size: 11px;
     letter-spacing: 1px;
-    font-weight: 400;
-    line-height: 14px;
+    font-weight: 300;
+    line-height: 12px;
     vertical-align: middle;
     bottom: 15px;
     position: absolute;
