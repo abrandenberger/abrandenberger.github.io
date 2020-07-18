@@ -18,6 +18,17 @@ h1 {
     margin: 0pt;
 }
 
+#words {
+    position: fixed;
+    top: 28%;
+    left: 50%;
+    text-align: right;
+    /* border: 1px solid black; */
+    font-family: 'Parisienne';
+    font-size: 20px;
+    /* background-color: #999999; */
+}
+
 #card {
     /* dimensions of business card are 3.5 to 2 */
     width: 350px;
