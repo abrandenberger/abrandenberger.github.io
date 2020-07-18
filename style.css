@@ -2,7 +2,7 @@ body {
     background-color: #f0f0f0;
     font-family: 'Computer Modern Serif', serif;
     color: #000000;
-    font-size: 11pt;
+    font-size: 11em;
 }
 
 a {
@@ -32,28 +32,42 @@ h1 {
 #card {
     /* dimensions of business card are 3.5 to 2 */
     width: 350px;
-    height: 200px;
+    /* padding-bottom: 150%; */
+    /* height: 200px; */
+    /* height will be fixed to depend on width by adding a dummy div and making all card elements absolute*/
+    padding: 20px;
+    /* padding: 1.25%; */
+    max-width: 85%;
     background-color: white;
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -120px;
+    transform: translate(-50%, -50%);
+    /* margin-top: -120px; */
     /* height/2 + 20 */
-    margin-left: -195px;
+    /* margin-left: -195px; */
     /* width/2 + 20 */
     text-align: center;
     box-shadow: 2px 2px 3px #c9c9c9;
-    padding: 20px;
+}
+
+#titles {
+    position: absolute;
+    left: 0;
+    /* border: 1px solid red; */
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    /* width: 90%; */
+    /* 100 - 2*5 % */
 }
 
 #name {
     font-family: 'Computer Modern Serif';
     font-weight: bolder;
-    /* font-variant: small-caps; */
-    /* text-transform: uppercase; */
     font-size: 19px;
-    padding-top: 50px;
-    /* border: 1px solid red; */
+    /* padding-top: 50px; */
+    padding-top: 13%;
+    /* border: 1px solid black; */
 }
 
 #position {
@@ -61,6 +75,8 @@ h1 {
     font-style: italic;
     font-size: 13px;
     padding-top: 5px;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
 }
 
 #affiliation {
