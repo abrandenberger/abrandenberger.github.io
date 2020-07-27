@@ -1,186 +1,194 @@
-        body {
-            -webkit-text-size-adjust: 100%;
-            background-color: #f0f0f0;
-            font-family: 'Computer Modern Serif', serif;
-            color: #000000;
-            font-size: 11pt;
-        }
-        
-        a {
-            color: #000000;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        h1 {
-            margin: 0pt;
-        }
-        
-        #words {
-            position: fixed;
-            top: 28%;
-            left: 50%;
-            text-align: right;
-            /* border: 1px solid black; */
-            font-family: 'Parisienne';
-            font-size: 20px;
-            /* background-color: #999999; */
-        }
-        
-        #card {
-            /* dimensions of business card are 3.5 to 2 */
-            width: 350px;
-            /* padding-bottom: 150%; */
-            /* height: 200px; */
-            /* height will be fixed to depend on width by adding a dummy div and making all card elements absolute*/
-            padding: 20px;
-            /* padding: 1.25%; */
-            max-width: 85%;
-            background-color: white;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* margin-top: -120px; */
-            /* height/2 + 20 */
-            /* margin-left: -195px; */
-            /* width/2 + 20 */
-            text-align: center;
-            box-shadow: 2px 2px 3px #c9c9c9;
-        }
-        
-        #titles {
-            position: absolute;
-            left: 0;
-            /* border: 1px solid red; */
-            padding-left: 2.5%;
-            padding-right: 2.5%;
-            /* width: 90%; */
-            /* 100 - 2*5 % */
-        }
-        
-        #name {
-            font-family: 'Computer Modern Serif';
-            font-weight: bolder;
-            font-size: 19px;
-            /* padding-top: 50px; */
-            padding-top: 13%;
-            /* border: 1px solid black; */
-        }
-        
-        #position {
-            font-family: 'Computer Modern Serif Upright Italic';
-            font-style: italic;
-            font-size: 13px;
-            padding-top: 5px;
-            padding-left: 3.5%;
-            padding-right: 3.5%;
-        }
-        
-        #affiliation {
-            font-family: 'Computer Modern Bright', serif;
-            text-transform: uppercase;
-            font-size: 9px;
-            padding-top: 8px;
-        }
-        
-        #links {
-            font-family: 'Inconsolata', serif;
-            font-size: 11px;
-            letter-spacing: 1px;
-            font-weight: 400;
-            /* line-height: 12px; */
-            vertical-align: middle;
-            bottom: 15px;
-            position: absolute;
-            /* border: 1px solid red; */
-            width: 348px;
-            text-align: left;
-        }
-        
-        #links a {
-            /* font-size: 11px; */
-            /* vertical-align: middle; */
-            text-decoration: none;
-            letter-spacing: normal;
-        }
-        
-        @media screen and (max-width: 400px) {
-            #links {
-                font-size: 9px;
-                line-height: 10px;
-                font-weight: 300;
-            }
-        }
-        
-        @media screen and (max-width: 325px) {
-            /* for iPhone 5 lol */
-            #position {
-                font-size: 11px;
-            }
-            #affiliation {
-                font-size: 8px;
-            }
-        }
-        
-        .alignleft {
-            float: left;
-        }
-        
-        .alignright {
-            float: right;
-        }
-        
-        .contact a {
-            color: #000000;
-        }
-        
-        [disp-title]:hover:after {
-            opacity: 1;
-            transition: all 0.3s ease 0.2s;
-            visibility: visible;
-        }
-        
-        [disp-title]:after {
-            content: attr(disp-title);
-            background-color: rgba(255, 255, 255, 0.95);
-            color: #111;
-            font-size: 110%;
-            font-family: 'Computer Modern Serif Upright Italic', serif;
-            font-style: italic;
-            position: absolute;
-            padding: 1px 5px 2px 5px;
-            bottom: -1.6em;
-            left: 100%;
-            white-space: nowrap;
-            box-shadow: 1px 1px 3px #999999;
-            opacity: 0;
-            z-index: 99999;
-            visibility: hidden;
-        }
-        
-        [disp-title] {
-            position: relative;
-        }
-        
-        #inspo {
-            position: absolute;
-            text-transform: uppercase;
-            font-size: 8px;
-            font-weight: normal;
-            color: #ececec;
-            right: 5px;
-            bottom: 6px;
-            letter-spacing: .5px;
-        }
-        
-        #inspo:hover {
-            color: #d8d8d8;
-            text-decoration: none;
-        }
-        /* .friends a {
-    color: #a1a1a1;
+body {
+    -webkit-text-size-adjust: 100%;
+    background-color: #f0f0f0;
+    font-family: 'Computer Modern Serif', serif;
+    color: #000000;
+    font-size: 11pt;
+}
+
+a {
+    color: #aa0000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0pt;
+}
+
+#words {
+    position: fixed;
+    top: 28%;
+    left: 50%;
+    text-align: right;
+    /* border: 1px solid black; */
+    font-family: 'Parisienne';
+    font-size: 20px;
+    /* background-color: #999999; */
+}
+
+#card {
+    /* dimensions of business card are 3.5 to 2 */
+    width: 350px;
+    /* padding-bottom: 150%; */
+    /* height: 200px; */
+    /* height will be fixed to depend on width by adding a dummy div and making all card elements absolute*/
+    padding: 20px;
+    /* padding: 1.25%; */
+    max-width: 85%;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-top: -120px; */
+    /* height/2 + 20 */
+    /* margin-left: -195px; */
+    /* width/2 + 20 */
+    text-align: center;
+    box-shadow: 2px 2px 3px #c9c9c9;
+}
+
+#titles {
+    position: absolute;
+    left: 0;
+    /* border: 1px solid red; */
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    /* width: 90%; */
+    /* 100 - 2*5 % */
+}
+
+#name {
+    font-family: 'Computer Modern Serif';
+    font-weight: bolder;
+    font-size: 19px;
+    /* padding-top: 50px; */
+    padding-top: 13%;
+    /* border: 1px solid black; */
+}
+
+#position {
+    font-family: 'Computer Modern Serif Upright Italic';
+    font-style: italic;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+}
+
+#affiliation {
+    font-family: 'Computer Modern Bright', serif;
+    text-transform: uppercase;
+    font-size: 9px;
+    padding-top: 8px;
+}
+
+#links {
+    font-family: 'Inconsolata', serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    /* line-height: 12px; */
+    vertical-align: middle;
+    bottom: 15px;
+    position: absolute;
+    /* border: 1px solid red; */
+    width: 348px;
+    text-align: left;
+}
+
+#links a {
+    /* font-size: 11px; */
+    /* vertical-align: middle; */
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: normal;
+}
+
+#links a:hover {
+    color: #aa0000;
+}
+
+@media screen and (max-width: 400px) {
+    #links {
+        font-size: 9px;
+        line-height: 10px;
+        font-weight: 300;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    /* for iPhone 5 lol */
+    #position {
+        font-size: 11px;
+    }
+    #affiliation {
+        font-size: 8px;
+    }
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+
+/* .contact a {
+    color: #000000;
+} */
+
+[disp-title]:hover:after {
+    opacity: 1;
+    transition: all 0.3s ease 0.2s;
+    visibility: visible;
+}
+
+[disp-title]:after {
+    content: attr(disp-title);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #111;
+    font-size: 110%;
+    font-family: 'Computer Modern Serif Upright Italic', serif;
+    font-style: italic;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #999999;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+}
+
+[disp-title] {
+    position: relative;
+}
+
+#inspo {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 8px;
+    font-weight: normal;
+    color: #ececec;
+    right: 5px;
+    bottom: 6px;
+    letter-spacing: .5px;
+}
+
+#inspo:hover {
+    color: #d8d8d8;
+    text-decoration: none;
+}
+
+
+/* .friends a {
+    color: #000000;
 } */
