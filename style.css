@@ -1,9 +1,19 @@
+html, body {
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 body {
     -webkit-text-size-adjust: 100%;
     background-color: #f0f0f0;
     font-family: 'Computer Modern Serif', serif;
     color: #000000;
     font-size: 11pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -33,21 +43,15 @@ h1 {
 #card {
     /* dimensions of business card are 3.5 to 2 */
     width: 350px;
-    /* padding-bottom: 150%; */
     /* height: 200px; */
     /* height will be fixed to depend on width by adding a dummy div and making all card elements absolute*/
     padding: 20px;
     /* padding: 1.25%; */
     max-width: 85%;
     background-color: white;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* margin-top: -120px; */
-    /* height/2 + 20 */
-    /* margin-left: -195px; */
-    /* width/2 + 20 */
+    position: relative;
+    /* overflow-y: hidden;  */
+    /* fixes small screen width issues for badly behaved children (too large width) */
     text-align: center;
     box-shadow: 2px 2px 3px #c9c9c9;
 }
@@ -97,7 +101,7 @@ h1 {
     bottom: 15px;
     position: absolute;
     /* border: 1px solid red; */
-    width: 348px;
+    width: 80%;
     text-align: left;
 }
 
@@ -115,7 +119,7 @@ h1 {
 
 @media screen and (max-width: 400px) {
     #links {
-        font-size: 9px;
+        font-size: 10px;
         line-height: 10px;
         font-weight: 300;
     }
@@ -128,6 +132,9 @@ h1 {
     }
     #affiliation {
         font-size: 8px;
+    }
+    #links {
+        font-size: 9px;
     }
 }
 
