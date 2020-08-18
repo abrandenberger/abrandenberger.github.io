@@ -42,28 +42,24 @@ h1 {
 
 #card {
     /* dimensions of business card are 3.5 to 2 */
-    width: 350px;
-    /* height: 200px; */
-    /* height will be fixed to depend on width by adding a dummy div and making all card elements absolute*/
+    --card-width: min(350px, 85vw);
+    --card-height: calc(var(--card-width)/1.75);
+    width: var(--card-width);
+    height: var(--card-height); 
     padding: 20px;
     /* padding: 1.25%; */
-    max-width: 85%;
     background-color: white;
-    position: relative;
+    /* position: relative; */
     /* overflow-y: hidden;  */
     /* fixes small screen width issues for badly behaved children (too large width) */
     text-align: center;
     box-shadow: 2px 2px 3px #c9c9c9;
+    display:flex; 
+    flex-direction: column; 
+    justify-content: space-between;
 }
 
 #titles {
-    position: absolute;
-    left: 0;
-    /* border: 1px solid red; */
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    /* width: 90%; */
-    /* 100 - 2*5 % */
 }
 
 #name {
@@ -97,10 +93,6 @@ h1 {
     letter-spacing: 1px;
     font-weight: 400;
     /* line-height: 12px; */
-    vertical-align: middle;
-    bottom: 15px;
-    position: absolute;
-    /* border: 1px solid red; */
     width: 80%;
     text-align: left;
 }
@@ -118,6 +110,11 @@ h1 {
 }
 
 @media screen and (max-width: 400px) {
+    #titles {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     #links {
         font-size: 10px;
         line-height: 10px;
@@ -126,9 +123,11 @@ h1 {
 }
 
 @media screen and (max-width: 325px) {
-    /* for iPhone 5 lol */
+    /* for iPhone 5 and galaxy fold lol */
     #position {
         font-size: 11px;
+        padding-left: 0;
+        padding-right: 0;
     }
     #affiliation {
         font-size: 8px;
@@ -138,14 +137,15 @@ h1 {
     }
 }
 
-.alignleft {
-    float: left;
+@media screen and (max-width: 290px) {
+    #name {
+        font-size: 18px;
+        padding-top: 10%;
+    }
+    #affiliation {
+        font-size: 7px;
+    }
 }
-
-.alignright {
-    float: right;
-}
-
 
 /* .contact a {
     color: #000000;
