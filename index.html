@@ -10,11 +10,16 @@
     <!-- font awesome icons: https://fontawesome.com/v4.7.0/icons/  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- computer modern font -->
-    <link rel="stylesheet" href="fonts/Serif/cmun-serif.css"></link>
-    <link rel="stylesheet" href="fonts/Sans/cmun-sans.css"></link>
-    <link rel="stylesheet" href="fonts/Bright/cmun-bright.css"></link>
-    <link rel="stylesheet" href="fonts/Serif-Slanted/cmun-serif-slanted.css"></link>
-    <link rel="stylesheet" href="fonts/Serif-Upright-Italic/cmun-upright-italic.css"></link>
+    <link rel="stylesheet" href="fonts/Serif/cmun-serif.css">
+    </link>
+    <link rel="stylesheet" href="fonts/Sans/cmun-sans.css">
+    </link>
+    <link rel="stylesheet" href="fonts/Bright/cmun-bright.css">
+    </link>
+    <link rel="stylesheet" href="fonts/Serif-Slanted/cmun-serif-slanted.css">
+    </link>
+    <link rel="stylesheet" href="fonts/Serif-Upright-Italic/cmun-upright-italic.css">
+    </link>
     <!-- inconsolata font  -->
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&display=swap" rel="stylesheet">
     <!-- parisienne font  -->
@@ -40,42 +45,104 @@
     <!-- <div id='words'>
         Have a card
     </div> -->
-    <div id='card'>
-        <div id="titles">
-            <div id='name'> Anna Brandenberger </div>
-            <div id='position'> Undergraduate Researcher in <a href="http://luc.devroye.org/carp/">Probabilistic
-                    Analysis of Algorithms</a> and <a href="http://rl.cs.mcgill.ca/"> Reinforcement Learning</a></div>
-            <div id='affiliation'> Honours Physics & Computer Science <i class="fa fa-at"></i> McGill University</div>
-        </div>
-        <div id='links'>
-            <span class="contact">
-                CONTACT
-                <a href="mailto:anna.brandenberger@mail.mcgill.ca" disp-title="Email Me"><i
-                        class="fa fa-envelope "></i></a>
-                <a href="https://github.com/abrandenberger" disp-title="GitHub"><i class="fa fa-github "></i></a>
-                <a href="https://www.linkedin.com/in/abrandenberger" disp-title="LinkedIn"><i
-                        class="fa fa-linkedin-square"></i></a>
-                <a href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en" disp-title="Google Scholar"><i
-                        class="fa fa-graduation-cap"></i></i></a>
-            </span>
-            <br>
-            <span class="friends">
-                FRIENDS
-                <a href="https://maiadd.github.io/" disp-title="Maia Darmon"><i class="fa fa-magic "></i></a>
-                <a href="http://luc.devroye.org/" disp-title="Luc Devroye"><i class="fa fa-snowflake-o"></i></a>
-                <a href="https://shereenelaidi.github.io/" disp-title="Shereen Elaidi"><i class="fa fa-bicycle"></i></a>
-                <a href="https://marcelgoh.github.io/" disp-title="Marcel Goh"><i class="fa fa-camera-retro "></i></a>
-                <a href="https://jadhamdan.github.io/website/" disp-title="Jad Hamdan"><i class="fa fa-coffee"></i></a>
-                <a href="https://claudiahleung.github.io/" disp-title="Claudia Leung"><i class="fa fa-umbrella"></i></a>
-                <a href="https://diegolopez.me/" disp-title="Diego Lopez"><i class="fa fa-pencil"></i></a>
-                <a href="https://gabrielamp.github.io/" disp-title="Gabriela Moisescu"><i
-                        class="fa fa-bar-chart"></i></a>
-                <a href="https://opent03.github.io/" disp-title="Viet Nguyen"><i class="fa fa-paper-plane-o"></i></a>
-            </span>
-        </div>
-    </div>
-    <!-- dummy card size fixer -->
+    <div id="overlay" class="latetransition">
+        <div id='card'>
+            <div id="titles">
+                <div id='name'> Anna Brandenberger </div>
+                <div id='position'> Undergraduate Researcher in <a href="http://luc.devroye.org/carp/">Probabilistic
+                        Analysis of Algorithms</a> and <a href="http://rl.cs.mcgill.ca/"> Reinforcement Learning</a>
+                </div>
+                <div id='affiliation'> Honours Physics & Computer Science <i class="fa fa-at"></i> McGill University
+                </div>
+            </div>
+            <div id='links'>
+                <span class="contact">
+                    CONTACT
+                    <a href="mailto:anna.brandenberger@mail.mcgill.ca" disp-title="Email Me"><i
+                            class="fa fa-envelope "></i></a>
+                    <a href="https://github.com/abrandenberger" disp-title="GitHub"><i class="fa fa-github "></i></a>
+                    <a href="https://www.linkedin.com/in/abrandenberger" disp-title="LinkedIn"><i
+                            class="fa fa-linkedin-square"></i></a>
+                    <a href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
+                        disp-title="Google Scholar"><i class="fa fa-graduation-cap"></i></i></a>
+                </span>
+                <br>
+                <span class="friends">
+                    FRIENDS
+                    <a href="https://maiadd.github.io/" disp-title="Maia Darmon"><i class="fa fa-magic "></i></a>
+                    <a href="http://luc.devroye.org/" disp-title="Luc Devroye"><i class="fa fa-snowflake-o"></i></a>
+                    <a href="https://shereenelaidi.github.io/" disp-title="Shereen Elaidi"><i
+                            class="fa fa-bicycle"></i></a>
+                    <a href="https://marcelgoh.github.io/" disp-title="Marcel Goh"><i
+                            class="fa fa-camera-retro "></i></a>
+                    <a href="https://jadhamdan.github.io/website/" disp-title="Jad Hamdan"><i
+                            class="fa fa-coffee"></i></a>
+                    <a href="https://claudiahleung.github.io/" disp-title="Claudia Leung"><i
+                            class="fa fa-umbrella"></i></a>
+                    <a href="https://diegolopez.me/" disp-title="Diego Lopez"><i class="fa fa-pencil"></i></a>
+                    <a href="https://gabrielamp.github.io/" disp-title="Gabriela Moisescu"><i
+                            class="fa fa-bar-chart"></i></a>
+                    <a href="https://opent03.github.io/" disp-title="Viet Nguyen"><i
+                            class="fa fa-paper-plane-o"></i></a>
+                </span>
+            </div>
+            <button id="cardbutton" onclick="toggleout()">Turn off</button>
 
+        </div>
+
+    </div>
+
+    <div id="content">
+        <button id="returntocard" onclick="togglein()">Turn on overlay effect</button>
+        <h1> Hi :) </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed accumsan diam. Ut lacinia dictum turpis eu
+            vulputate. Vestibulum rhoncus tincidunt enim, feugiat auctor nisl euismod nec. Morbi lacus sapien, luctus eu
+            tellus ac, ultricies egestas turpis. Curabitur placerat iaculis faucibus. Vestibulum accumsan molestie
+            pellentesque. Nulla ullamcorper venenatis auctor. Nunc quis turpis pretium, placerat arcu in, consectetur
+            massa. Quisque consectetur lectus nec finibus egestas. Phasellus vitae aliquet urna. Etiam consectetur nibh
+            ligula, a cursus nunc fringilla eu. Nunc sagittis mi id risus pretium volutpat. Maecenas efficitur purus ut
+            convallis feugiat. Duis tristique urna felis, vel pharetra nisi interdum sit amet. Suspendisse venenatis,
+            orci eget lobortis facilisis, nibh tellus tempor massa, rhoncus convallis arcu tortor eu justo. Morbi
+            posuere ligula eget ligula viverra convallis.
+        </p>
+        <p>
+            Proin ut sollicitudin sem, non egestas erat. Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Phasellus at nisi at elit luctus sodales at elementum orci. Vivamus sed sem congue,
+            ultricies tortor sit amet, fermentum enim. Phasellus vitae erat eget arcu ullamcorper finibus. Maecenas et
+            suscipit ipsum, viverra bibendum sapien. Nunc tristique, dui eget hendrerit cursus, nulla ligula dignissim
+            massa, ut congue tellus ex vel nulla. Donec a porta ipsum, a ullamcorper urna. Phasellus et dolor et sapien
+            egestas malesuada ut in tellus. Ut laoreet purus ac lorem finibus, vitae varius sem bibendum. Phasellus
+            metus nulla, tristique non luctus nec, efficitur a orci. Donec porttitor vulputate felis nec consequat.
+        </p>
+        <p>
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce in mollis
+            mauris. Phasellus vel consequat ipsum. Nam nec velit mattis, mollis turpis a, ullamcorper magna. Maecenas
+            non urna sagittis, elementum eros vel, sagittis diam. Nullam quis augue ullamcorper, aliquam purus ut,
+            tempus arcu. Maecenas nulla leo, scelerisque quis commodo sit amet, dignissim et dolor. Donec molestie, orci
+            in lacinia auctor, urna purus cursus metus, elementum euismod diam mi pretium libero. In varius, orci in
+            euismod pellentesque, purus risus hendrerit sapien, vel consectetur nibh augue ac turpis. Sed viverra, ante
+            sed elementum mollis, dui est lobortis lectus, quis faucibus erat tortor non mauris. Mauris velit leo,
+            vehicula ut porttitor volutpat, volutpat ac ex. Vivamus scelerisque urna id ligula scelerisque placerat.
+            Nunc feugiat porta lorem, a ornare velit. Nulla facilisi.
+        </p>
+        <p>
+            Vestibulum scelerisque varius enim, ac consequat nulla mattis ut. Maecenas eleifend libero eros, sit amet
+            auctor nulla imperdiet id. Aenean a dolor ac urna consectetur pharetra. Sed at orci diam. Phasellus
+            dignissim quis leo dictum imperdiet. Suspendisse potenti. Etiam viverra ante a elit egestas pulvinar.
+        </p>
+        <p>
+            Nunc tincidunt elit nec turpis placerat, quis ultrices mi congue. Pellentesque consequat, libero nec lacinia
+            laoreet, lorem massa volutpat est, quis tempor purus neque lacinia sapien. Nulla auctor dignissim luctus.
+            Pellentesque vehicula tincidunt libero, sed consequat purus ultrices quis. Vivamus efficitur auctor nunc, eu
+            placerat eros tristique ut. Maecenas tincidunt bibendum tincidunt. Duis in pharetra purus, tristique
+            sagittis ipsum. Sed lacinia gravida nisl nec egestas. Vestibulum mollis ex vitae purus rutrum, eu efficitur
+            metus dapibus. Pellentesque consequat, leo molestie tincidunt commodo, metus lorem placerat purus, nec
+            sodales lorem massa vel ante. Pellentesque eget libero viverra, semper neque vel, aliquam metus. Suspendisse
+            ornare, sapien id vulputate auctor, purus dolor scelerisque nunc, quis bibendum nulla lacus ac sem. Nam
+            lectus lacus, tempor a malesuada nec, consectetur at nisi. Cras fermentum condimentum dolor sit amet
+            gravida.
+        </p>
+    </div>
     <a id="inspo" href="http://ciralism.tumblr.com" target="_blank">inspiration</a>
 </body>
 

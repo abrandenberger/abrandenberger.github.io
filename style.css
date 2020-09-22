@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0 !important;
     padding: 0 !important;
@@ -12,7 +13,6 @@ body {
     font-size: 12pt;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -29,38 +29,98 @@ h1 {
     margin: 0pt;
 }
 
-#words {
-    position: fixed;
-    top: 28%;
-    left: 50%;
-    text-align: right;
-    /* border: 1px solid black; */
-    font-family: 'Parisienne';
-    font-size: 20px;
-    /* background-color: #999999; */
+
+/* OVERLAY STUFF */
+
+.hidden {
+    display: none;
 }
+
+.moveout {
+    transform: translateY(-225%);
+    z-index: 2 !important;
+}
+
+.transp {
+    background-color: transparent !important;
+    animation-duration: 1s;
+    z-index: -1 !important;
+    /* opacity: 0; */
+}
+
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    z-index: 1;
+    /* Specify a stack order in case you're using a different order for other elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* -moz-transition: background-color 1s ease-in-out, z-index .2s .8s;  
+    -webkit-transition: background-color 1s ease-in-out, z-index .2s .8s;
+    -o-transition: background-color 1s ease-in-out, z-index .2s .8s;
+    transition: background-color 1s ease-in-out, z-index .2s .8s; */
+}
+
+.latetransition {
+    -moz-transition: background-color 1s ease-in-out, z-index .2s .8s;
+    -webkit-transition: background-color 1s ease-in-out, z-index .2s .8s;
+    -o-transition: background-color 1s ease-in-out, z-index .2s .8s;
+    transition: background-color 1s ease-in-out, z-index .2s .8s;
+}
+
+.earlytransition {
+    -moz-transition: background-color 1s ease-in-out, z-index .2s .2s !important;
+    -webkit-transition: background-color 1s ease-in-out, z-index .2s .2s !important;
+    -o-transition: background-color 1s ease-in-out, z-index .2s .2s !important;
+    transition: background-color 1s ease-in-out, z-index .2s .2s !important;
+}
+
+
+/* CARD STUFF */
 
 #card {
     /* dimensions of business card are 3.5 to 2 */
     --card-width: min(375px, 85vw);
     --card-height: calc(var(--card-width)/1.75);
     width: var(--card-width);
-    height: var(--card-height); 
+    height: var(--card-height);
     padding: 20px;
     /* padding: 1.25%; */
     background-color: white;
+    z-index: 2 !important;
     /* position: relative; */
     /* overflow-y: hidden;  */
     /* fixes small screen width issues for badly behaved children (too large width) */
     text-align: center;
     box-shadow: 2px 2px 3px #c9c9c9;
-    display:flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    /* Firefox */
+    -moz-transition: all 1s ease-in-out;
+    /* WebKit */
+    -webkit-transition: all 1s ease-in-out;
+    /* Opera */
+    -o-transition: all 1s ease-in-out;
+    /* Standard */
+    transition: all 1s ease-in-out;
 }
 
-#titles {
-}
+
+/* #titles {
+} */
 
 #name {
     font-family: 'Computer Modern Serif';
@@ -114,22 +174,19 @@ h1 {
         padding-left: 0;
         padding-right: 0;
     }
-
     #name {
         font-size: 19px;
     }
-
     #position {
         font-size: 13px;
     }
-
     #affiliation {
         font-size: 9.5px;
     }
-
     #links {
         font-size: 11px;
-        line-height: 14px; /* + 3 */
+        line-height: 14px;
+        /* + 3 */
         font-weight: 300;
     }
 }
@@ -160,6 +217,7 @@ h1 {
     }
 }
 
+
 /* .contact a {
     color: #000000;
 } */
@@ -172,7 +230,7 @@ h1 {
 
 [disp-title]:after {
     content: attr(disp-title);
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, .95);
     color: #111;
     font-size: 110%;
     font-family: 'Computer Modern Serif Upright Italic', serif;
@@ -212,3 +270,10 @@ h1 {
 /* .friends a {
     color: #000000;
 } */
+
+#content {
+    /* background: red; */
+    width: 800px;
+    max-width: 75vw;
+    z-index: 0;
+}
