@@ -82,7 +82,7 @@ h1 {
 }
 
 .moveout {
-    transform: translateY(-250%);
+    transform: translateY(-75vh);
     z-index: 2 !important;
 }
 
