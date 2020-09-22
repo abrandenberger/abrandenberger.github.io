@@ -11,9 +11,43 @@ body {
     font-family: 'Computer Modern Serif', serif;
     color: #000000;
     font-size: 12pt;
+    font-feature-settings: "onum" 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+ ::-webkit-scrollbar {
+    width: .8em;
+}
+
+ ::-webkit-scrollbar-track {
+    /* Track */
+    background: lightgray;
+    border: .35em solid #f0f0f0;
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    /* Handle */
+    background: #f0b1b1;
+    border: .3em solid #f0f0f0;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    /* Handle on hover */
+    background: #e05c5c;
+}
+
+.noscroll {
+    overflow-y: hidden;
+}
+
+@supports (font-variant-numeric: oldstyle-nums) {
+    body {
+        font-feature-settings: normal;
+        font-variant-numeric: oldstyle-nums;
+    }
 }
 
 a {
@@ -26,7 +60,18 @@ a:hover {
 }
 
 h1 {
-    margin: 0pt;
+    width: fit-content;
+    max-width: 80vw;
+    font-weight: bold;
+    font-variant: small-caps;
+    line-height: 110%;
+    /* box-shadow: inset 0 -.1em 0 #f0f0f0, inset 0 -.7em 0 #b85050; */
+    padding-left: .3em;
+    padding-right: .3em;
+    /* to make the shadow larger */
+    text-align: center;
+    margin: 0;
+    margin-bottom: .5em;
 }
 
 
@@ -37,7 +82,7 @@ h1 {
 }
 
 .moveout {
-    transform: translateY(-225%);
+    transform: translateY(-250%);
     z-index: 2 !important;
 }
 
@@ -52,9 +97,7 @@ h1 {
     position: fixed;
     /* Sit on top of the page content */
     width: 100%;
-    /* Full width (cover the whole page) */
     height: 100%;
-    /* Full height (cover the whole page) */
     top: 0;
     left: 0;
     right: 0;
@@ -105,6 +148,7 @@ h1 {
     /* fixes small screen width issues for badly behaved children (too large width) */
     text-align: center;
     box-shadow: 2px 2px 3px #c9c9c9;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -147,14 +191,23 @@ h1 {
     padding-top: 8px;
 }
 
+.affiliationtext {
+    font-family: 'Computer Modern Bright', serif;
+    /* text-transform: uppercase; */
+    font-size: 10.5px; 
+}
+
 #links {
+    width: 80%;
+    text-align: left;
+}
+
+.linktext {
     font-family: 'Inconsolata', serif;
     font-size: 13px;
     letter-spacing: .75px;
     font-weight: 400;
     line-height: 16px;
-    width: 80%;
-    text-align: left;
 }
 
 #links a {
@@ -165,7 +218,12 @@ h1 {
     letter-spacing: normal;
 }
 
-#links a:hover {
+#links i {
+    /* font-size: 9.5px;   */
+    /* main font size - 1 */
+}
+
+#links i:hover {
     color: #aa0000;
 }
 
@@ -183,7 +241,7 @@ h1 {
     #affiliation {
         font-size: 9.5px;
     }
-    #links {
+    .linktext {
         font-size: 11px;
         line-height: 14px;
         /* + 3 */
@@ -201,7 +259,7 @@ h1 {
     #affiliation {
         font-size: 8px;
     }
-    #links {
+    .linktext {
         font-size: 9px;
         line-height: 12px;
     }
@@ -250,6 +308,37 @@ h1 {
     position: relative;
 }
 
+
+/* BUTTON STUFF */
+
+button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+button:hover {
+    color: #aa0000;
+}
+
+#leavecard {
+    /* align-self: flex-end; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+}
+
+#returntocard {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 3px;
+}
+
+
+/* MAIN CONTENT */
+
 #inspo {
     position: absolute;
     text-transform: uppercase;
@@ -270,10 +359,18 @@ h1 {
 /* .friends a {
     color: #000000;
 } */
-
-#content {
-    /* background: red; */
+.main {
     width: 800px;
     max-width: 75vw;
     z-index: 0;
+}
+#content {
+    /* background: red; */
+}
+
+#header {
+    padding-top: 30px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
