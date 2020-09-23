@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: overlay;
 }
 
  ::-webkit-scrollbar {
@@ -28,13 +29,13 @@ body {
     border-radius: 10px;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     /* Handle */
     background: #f0b1b1;
     border: .3em solid #f0f0f0;
 }
 
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     /* Handle on hover */
     background: #e05c5c;
 }
@@ -193,6 +194,7 @@ h1 {
 }
 
 .linktext {
+    /* delete this */
     font-family: 'Inconsolata', serif;
     font-size: 13px;
     letter-spacing: .75px;
