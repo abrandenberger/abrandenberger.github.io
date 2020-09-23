@@ -5,18 +5,18 @@ function timedscrolltoggle() {
 }
 
 function toggles() {
-    timedscrolltoggle();
-    // document.body.classList.toggle('noscroll');
     document.getElementById("card").classList.toggle('moveout');
     document.getElementById("overlay").classList.toggle('transp');
 }
 
 function toggleout() {
+    timedscrolltoggle();
     toggles();
     document.getElementById("overlay").classList.remove('earlytransition');
 }
 
 function togglein() {
+    document.body.classList.toggle('noscroll');
     toggles();
     document.getElementById("overlay").classList.toggle('earlytransition');
 }
