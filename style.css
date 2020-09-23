@@ -53,6 +53,10 @@ body {
 a {
     color: #aa0000;
     text-decoration: none;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    transition-duration: 500ms;
 }
 
 a:hover {
@@ -110,10 +114,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* -moz-transition: background-color 1s ease-in-out, z-index .2s .8s;  
-    -webkit-transition: background-color 1s ease-in-out, z-index .2s .8s;
-    -o-transition: background-color 1s ease-in-out, z-index .2s .8s;
-    transition: background-color 1s ease-in-out, z-index .2s .8s; */
 }
 
 .latetransition {
@@ -152,19 +152,11 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Firefox */
     -moz-transition: all 1s ease-in-out;
-    /* WebKit */
     -webkit-transition: all 1s ease-in-out;
-    /* Opera */
     -o-transition: all 1s ease-in-out;
-    /* Standard */
     transition: all 1s ease-in-out;
 }
-
-
-/* #titles {
-} */
 
 #name {
     font-family: 'Computer Modern Serif';
@@ -185,21 +177,19 @@ h1 {
 }
 
 #affiliation {
-    font-family: 'Computer Modern Bright', serif;
     text-transform: uppercase;
-    font-size: 10.5px;
     padding-top: 8px;
 }
 
 .affiliationtext {
     font-family: 'Computer Modern Bright', serif;
-    /* text-transform: uppercase; */
-    font-size: 10.5px; 
+    font-size: 10.5px;
 }
 
 #links {
-    width: 80%;
     text-align: left;
+    display: flex;
+    justify-content: space-between;
 }
 
 .linktext {
@@ -211,20 +201,28 @@ h1 {
 }
 
 #links a {
-    /* font-size: 11px; */
-    /* vertical-align: middle; */
     color: #000000;
     text-decoration: none;
     letter-spacing: normal;
 }
 
-#links i {
-    /* font-size: 9.5px;   */
-    /* main font size - 1 */
+#links a:hover {
+    color: #aa0000;
 }
 
-#links i:hover {
-    color: #aa0000;
+.contact i {
+    padding-right: 3px;
+}
+
+.oldcontact {
+    text-align: left;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.oldcontact a {
+    display: block;
+    padding-top: 4px;
 }
 
 @media screen and (max-width: 400px) {
@@ -238,7 +236,7 @@ h1 {
     #position {
         font-size: 13px;
     }
-    #affiliation {
+    .affiliationtext {
         font-size: 9.5px;
     }
     .linktext {
@@ -256,7 +254,7 @@ h1 {
         padding-left: 0;
         padding-right: 0;
     }
-    #affiliation {
+    .affiliationtext {
         font-size: 8px;
     }
     .linktext {
@@ -270,18 +268,16 @@ h1 {
         font-size: 18px;
         padding-top: 10%;
     }
-    #affiliation {
+    .affiliationtext {
         font-size: 7px;
     }
 }
 
-
-/* .contact a {
-    color: #000000;
-} */
-
 [disp-title]:hover:after {
     opacity: 1;
+    -moz-transition: all .3s ease 0.2s;
+    -webkit-transition: all 0.3s ease 0.2s;
+    -o-transition: all 0.3s ease 0.2s;
     transition: all 0.3s ease 0.2s;
     visibility: visible;
 }
@@ -315,25 +311,28 @@ button {
     border: none;
     cursor: pointer;
     background: transparent;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    transition-duration: 500ms;
 }
 
 button:hover {
     color: #aa0000;
 }
 
-#leavecard {
-    /* align-self: flex-end; */
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 20px;
-}
-
 #returntocard {
     position: fixed;
     left: 0;
     top: 0;
-    padding: 3px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    max-width: 18vw;
+    font-size: large;
 }
 
 
@@ -359,18 +358,17 @@ button:hover {
 /* .friends a {
     color: #000000;
 } */
+
 .main {
     width: 800px;
     max-width: 75vw;
     z-index: 0;
 }
+
 #content {
     /* background: red; */
 }
 
 #header {
     padding-top: 30px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 }
