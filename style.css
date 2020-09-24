@@ -1,3 +1,5 @@
+/* ---------------------- GENERAL BODY STUFF (a, h1, scrollbar, tooltip) ---------------------*/
+
 html,
 body {
     height: 100%;
@@ -40,10 +42,6 @@ body {
     background: #e05c5c;
 }
 
-.noscroll {
-    overflow-y: hidden;
-}
-
 @supports (font-variant-numeric: oldstyle-nums) {
     body {
         font-feature-settings: normal;
@@ -79,8 +77,73 @@ h1 {
     margin-bottom: .5em;
 }
 
+[disp-title]:hover:after {
+    opacity: 1;
+    -moz-transition: all .3s ease 0.2s;
+    -webkit-transition: all 0.3s ease 0.2s;
+    -o-transition: all 0.3s ease 0.2s;
+    transition: all 0.3s ease 0.2s;
+    visibility: visible;
+}
 
-/* OVERLAY STUFF */
+[disp-title]:after {
+    content: attr(disp-title);
+    background-color: rgba(255, 255, 255, .95);
+    color: #111;
+    font-size: 110%;
+    /* font-size: small; */
+    font-family: 'Computer Modern Serif Upright Italic', serif;
+    /* font-family: 'Computer Modern Serif', serif; */
+    font-style: italic;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #999999;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+}
+
+[disp-title] {
+    position: relative;
+}
+
+
+/*---------------------------------------- BUTTON STUFF ---------------------------------------*/
+
+button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+button:hover {
+    color: #f0b1b1;
+    /* aa0000 */
+}
+
+#returntocard {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    max-width: 18vw;
+    font-size: large;
+}
+
+
+/*------------------------------------------ OVERLAY STUFF ----------------------------------------*/
 
 .hidden {
     display: none;
@@ -96,6 +159,10 @@ h1 {
     animation-duration: 1s;
     z-index: -1 !important;
     /* opacity: 0; */
+}
+
+.noscroll {
+    overflow-y: hidden;
 }
 
 #overlay {
@@ -132,7 +199,7 @@ h1 {
 }
 
 
-/* CARD STUFF */
+/*------------------------------------------ CARD STUFF -----------------------------------------*/
 
 #card {
     /* dimensions of business card are 3.5 to 2 */
@@ -146,7 +213,7 @@ h1 {
     z-index: 2 !important;
     /* position: relative; */
     /* overflow-y: hidden;  */
-    /* fixes small screen width issues for badly behaved children (too large width) */
+    /* fixes small screen width issues for badly behaved children (large width) */
     text-align: center;
     box-shadow: 2px 2px 3px #c9c9c9;
     position: relative;
@@ -187,7 +254,10 @@ h1 {
     font-size: 10.5px;
 }
 
-#links {
+
+/* General Links Formatting  */
+
+.links {
     text-align: left;
     display: flex;
     justify-content: space-between;
@@ -202,17 +272,19 @@ h1 {
     line-height: 16px;
 }
 
-#links a {
+.links a {
     color: #000000;
     text-decoration: none;
     letter-spacing: normal;
 }
 
-#links a:hover {
-    color: #aa0000;
+.links a:hover {
+    color: #f0b1b1;
+    /* aa0000 */
 }
 
 .contact i {
+    /* font-size: larger; */
     padding-right: 3px;
 }
 
@@ -226,6 +298,9 @@ h1 {
     display: block;
     padding-top: 4px;
 }
+
+
+/*------------------- MEDIA BREAKPOINTS (FIXING FONT SIZES FOR PHONE SCREENS) -----------------*/
 
 @media screen and (max-width: 400px) {
     #titles {
@@ -275,70 +350,8 @@ h1 {
     }
 }
 
-[disp-title]:hover:after {
-    opacity: 1;
-    -moz-transition: all .3s ease 0.2s;
-    -webkit-transition: all 0.3s ease 0.2s;
-    -o-transition: all 0.3s ease 0.2s;
-    transition: all 0.3s ease 0.2s;
-    visibility: visible;
-}
 
-[disp-title]:after {
-    content: attr(disp-title);
-    background-color: rgba(255, 255, 255, .95);
-    color: #111;
-    font-size: 110%;
-    font-family: 'Computer Modern Serif Upright Italic', serif;
-    font-style: italic;
-    position: absolute;
-    padding: 1px 5px 2px 5px;
-    bottom: -1.6em;
-    left: 100%;
-    white-space: nowrap;
-    box-shadow: 1px 1px 3px #999999;
-    opacity: 0;
-    z-index: 99999;
-    visibility: hidden;
-}
-
-[disp-title] {
-    position: relative;
-}
-
-
-/* BUTTON STUFF */
-
-button {
-    border: none;
-    cursor: pointer;
-    background: transparent;
-    outline: none;
-    padding: 0;
-    margin: 0;
-    -webkit-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    -moz-transition-duration: 500ms;
-    transition-duration: 500ms;
-}
-
-button:hover {
-    color: #aa0000;
-}
-
-#returntocard {
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    max-width: 18vw;
-    font-size: large;
-}
-
-
-/* MAIN CONTENT */
+/*--------------------------------------- MAIN CONTENT -----------------------------------*/
 
 #inspo {
     position: absolute;
@@ -356,11 +369,6 @@ button:hover {
     text-decoration: none;
 }
 
-
-/* .friends a {
-    color: #000000;
-} */
-
 .main {
     width: 800px;
     max-width: 75vw;
@@ -371,6 +379,42 @@ button:hover {
     /* background: red; */
 }
 
+.columns {
+    width: 100%;
+    display: inline-block;
+    text-align: justify;
+}
+
+.threecolentry {
+    display: inline-block;
+    width: 26%;
+    min-width: 200px;
+}
+
+.columns .threecolentry a {
+    /* element inside .threecolentry */
+    display: block;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.columns:after {
+    display: inline-block;
+    width: 100%;
+    content: '';
+}
+
+
+/*---------------------------------- Header (title) and Footer ------------------------------*/
+
 #header {
     padding-top: 30px;
+}
+
+#footer {
+    margin-top: 4em;
+    margin-bottom: 5em;
+    text-align: center;
+    font-size: small;
+    color: rgb(160, 160, 160);
 }
