@@ -67,10 +67,10 @@ h1 {
     max-width: 80vw;
     font-weight: bold;
     font-variant: small-caps;
-    line-height: 110%;
+    /* line-height: 110%; */
     /* box-shadow: inset 0 -.1em 0 #f0f0f0, inset 0 -.7em 0 #b85050; */
-    padding-left: .3em;
-    padding-right: .3em;
+    /* padding-left: .3em; */
+    /* padding-right: .3em; */
     /* to make the shadow larger */
     text-align: center;
     margin: 0;
@@ -375,8 +375,24 @@ button:hover {
     z-index: 0;
 }
 
-#content {
-    /* background: red; */
+#content ul {
+    margin-top: 0;
+}
+
+#content .lessmargin {
+    margin-bottom: 8px;
+}
+
+.projectlist li {
+    padding-bottom: 5px;
+}
+
+code {
+    background-color: #dfdfdf;
+    border-radius: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: smaller;
 }
 
 .columns {
