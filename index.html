@@ -25,7 +25,7 @@
     <!-- google fonts  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Lekton&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500&display=swap"
         rel="stylesheet">
 
     <!-- KaTeX -->
@@ -77,176 +77,183 @@
     </div>
 
     <button id="returntocard" onclick="togglein()"><i class='fa fa-fw fa-chevron-down'></i></button>
-    <div id="header">
-        <h1> Hi there<span style="font-size: smaller;"> <i class="fa fa-leaf"></i></span></h1>
-    </div>
     <div id="content" class="main">
-        <p>I'm an undergraduate student at <a href="">McGill University</a> studying physics and computer science,
-            along with a dash of mathematics (some would say more like a heaping scoop).
+        <div id="header">
+            <h2> Anna Brandenberger
+                <!-- <span style="font-size: smaller;"> <i class="fa fa-leaf"></i></span> -->
+            </h2>
+            <div style="display: inline-block;">
+                <a href="mailto:anna.brandenberger@mail.mcgill.ca"><i class="fa fa-fw fa-envelope "></i></a><a
+                    href="https://www.linkedin.com/in/abrandenberger"><i class="fab fa-fw fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p>I study random trees and quantum information as a <a href="https://building21.ca/" target="_blank">BLUE
+                scholar</a> at McGill University.
         </p>
-        <p class="lessmargin">My current research interests include </p>
-        <ul>
+        <p>
+            My research interests include probability theory, random discrete structures, <a
+                href="https://opent03.github.io/basicrl/" target="_blank">reinforcement learning</a> theory
+            and quantum information theory.
+        </p>
+        <!-- <ul>
             <li>probabilistic analysis, probability theory</li>
-            <li>random discrete structures: branching processes, random graphs</li>
+            <li>random discrete structures</li>
             <li>reinforcement learning theory</li>
-            <li>quantum information theory: entanglement and negative entropy</li>
-        </ul>
+            <li>quantum information theory.</li>
+        </ul> -->
         <p>
             Over my time at McGill, I have the pleasure of working with great people from several organizations such as
-            the <a href="https://sumsmcgill.ca/">Society of Undergraduate Mathematics Students</a>, <a
+            <a href="https://sumsmcgill.ca/">SUMS</a>, <a
                 href="https://reporter.mcgill.ca/meet-milo-mcgills-brain-powered-wheelchair/">McGill NeuroTech</a> and
             the <a href="https://sites.google.com/site/mcgillcmc/">McGill Classical Music Club</a>.
         </p>
-        <p>
-            In winter 2021, I will be the official botanist of a brand new course, <a
-                href="https://opent03.github.io/basicrl/" target="_blank">SUMS 707: Basic Reinforcement Learning</a>,
-            taught by <a href="https://opent03.github.io/">Viet</a> and <a
-                href="https://gabrielamp.github.io/">Gabriela</a>.
-            We will feature PDEs propaganda by <a href="https://shereenelaidi.github.io/">Shereen</a> as well as Markov
-            chain and random trees indoctrination by myself. Sign up!
+        <p class="lighter">
+            When I'm not scribbling mathematical nonsense, you can find me reading Dostoevsky, creating my next oddly
+            specific Spotify playlist or playing piano and cursing Rachmaninov's handspan.
         </p>
-        <p>
-            When I'm not watching lectures or scratching my head at QFT assignments, you can find me reading Dostoevsky,
-            creating my next oddly specific Spotify playlist or playing piano and cursing Rachmaninov's handspan.
-        </p>
-        <p>
-            Contact me if you want to talk about spicy music, literature, research or anything else!
-            <span>
-                <a href="mailto:anna.brandenberger@mail.mcgill.ca"><i class="fa fa-fw fa-envelope "></i></a><a
-                    href="https://www.linkedin.com/in/abrandenberger"><i class="fab fa-fw fa-linkedin"></i></a>
-            </span>
-        </p>
-        <h3>Papers</h3>
-        <ul class='projectlist'>
-            <li>
-                <b>Brandenberger, A. M.</b>, Devroye, L. and Reddad, T. <a
-                    href="https://arxiv.org/pdf/2010.08613.pdf">The Horton-Strahler number of conditioned Galton-Watson
-                    trees</a>. arXiv:2010.08613 [math.PR] (2020). Submitted July 2020.
-            </li>
-            <li>
-                <b>Brandenberger, A. M.</b>, Devroye, L. and Goh, M. K. <a
-                    href="https://arxiv.org/pdf/2007.05681.pdf">Root estimation in Galton-Watson trees</a>.
-                arXiv:2007.05681 [math.PR] (2020). Submitted October 2020.
-            </li>
-            <!-- <li>
+
+        <div class="collapsible-wrapper">
+            <h3 class="collapsible">Papers</h3>
+            <h3 class="collapsible">Reports</h3>
+            <h3 class="collapsible">Projects</h3>
+            <h3 class="collapsible">Course Notes</h3>
+        </div>
+
+        <div class="collapsible-content">
+            <ul class="projectlist">
+                <li>
+                    <b>Brandenberger, A. M.</b>, Devroye, L. and Reddad, T. <a
+                        href="https://arxiv.org/pdf/2010.08613.pdf">The Horton-Strahler number of conditioned
+                        Galton-Watson trees</a>. arXiv:2010.08613 [math.PR] (2020). Submitted July 2020.
+                </li>
+                <li>
+                    <b>Brandenberger, A. M.</b>, Devroye, L. and Goh, M. K. <a
+                        href="https://arxiv.org/pdf/2007.05681.pdf">Root estimation in Galton-Watson trees</a>.
+                    arXiv:2007.05681 [math.PR] (2020). Submitted October 2020.
+                </li>
+                <!-- <li>
                 McCracken, G., Daniels, C., Zhao, R., Brandenberger, A., Panangaden, P. and Precup, D.  
                 Distributional analysis of policy gradient in POMDPs using explicit value distributions. arXiv: TBD (2020). 
                 Submitted September 2020.
             </li> -->
-            <li>
-                Shi, R., Legrand, C. and <b>Brandenberger, A.</b> <a
-                    href="https://www.tandfonline.com/doi/abs/10.1080/10489223.2020.1776010">
-                    Toddlers track hierarchical structure dependence</a>. <i>Language Acquisition</i> <b>27</b>, 397–409
-                (2020).
-            </li>
-            <li>
-                Xiong, M., Hotter, R., Nadin, D., Patel, J., Tartakovsky, S., Wang, Y., Patel, H., Axon, C., Bosiljevac,
-                H.,
-                <b>Brandenberger, A.</b> et. al. <a href="https://ieeexplore.ieee.org/abstract/document/8914544/">A
-                    low-cost, semi-autonomous wheelchair controlled by motor imagery and jaw muscle activation</a>. In
-                <i>2019 IEEE International Conference on Systems, Man and Cybernetics (SMC)</i>, 2180–2185 (2019).
-            </li>
-        </ul>
-        <p style='margin-top: 0;'>
-            For an up to date list, see my <a href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en">Google
-                Scholar</a>.
-        </p>
-        <h3>Reports</h3>
+                <li>
+                    Shi, R., Legrand, C. and <b>Brandenberger, A.</b> <a
+                        href="https://www.tandfonline.com/doi/abs/10.1080/10489223.2020.1776010"> Toddlers track
+                        hierarchical structure dependence</a>. <i>Language Acquisition</i> <b>27</b>, 397–409 (2020).
+                </li>
+                <li>
+                    Xiong, M., Hotter, R., Nadin, D., Patel, J., Tartakovsky, S., Wang, Y., Patel, H., Axon, C.,
+                    Bosiljevac, H., <b>Brandenberger, A.</b> et. al. <a
+                        href="https://ieeexplore.ieee.org/abstract/document/8914544/">A low-cost, semi-autonomous
+                        wheelchair controlled by motor imagery and jaw muscle activation</a>. In <i>2019 IEEE
+                        International Conference on Systems, Man and Cybernetics (SMC)</i>, 2180–2185 (2019).
+                </li>
+            </ul>
+            <p style='margin-top: 0;'>
+                For an up to date list, see my <a
+                    href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en">Google
+                    Scholar</a>.
+            </p>
+        </div>
 
-        <ul class='projectlist'>
-            <li>
-                <b>Brandenberger, A.</b> <a href="resources/thermo_negative_entropy.pdf">On the thermodynamic meaning of
-                    negative entropy</a>. Survey paper written for COMP 480: Independent Studies in Computer Science,
-                18p (2020).
-            </li>
-            <li>
-                <b>Brandenberger, A.</b>, McCracken, G. <a
-                    href="resources/fluctuation_dissipation_policy_grad.pdf">Extending
-                    fluctuation dissipation relations to policy gradient methods in reinforcement learning</a>. Project
-                report for COMP 599: Mathematical Foundations of Machine Learning, 14p (2019).
-            </li>
-            <li>
-                Alama-Bronsard, Y., <b>Brandenberger, A.</b> <a href="resources/topology_loss_surface.pdf">On the study
-                    of the topology, geometry, and second order properties of the loss surface of deep neural
-                    networks</a>. Project report for COMP 598: Mathematical Foundations of Machine Learning (Statistical
-                Learning Theory), 12p (2018).
-            </li>
-        </ul>
+        <div class="collapsible-content">
+            <ul class='projectlist'>
+                <li>
+                    <b>Brandenberger, A.</b> <a href="resources/thermo_negative_entropy.pdf">On the thermodynamic
+                        meaning of negative entropy</a>. Survey paper written for COMP 480: Independent Studies in
+                    Computer Science, 18p (2020).
+                </li>
+                <li>
+                    <b>Brandenberger, A.</b>, McCracken, G. <a
+                        href="resources/fluctuation_dissipation_policy_grad.pdf">Extending fluctuation dissipation
+                        relations to policy gradient methods in reinforcement learning</a>. Project report for COMP 599:
+                    Mathematical Foundations of Machine Learning, 14p (2019).
+                </li>
+                <li>
+                    Alama-Bronsard, Y., <b>Brandenberger, A.</b> <a href="resources/topology_loss_surface.pdf">On the
+                        study of the topology, geometry, and second order properties of the loss surface of deep neural
+                        networks</a>. Project report for COMP 598: Mathematical Foundations of Machine Learning
+                    (Statistical Learning Theory), 12p (2018).
+                </li>
+            </ul>
+        </div>
 
-        <h3>Projects</h3>
-        <ul class='projectlist'>
-            <li>
-                <a href="/mchacks-2021/">Lie for Me</a>, built in January 2021 with <a
-                    href="https://diegolopez.me/">Diego</a> and <a href="https://gabrielamp.github.io/">Gabriela</a>. An
-                animation of the orbits of Lie groups. <a href="https://github.com/abrandenberger/mchacks-2021"><i
-                        class='fa fa-github'></i></a>
-            </li>
-            <li>
-                <a href="http://inthestars.tech" target="_blank">In the Stars</a>, built in January 2021 with Simon and
-                Jacob for Hack the North. Letting the stars answer your burning questions, using GPT-3 and the
-                live feed of a radio telescope. <a href="https://github.com/merny93/bright-future"><i
-                        class='fa fa-github'></i></a>
-            </li>
-            <li>
-                <a href="https://diegolopez.me/McGill-Physics-Hackathon-2020/" target="_blank">Donut
-                    Electrodynamics</a>, built in November 2020 with <a href="https://diegolopez.me/">Diego</a>,
-                <a href="https://shereenelaidi.github.io/">Shereen</a>, <a href="https://maiadd.github.io/">Maia</a> and
-                <a href="https://gabrielamp.github.io/">Gabriela</a>. Simulating electrodynamics on a flat torus. Won
-                1st place at the McGill Physics Hackathon! <a
-                    href="https://github.com/Symmetries/McGill-Physics-Hackathon-2020"><i class='fa fa-github'></i></a>
-            </li>
-            <li><a href="/random-trees">Random Trees</a>, built in summer 2020 with <a
-                    href="https://diegolopez.me/">Diego Lopez</a>.
-                Animating the free tree structures of randomly generated Galton-Watson trees of various offspring
-                distributions. <a href="https://github.com/abrandenberger/random-trees/"><i
-                        class='fa fa-github'></i></a>
-            </li>
-            <li><a href="/fractal-graphics/">Fractal Graphics</a>, building in progress with <a
-                    href="https://diegolopez.me/">Diego Lopez</a>.
-                3D mirror fractal rendered using a recusive ray tracing engine coded from scratch. <a
-                    href="https://github.com/abrandenberger/fractal-graphics/"><i class='fa fa-github'></i></a>
-            </li>
-            <li><a href="https://neurotechx.com/milo-brain-controlled-wheelchair-1st-place-winners/">MILO: the
-                    brain-controlled wheelchair</a>, built in winter 2019 with McGill NeuroTechX. "Students from
-                different backgrounds — including biology, computer science, hardware engineering, data collection, and
-                machine learning — got together on their free-time to start a project to challenge themselves and
-                improve the world around them. By gathering EEG bio-signals from the brain, they were able to process
-                the data in order to direct the wheelchair forward, left, right, and stop. Over the course of the
-                development, the students were able to create a wheelchair without using motor controls – just the
-                control of the user’s mind – further improved with impressive semi-autonomous enhancements." <a
-                    href="https://github.com/NTX-McGill/NeuroTechX-McGill-2019"><i class='fa fa-github'></i></a>
-            </li>
-        </ul>
-        <p style="margin-top: 0;">
-            For more samples of code written at 2am, see my <a href="https://github.com/abrandenberger">GitHub</a>.
-        </p>
-        <h3>Course Notes</h3>
-        <ul class='projectlist'>
-            <li><b>COMP 252: Honours Algorithms and Data Structures</b>.
-                <i><a href='resources/AlgorithmComplexityAnalysis-2018-Brandenberger-Malakhveitchouk.pdf'>Algorithm
-                        Complexity Analysis</a></i> and <i><a
-                        href='resources/Divide+Conquer-I-2018-Brandenberger-Malakhveitchouk.pdf'>Divide and
-                        Conquer</a></i>, written with Anton Malakhveitchouk (Prof. Luc Devroye, winter 2018).
-                <i><a href='resources/DynamicProgramming-2019-Brandenberger.pdf'>Dynamic Programming</a></i> (Prof. Luc
-                Devroye, winter 2019).
-            </li>
-            <li><b>MATH 240: Discrete Structures</b>. <a href='resources/MATH-240-notes.pdf'>Full course notes</a>,
-                written
-                with Binyuan Sun (Prof. Benjamin Seamone, winter 2018).</li>
-            <li><b>MATH 247: Honours Applied Linear Algebra</b>. <a href='resources/MATH-247-notes.pdf'>Full course
-                    notes</a>,
-                written with Daniela Breitman (Prof. Axel Hundemer, winter 2018 ).</li>
-            <li><b>MATH 323: Probability Theory</b>. <a href='resources/MATH-323-notes.pdf'>Full course notes</a> (Prof.
-                David
-                Stephens, fall 2018).
-            </li>
-        </ul>
-        <p style="margin-top: 0; margin-bottom: 30px;">
-            Drop a star on the <a href="https://github.com/abrandenberger/course-notes">GitHub repo</a> if you found
-            these notes useful <span style="font-size: smaller;"><i class="fa fa-star"></i></span>
-        </p>
+        <div class="collapsible-content">
+            <ul class='projectlist'>
+                <li>
+                    <a href="/mchacks-2021/">Lie for Me</a>, built in January 2021 with <a
+                        href="https://diegolopez.me/">Diego</a> and <a
+                        href="https://gabrielamp.github.io/">Gabriela</a>. An animation of the orbits of Lie groups. <a
+                        href="https://github.com/abrandenberger/mchacks-2021"><i class='fa fa-github'></i></a>
+                </li>
+                <li>
+                    <a href="http://inthestars.tech" target="_blank">In the Stars</a>, built in January 2021 with Simon
+                    and Jacob for Hack the North. Letting the stars answer your burning questions, using GPT-3 and the
+                    live feed of a radio telescope. <a href="https://github.com/merny93/bright-future"><i
+                            class='fa fa-github'></i></a>
+                </li>
+                <li>
+                    <a href="https://diegolopez.me/McGill-Physics-Hackathon-2020/" target="_blank">Donut
+                        Electrodynamics</a>, built in November 2020 with <a href="https://diegolopez.me/">Diego</a>, <a
+                        href="https://shereenelaidi.github.io/">Shereen</a>, <a
+                        href="https://maiadd.github.io/">Maia</a> and <a
+                        href="https://gabrielamp.github.io/">Gabriela</a>. Simulating electrodynamics on a flat torus.
+                    Won 1st place at the McGill Physics Hackathon! <a
+                        href="https://github.com/Symmetries/McGill-Physics-Hackathon-2020"><i
+                            class='fa fa-github'></i></a>
+                </li>
+                <li><a href="/random-trees">Random Trees</a>, built in summer 2020 with <a
+                        href="https://diegolopez.me/">Diego Lopez</a>. Animating the free tree structures of randomly
+                    generated Galton-Watson trees of various offspring distributions. <a
+                        href="https://github.com/abrandenberger/random-trees/"><i class='fa fa-github'></i></a>
+                </li>
+                <li><a href="/fractal-graphics/">Fractal Graphics</a>, building in progress with <a
+                        href="https://diegolopez.me/">Diego Lopez</a>. 3D mirror fractal rendered using a recusive ray
+                    tracing engine coded from scratch. <a href="https://github.com/abrandenberger/fractal-graphics/"><i
+                            class='fa fa-github'></i></a>
+                </li>
+                <li><a href="https://neurotechx.com/milo-brain-controlled-wheelchair-1st-place-winners/">MILO: the
+                        brain-controlled wheelchair</a>, built in winter 2019 with McGill NeuroTech. "Students from
+                    different backgrounds — including biology, computer science, hardware engineering, data collection,
+                    and machine learning — got together on their free-time to start a project to challenge themselves
+                    and improve the world around them. By gathering EEG bio-signals from the brain, they were able to
+                    process the data in order to direct the wheelchair forward, left, right, and stop. Over the course
+                    of the development, the students were able to create a wheelchair without using motor controls –
+                    just the control of the user’s mind – further improved with impressive semi-autonomous
+                    enhancements." <a href="https://github.com/NTX-McGill/NeuroTechX-McGill-2019"><i
+                            class='fa fa-github'></i></a>
+                </li>
+            </ul>
+            <p style="margin-top: 0;">
+                For more samples of code written at 2am, see my <a href="https://github.com/abrandenberger">GitHub</a>.
+            </p>
+        </div>
 
-        <h3>Friends</h3>
+        <div class="collapsible-content">
+            <ul class='projectlist'>
+                <li><b>COMP 252: Honours Algorithms and Data Structures</b>.
+                    <i><a href='resources/AlgorithmComplexityAnalysis-2018-Brandenberger-Malakhveitchouk.pdf'>Algorithm
+                            Complexity Analysis</a></i> and <i><a
+                            href='resources/Divide+Conquer-I-2018-Brandenberger-Malakhveitchouk.pdf'>Divide and
+                            Conquer</a></i>, written with Anton Malakhveitchouk (Prof. Luc Devroye, winter 2018). <i><a
+                            href='resources/DynamicProgramming-2019-Brandenberger.pdf'>Dynamic Programming</a></i>
+                    (Prof. Luc Devroye, winter 2019).
+                </li>
+                <li><b>MATH 240: Discrete Structures</b>. <a href='resources/MATH-240-notes.pdf'>Full course notes</a>,
+                    written with Binyuan Sun (Prof. Benjamin Seamone, winter 2018).</li>
+                <li><b>MATH 247: Honours Applied Linear Algebra</b>. <a href='resources/MATH-247-notes.pdf'>Full course
+                        notes</a>, written with Daniela Breitman (Prof. Axel Hundemer, winter 2018 ).</li>
+                <li><b>MATH 323: Probability Theory</b>. <a href='resources/MATH-323-notes.pdf'>Full course notes</a>
+                    (Prof. David Stephens, fall 2018).
+                </li>
+            </ul>
+            <p style="margin-top: 0;">
+                Drop a star on the <a href="https://github.com/abrandenberger/course-notes">GitHub repo</a> if you found
+                these notes useful <span style="font-size: smaller;"><i class="fa fa-star"></i></span>
+            </p>
+        </div>
+
+        <h3 class="sectionhead">Friends</h3>
         <div class='links columns'>
             <div class="threecolentry">
                 <a href="https://maiadd.github.io/"><i class="fa fa-fw fa-book"></i> Maia Darmon</a>
@@ -266,12 +273,10 @@
                 <a href="https://tiffanyyong.github.io/"><i class="fa fa-fw fa-fire"></i> Tiffany Yong</a>
                 <a href="http://daocheny.github.io/"><i class="fa fa-fw fa-bug"></i> Dao Chen Yuan</a>
             </div>
-            <!-- <div style='width: 100%; height: 3px; background: blue'></div>  -->
-            <!-- dummy to fix justify -->
         </div>
     </div>
     <div id="footer" class="main">
-        &copy; October 2020
+        &copy; February 2021
     </div>
 </body>
 

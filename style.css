@@ -8,10 +8,11 @@ html, body {
 
 body {
     -webkit-text-size-adjust: 100%;
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
     font-family: 'Saira';
     color: #000000;
-    font-size: 12pt;
+    font-size: 11pt;
+    font-weight: 300;
     font-feature-settings: "onum" 1;
     display: flex;
     flex-direction: column;
@@ -62,27 +63,35 @@ a:hover {
 }
 
 a i:hover {
-    color: #f0b1b1;
+    color: #aa0000;
     -webkit-transition-duration: 300ms;
     -o-transition-duration: 300ms;
     -moz-transition-duration: 300ms;
     transition-duration: 300ms;
 }
 
-h1 {
+h2 {
     width: fit-content;
     max-width: 80vw;
-    font-weight: 600;
+    font-weight: 500;
     /* font-variant: small-caps; */
     /* line-height: 110%; */
-    box-shadow: inset 0 -0.2em 0 #f0f0f0, inset 0 -0.75em 0 #b850507a;
+    /* box-shadow: inset 0 -0.2em 0 #f0f0f0, inset 0 -0.75em 0 #b850507a; */
     /* box-shadow: inset 0 -.1em 0 #f0f0f0, inset 0 -.7em 0 #b85050; */
     /* padding-left: .3em; */
-    /* padding-right: .3em; */
+    padding-right: .5em;
     /* to make the shadow larger */
-    text-align: center;
     margin: 0;
     margin-bottom: .5em;
+    display: inline-block;
+}
+
+h3 {
+    font-weight: 400;
+    padding-left: 3px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: #222;
 }
 
 [disp-title]:hover:after {
@@ -134,7 +143,7 @@ button {
 }
 
 button:hover {
-    color: #f0b1b1;
+    color: #aa0000;
     /* aa0000 */
 }
 
@@ -181,7 +190,7 @@ button:hover {
     right: 0;
     bottom: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
     z-index: 1;
     /* Specify a stack order in case you're using a different order for other elements */
     display: flex;
@@ -233,7 +242,7 @@ button:hover {
 
 #name {
     font-family: 'Computer Modern Serif';
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 22px;
     /* padding-top: 50px; */
     padding-top: 13%;
@@ -283,8 +292,8 @@ button:hover {
 }
 
 .links a:hover {
-    color: #f0b1b1;
-    /* aa0000 */
+    color: #aa0000;
+    /* f0b1b1 */
 }
 
 .contact i {
@@ -303,7 +312,167 @@ button:hover {
     padding-top: 4px;
 }
 
+/*--------------------------------------- MAIN CONTENT -----------------------------------*/
+
+#inspo {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 8px;
+    font-weight: normal;
+    color: #ececec;
+    right: 5px;
+    bottom: 6px;
+    letter-spacing: .5px;
+}
+
+#inspo:hover {
+    color: #d8d8d8;
+    text-decoration: none;
+}
+
+.main {
+    width: 600px;
+    max-width: 75vw;
+    z-index: 0;
+    /* padding-right: 20vw; */
+}
+
+#content ul {
+    margin-top: 0;
+}
+
+#content b {
+    font-weight: 400;
+}
+
+#content .lessmargin {
+    margin-bottom: 8px;
+}
+
+.collapsible-wrapper {
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.collapsible {
+    margin-bottom: 5px;
+    width: 22.75%;
+    min-width: 130px;
+    display: inline-block;
+    justify-content: space-between;
+    box-shadow: inset 0 -0.1em 0 #f5f5f5, inset 0 -0.15em 0 #dadada;
+    cursor: pointer;
+    -webkit-transition: box-shadow 300ms;
+    -o-transition: box-shadow 300ms;
+    -moz-transition: box-shadow 300ms;
+    transition: box-shadow 300ms;
+    position: relative;
+    padding-right: 5px;
+}
+
+/* .collapsible i {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #aaa;
+    font-size: smaller;
+    display: none;
+} */
+
+.collapsible:hover, .active {
+    box-shadow: inset 0 -0.1em 0 #f5f5f5, inset 0 -1.5em 0 #dadada;
+    color: #f5f5f5;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: #ccc;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible:hover:after, .active:after {
+    color: #eee;
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    -o-transition: max-height 0.2s ease-out;
+    -moz-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.sectionhead {
+    margin-top: 10px;
+}
+
+.projectlist li {
+    padding-bottom: 5px;
+}
+
+code {
+    background-color: #dfdfdf;
+    border-radius: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: smaller;
+}
+
+.columns {
+    width: 100%;
+    display: inline-block;
+    text-align: justify;
+}
+
+.threecolentry {
+    display: inline-block;
+    width: 26%;
+    min-width: 160px;
+}
+
+.columns .threecolentry a {
+    /* element inside .threecolentry */
+    display: block;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.columns .threecolentry a:hover {
+    -webkit-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    transition-duration: 300ms;
+}
+
+.columns:after {
+    display: inline-block;
+    width: 100%;
+    content: '';
+}
+
+#header a {
+    margin-right: .2em;
+    font-size: large;
+    color: #666;
+}
+
+.lighter {
+    color: #777;
+}
+
 /*------------------- MEDIA BREAKPOINTS (FIXING FONT SIZES FOR PHONE SCREENS) -----------------*/
+
+/* @media screen and (max-width: 900px) {
+    .main {
+        padding-right: 0px;
+    }
+} */
 
 @media screen and (max-width: 400px) {
     #titles {
@@ -353,90 +522,10 @@ button:hover {
     }
 }
 
-/*--------------------------------------- MAIN CONTENT -----------------------------------*/
-
-#inspo {
-    position: absolute;
-    text-transform: uppercase;
-    font-size: 8px;
-    font-weight: normal;
-    color: #ececec;
-    right: 5px;
-    bottom: 6px;
-    letter-spacing: .5px;
-}
-
-#inspo:hover {
-    color: #d8d8d8;
-    text-decoration: none;
-}
-
-.main {
-    width: 800px;
-    max-width: 75vw;
-    z-index: 0;
-}
-
-#content ul {
-    margin-top: 0;
-}
-
-#content b {
-    font-weight: 500;
-}
-
-#content .lessmargin {
-    margin-bottom: 8px;
-}
-
-.projectlist li {
-    padding-bottom: 5px;
-}
-
-code {
-    background-color: #dfdfdf;
-    border-radius: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
-    font-size: smaller;
-}
-
-.columns {
-    width: 100%;
-    display: inline-block;
-    text-align: justify;
-}
-
-.threecolentry {
-    display: inline-block;
-    width: 26%;
-    min-width: 200px;
-}
-
-.columns .threecolentry a {
-    /* element inside .threecolentry */
-    display: block;
-    text-align: left;
-    padding-bottom: 5px;
-}
-
-.columns .threecolentry a:hover {
-    -webkit-transition-duration: 300ms;
-    -o-transition-duration: 300ms;
-    -moz-transition-duration: 300ms;
-    transition-duration: 300ms;
-}
-
-.columns:after {
-    display: inline-block;
-    width: 100%;
-    content: '';
-}
-
 /*---------------------------------- Header (title) and Footer ------------------------------*/
 
 #header {
-    padding-top: 30px;
+    padding-top: 9vh;
 }
 
 #footer {
