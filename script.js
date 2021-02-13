@@ -78,7 +78,7 @@ window.addEventListener('load', () => {
                 setTimeout(() => {
                     toggleHeight(clicked);
                     coll[i].classList.toggle("active");
-                    }, 250);
+                    }, 150);
             }
         });
     }
