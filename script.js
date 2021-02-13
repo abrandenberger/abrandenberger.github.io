@@ -50,6 +50,16 @@ function toggleHeight(clicked) {
     }
 
 }
+
+function setFullWidthHeader() {
+    let wrapper = document.getElementsByClassName("collapsible-wrapper")[0];
+    let width = wrapper.getBoundingClientRect().width;
+    // remove padding width of sectionHead (3px, 5px)
+    width -= 8; 
+    let sectionHead = document.getElementsByClassName("sectionhead")[0];
+    sectionHead.style.width = width.toString()+'px';
+}
+
 window.addEventListener('load', () => {
     if (window.navigator.platform != 'MacIntel') {
         insertCss(scrollCSS);
@@ -78,10 +88,13 @@ window.addEventListener('load', () => {
                 setTimeout(() => {
                     toggleHeight(clicked);
                     coll[i].classList.toggle("active");
-                    }, 150);
+                }, 150);
             }
         });
     }
     // start with one open
     // coll[0].click();
+    setFullWidthHeader();
 })
+
+window.addEventListener('resize', setFullWidthHeader);
