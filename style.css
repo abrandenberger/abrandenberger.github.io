@@ -425,6 +425,7 @@ code {
 
 .threecolentry {
     display: inline-block;
+    vertical-align: top;
     width: 26%;
     min-width: 160px;
 }
