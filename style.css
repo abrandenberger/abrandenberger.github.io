@@ -8,7 +8,7 @@ html, body {
 
 body {
     -webkit-text-size-adjust: 100%;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     font-family: 'Saira';
     color: #000000;
     font-size: 11pt;
@@ -190,7 +190,7 @@ button:hover {
     right: 0;
     bottom: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     z-index: 1;
     /* Specify a stack order in case you're using a different order for other elements */
     display: flex;
@@ -361,7 +361,7 @@ button:hover {
     min-width: 130px;
     display: inline-block;
     justify-content: space-between;
-    box-shadow: inset 0 -0.1em 0 #f5f5f5, inset 0 -0.15em 0 #dadada;
+    box-shadow: inset 0 -0.1em 0 #f9f9f9, inset 0 -0.15em 0 #dadada;
     cursor: pointer;
     -webkit-transition: box-shadow 300ms;
     -o-transition: box-shadow 300ms;
@@ -372,8 +372,8 @@ button:hover {
 }
 
 .collapsible:hover, .active {
-    box-shadow: inset 0 -0.1em 0 #f5f5f5, inset 0 -1.5em 0 #dadada;
-    color: #f5f5f5;
+    box-shadow: inset 0 -0.1em 0 #f9f9f9, inset 0 -1.5em 0 #dadada;
+    color: #f9f9f9;
 }
 
 .collapsible:after {
@@ -457,7 +457,11 @@ code {
 }
 
 .lighter {
-    color: #777;
+    color: #737373;
+}
+
+.lighter a {
+    color: #cc6c6c
 }
 
 /*------------------- MEDIA BREAKPOINTS (FIXING FONT SIZES FOR PHONE SCREENS) -----------------*/
