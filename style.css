@@ -360,8 +360,8 @@ button:hover {
 
 .collapsible {
   margin-bottom: 5px;
-  /* width: 22.75%; */
-  width: 46.5%;
+  /* width: 22.75%; for 4 col, 46.5 for 2 col */
+  width: 30.5%;
   min-width: 130px;
   display: inline-block;
   justify-content: space-between;
