@@ -424,7 +424,7 @@ code {
 }
 
 .columns {
-  width: 100%;
+  width: 99%;
   display: inline-block;
   text-align: justify;
 }
@@ -435,15 +435,32 @@ code {
   width: 26%;
   min-width: 160px;
 }
-
 .columns .threecolentry a {
   /* element inside .threecolentry */
   display: block;
   text-align: left;
   padding-bottom: 5px;
 }
-
 .columns .threecolentry a:hover {
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+
+.fivecolentry {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  min-width: 100px;
+}
+.columns .fivecolentry a {
+  /* element inside .fivecolentry */
+  display: block;
+  text-align: left;
+  padding-bottom: 5px;
+}
+.columns .fivecolentry a:hover {
   -webkit-transition-duration: 300ms;
   -o-transition-duration: 300ms;
   -moz-transition-duration: 300ms;
