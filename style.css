@@ -448,25 +448,6 @@ code {
   transition-duration: 300ms;
 }
 
-.fivecolentry {
-  display: inline-block;
-  vertical-align: top;
-  width: 15%;
-  min-width: 100px;
-}
-.columns .fivecolentry a {
-  /* element inside .fivecolentry */
-  display: block;
-  text-align: left;
-  padding-bottom: 5px;
-}
-.columns .fivecolentry a:hover {
-  -webkit-transition-duration: 300ms;
-  -o-transition-duration: 300ms;
-  -moz-transition-duration: 300ms;
-  transition-duration: 300ms;
-}
-
 .columns:after {
   display: inline-block;
   width: 100%;
@@ -487,6 +468,9 @@ code {
   color: #cc6c6c;
 }
 
+.partopmargin {
+  margin-top: 10px;
+}
 /*------------------- MEDIA BREAKPOINTS (FIXING FONT SIZES FOR PHONE SCREENS) -----------------*/
 
 /* @media screen and (max-width: 900px) {
