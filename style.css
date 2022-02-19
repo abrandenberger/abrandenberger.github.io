@@ -137,6 +137,7 @@ button {
   outline: none;
   padding: 0;
   margin: 0;
+  color: #000;
   -webkit-transition-duration: 500ms;
   -o-transition-duration: 500ms;
   -moz-transition-duration: 500ms;
@@ -253,9 +254,10 @@ button:hover {
 }
 
 #position {
-  font-family: Didot, "Computer Modern Serif Upright Italic";
+  font-family: "Playfair", "Computer Modern Serif Upright Italic";
   font-style: italic;
-  font-size: 15px;
+  /* letter-spacing: 1px; */
+  font-size: 16px;
   padding-top: 13px;
   padding-left: 3.5%;
   padding-right: 3.5%;
@@ -264,6 +266,7 @@ button:hover {
 #affiliation {
   text-transform: uppercase;
   padding-top: 8px;
+  font-size: 12px;
 }
 
 .affiliationtext {
@@ -489,7 +492,10 @@ code {
     letter-spacing: 1px;
   }
   #position {
-    font-size: 13px;
+    font-size: 14px;
+  }
+  #affiliation {
+    font-size: 11px;
   }
   .affiliationtext {
     font-size: 10px;
@@ -508,6 +514,9 @@ code {
     font-size: 11px;
     padding-left: 0;
     padding-right: 0;
+  }
+  #affiliation {
+    font-size: 10px;
   }
   .affiliationtext {
     font-size: 9px;
