@@ -167,7 +167,7 @@ button:hover {
 }
 
 .moveout {
-  transform: translateY(-75vh);
+  transform: translateY(-80vh);
   z-index: 2 !important;
 }
 
@@ -482,7 +482,7 @@ code {
     }
 } */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   #titles {
     padding-left: 0;
     padding-right: 0;
@@ -505,6 +505,9 @@ code {
     line-height: 14px;
     /* + 3 */
     font-weight: 300;
+  }
+  .moveout {
+    transform: translateY(-90vh);
   }
 }
 
