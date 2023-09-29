@@ -43,46 +43,7 @@
     <script src="script.js"></script>
 </head>
 
-<body class='noscroll'>
-    <div id="overlay" class="latetransition">
-        <div id="card">
-            <div id="titles">
-                <div id='name'> Anna Brandenberger </div>
-                <div id='position'> researcher and resident curious person
-                </div>
-                <div id='affiliation' class='affiliationtext'> math <i class="las la-at"></i> MIT </div>
-            </div>
-            <div class='links affiliationtext'>
-                <div class="contact">
-                    <!-- CONTACT -->
-                    <!-- email -->
-                    <a href="mailto:abrande@mit.edu" disp-title="Email Me"><i
-                        class="lar la-fw la-envelope "></i></a>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/abrandenberger" disp-title="LinkedIn"><i
-                        class="lab la-fw la-linkedin"></i></a>
-                    <!-- curius page -->
-                    <a href="https://curius.app/anna-brandenberger" disp-title="Curius"><i 
-                        class="las la-fw la-chevron-circle-up"></i></a>
-                    <!-- github -->
-                    <a href="https://github.com/abrandenberger" disp-title="GitHub"><i
-                        class="lab la-fw la-github"></i></a>
-                    <!-- google scholar -->
-                    <a href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
-                        disp-title="Google Scholar"><i class="las la-fw la-graduation-cap"></i></i></a>
-                    <!-- substack -->
-                    <!-- <a href="link to substack" disp-title="Substack"><i 
-                      class="las la-bookmark"></i></a> -->
-                </div>
-                <button id="leavecard" class="affiliationtext" onclick="toggleout()">
-                    ENTER <i class='las la-fw la-chevron-right'></i>
-                </button>
-            </div>
-        </div>
-        <a id="inspo" href="http://ciralism.tumblr.com" target="_blank">inspiration</a>
-    </div>
-
-    <button id="returntocard" onclick="togglein()"><i class='las la-fw la-chevron-down'></i></button>
+<body>
     <div id="content" class="main">
         <div id="header">
             <h2> Anna Brandenberger
@@ -90,7 +51,11 @@
             </h2>
             <div style="display: inline-block;">
                 <a href="mailto:abrande@mit.edu"><i class="las la-fw la-envelope "></i></a><a
-                    href="https://curius.app/anna-brandenberger"><i class="las la-fw la-chevron-circle-up"></i></a>
+                    href="https://curius.app/anna-brandenberger"><i class="las la-fw la-chevron-circle-up"></i></a><a 
+                        href="https://github.com/abrandenberger"><i class="lab la-fw la-github"></i></a><a 
+                        href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"><i 
+                        class="las la-fw la-graduation-cap"></i></i></a>
+            <!-- <a href="https://www.linkedin.com/in/abrandenberger"><i class="lab la-fw la-linkedin"></i></a> -->
             </div>
         </div>
         <p>I am a math PhD student at <a href="https://math.mit.edu/" target="_blank">MIT</a>, where my 
@@ -104,8 +69,8 @@
               Perimeter Institute</a>, working with <a href="https://www.math.uwaterloo.ca/~a3jagann/">
               Aukosh</a>. 
             Even more distantly, I did my BSc at <a href="https://www.mcgill.ca/">McGill</a>, doing 
-            research with <a href="http://luc.devroye.org/" target="_blank">Luc</a>, <a href="https://problab.ca/louigi/" 
-            target="_blank">Louigi</a>, <a href="https://www.cs.mcgill.ca/~prakash/" target="_blank">Prakash</a> 
+            research with <a href="http://luc.devroye.org/" >Luc</a>, <a href="https://problab.ca/louigi/" 
+            >Louigi</a>, <a href="https://www.cs.mcgill.ca/~prakash/" >Prakash</a> 
             and others. 
         </p>
         <p class="lighter">
@@ -137,6 +102,10 @@
                 Scholar</a>.
             </p>
             <ul class="projectlist">
+                <li>
+                  <b>Brandenberger, A.</b> , Marcussen, C., Mossel, E., & Sudan, M. <a href="https://arxiv.org/pdf/2309.05638" target="_blank">Combinative 
+                    Cumulative Knowledge Processes</a>. arXiv:2309.05638 (2023). 
+                </li>
                 <li>
                   <b>Brandenberger, A. M.</b>, Devroye, L., Goh, M.K. and Zhao, R. Y. <a href="https://arxiv.org/pdf/2105.12046.pdf" target="_blank">Leaf 
                       multiplicity in a Bienaymé-Galton-Watson tree</a>. <i>Discrete Mathematics & Theoretical Computer Science</i>
@@ -182,25 +151,25 @@
                         href="https://github.com/abrandenberger/mchacks-2021"><i class='lab la-fw la-github'></i></a>
                 </li>
                 <li>
-                    <a href="http://inthestars.tech" target="_blank">In the Stars</a>, built in January 2021 with Simon
+                    <a href="http://inthestars.tech" >In the Stars</a>, built in January 2021 with Simon
                     and Jacob for Hack the North. Letting the stars answer your burning questions, using GPT-3 and the
-                    live feed of a radio telescope. <a href="https://github.com/merny93/bright-future" target="_blank"><i
+                    live feed of a radio telescope. <a href="https://github.com/merny93/bright-future" ><i
                             class='lab la-fw la-github'></i></a>
                 </li>
                 <li>
-                    <a href="https://diegolopez.me/McGill-Physics-Hackathon-2020/" target="_blank">Donut
+                    <a href="https://diegolopez.me/McGill-Physics-Hackathon-2020/" >Donut
                         Electrodynamics</a>, built in November 2020 with <a href="https://diegolopez.me/">Diego</a>, <a
                         href="https://shereenelaidi.github.io/">Shereen</a>, <a
                         href="https://maiadd.github.io/">Maia</a> and <a
                         href="https://gabrielamp.github.io/">Gabriela</a>. Simulating electrodynamics on a flat torus.
                     Won 1st place at the McGill Physics Hackathon! <a
-                        href="https://github.com/Symmetries/McGill-Physics-Hackathon-2020" target="_blank"><i
+                        href="https://github.com/Symmetries/McGill-Physics-Hackathon-2020" ><i
                             class='lab la-fw la-github'></i></a>
                 </li>
                 <li><a href="/random-trees">Random Trees</a>, built in summer 2020 with <a
                         href="https://diegolopez.me/">Diego Lopez</a>. Animating the free tree structures of randomly
                     generated Galton-Watson trees of various offspring distributions. <a
-                        href="https://github.com/abrandenberger/random-trees/" target="_blank"><i class='lab la-fw la-github'></i></a>
+                        href="https://github.com/abrandenberger/random-trees/"><i class='lab la-fw la-github'></i></a>
                 </li>
                 <li><a href="https://neurotechx.com/milo-brain-controlled-wheelchair-1st-place-winners/">MILO: the
                         brain-controlled wheelchair</a>, built in winter 2019 with McGill NeuroTech. "Students from
@@ -210,7 +179,7 @@
                     process the data in order to direct the wheelchair forward, left, right, and stop. Over the course
                     of the development, the students were able to create a wheelchair without using motor controls –
                     just the control of the user’s mind – further improved with impressive semi-autonomous
-                    enhancements." <a href="https://github.com/NTX-McGill/NeuroTechX-McGill-2019" target="_blank"><i
+                    enhancements." <a href="https://github.com/NTX-McGill/NeuroTechX-McGill-2019"><i
                             class='lab la-fw la-github'></i></a>
                 </li>
             </ul>
@@ -224,10 +193,11 @@
             If you happen to be at McGill, check out the great folks at <a href="https://sumsmcgill.ca/">SUMS</a>, <a
             href="https://reporter.mcgill.ca/meet-milo-mcgills-brain-powered-wheelchair/">McGill NeuroTech</a>, the 
             <a href="https://sites.google.com/site/mcgillcmc/">Classical Music Club</a> and <a href="https://www.msurj.com/">
-              MSURJ</a>.
+              MSURJ</a>. Here are also <a href="https://github.com/abrandenberger/course-notes">some introductory math/CS 
+                notes</a> and <a href="https://github.com/abrandenberger/academic-resume">a LaTeX CV and resume template</a>.
           </p>
-          <p>
-            Here are a few things I’ve written for various classes on topics that I thought were cool, feel free to check them 
+          <!-- <p>
+            Here are a few things I've written for various classes on topics that I thought were cool, feel free to check them 
             out (or not)
           </p>
           <ul class='projectlist'>
@@ -246,13 +216,13 @@
                 of the loss surface of deep neural networks</a>. Project report for COMP 598: Mathematical Foundations of 
                 Machine Learning (Statistical Learning Theory), 12p (2018).
             </li>
-          </ul>
-          <p>
-            <a href="https://github.com/abrandenberger/course-notes" target="_blank">Some introductory math/CS notes</a> 
+          </ul> -->
+          <!-- <p>
+            <a href="https://github.com/abrandenberger/course-notes">Some introductory math/CS notes</a> 
             - drop a star if they're useful to you!
             <br>
-            <a href="https://github.com/abrandenberger/academic-resume" target="_blank">A LaTeX CV and resume template</a>
-          </p>
+            <a href="https://github.com/abrandenberger/academic-resume">A LaTeX CV and resume template</a>
+          </p> -->
           <p style="margin-top: 0">An unordered and incomplete list of faves,</p>
           <ul class="projectlist">
             <li>
@@ -298,79 +268,44 @@
         <div class='collapsible-content'>
           <p class="partopmargin">
             <b>Canada.</b> 
-            <i class="lab la-pagelines"></i><a href="http://luc.devroye.org/" target="_blank">Luc</a> 
-            <i class="las la-bicycle"></i><a href="https://shereenelaidi.github.io/" target="_blank">Shereen</a> 
-            <i class="las la-hourglass-half"></i><a href="https://stephenfay.xyz/" target="_blank">Stephen</a> 
-            <i class="las la-camera-retro"></i><a href="https://marcelgoh.ca/" target="_blank">Marcel</a> 
-            <i class="las la-pen"></i><a href="https://diegolopez.me/" target="_blank">Diego</a>
-            <i class="las la-chart-bar"></i><a href="https://gabrielamp.github.io/" target="_blank">Gabriela</a>
-            <i class="las la-kiwi-bird"></i><a href="https://opent03.github.io/" target="_blank">Viet</a>
-            <i class="las la-drumstick-bite"></i><a href="https://mytran2111.github.io/" target="_blank">Mia</a>
-            <i class="las la-fire"></i><a href="https://tiffanyyong.net/" target="_blank">Tiffany</a>
-            <i class="las la-spa"></i><a href="http://daocheny.github.io/" target="_blank">Dao Chen</a>
-            <i class="las la-feather-alt"></i><a href="https://www.zhengzhou.page/" target="_blank">Zheng</a>
-            <i class="las la-blender"></i><a href="https://alexander.iannantuono.org/" target="_blank">Alex</a>
+            <i class="lab la-pagelines"></i><a href="http://luc.devroye.org/">Luc</a> 
+            <i class="las la-bicycle"></i><a href="https://shereenelaidi.github.io/">Shereen</a> 
+            <i class="las la-hourglass-half"></i><a href="https://stephenfay.xyz/">Stephen</a> 
+            <i class="las la-camera-retro"></i><a href="https://marcelgoh.ca/">Marcel</a> 
+            <i class="las la-chart-bar"></i><a href="https://gabrielamp.github.io/">Gabriela</a>
+            <i class="las la-kiwi-bird"></i><a href="https://opent03.github.io/">Viet</a>
+            <i class="las la-drumstick-bite"></i><a href="https://mytran2111.github.io/">Mia</a>
+            <i class="las la-fire"></i><a href="https://tiffanyyong.net/">Tiffany</a>
+            <i class="las la-spa"></i><a href="http://daocheny.github.io/">Dao Chen</a>
+            <i class="las la-feather-alt"></i><a href="https://www.zhengzhou.page/">Zheng</a>
+            <i class="las la-blender"></i><a href="https://alexander.iannantuono.org/">Alex</a>
           </p>
           <p>
             <b>Europe.</b> 
-            <i class="las la-atom"></i><a href="https://atomyka.com/" target="_blank">Anna</a> 
-            <i class="las la-fish"></i><a href="https://jredondoyuste.github.io/" target="_blank">Jaime</a> 
-            <i class="las la-coffee"></i><a href="https://jadhamdan.github.io/" target="_blank">Jad</a>
-            <i class="las la-satellite-dish"></i><a href="https://danielabreitman.github.io/" 
-              target="_blank">Daniela</a>
-            <i class="las la-umbrella"></i><a href="https://claudiahleung.github.io/" target="_blank">Claudia</a>
+            <i class="las la-atom"></i><a href="https://atomyka.com/">Anna</a> 
+            <i class="las la-fish"></i><a href="https://jredondoyuste.github.io/">Jaime</a> 
+            <i class="las la-coffee"></i><a href="https://jadhamdan.github.io/">Jad</a>
+            <i class="las la-satellite-dish"></i><a href="https://danielabreitman.github.io/">Daniela</a>
+            <i class="las la-umbrella"></i><a href="https://claudiahleung.github.io/">Claudia</a>
           </p>
           <p>
             <b>Northeast.</b> 
-            <i class="las la-meteor"></i><a href="https://rhotter.github.io/" target="_blank">Raffi</a> 
-            <i class="las la-flask"></i><a href="https://www.marleyx.com/" target="_blank">Marley</a> 
-            <i class="las la-cog"></i><a href="https://merny93.github.io/blog/" target="_blank">Simon</a>
+            <i class="las la-golf-ball"></i><a href="https://math.mit.edu/~byronc/">Byron</a>
+            <i class="las la-meteor"></i><a href="https://rhotter.github.io/">Raffi</a> 
+            <i class="las la-flask"></i><a href="https://www.marleyx.com/">Marley</a> 
+            <i class="las la-cog"></i><a href="https://merny93.github.io/blog/">Simon</a>
           </p>
             <b>California.</b> 
+            <i class="las la-pen"></i><a href="https://diegolopez.me/">Diego</a>
             <i class="las la-mountain"></i><a href="https://www.matthewfoxphysics.com/" 
-            target="_blank">Matthew</a> 
-            <i class="las la-book"></i><a href="https://maiadd.github.io/" target="_blank">Maia</a>
+            >Matthew</a> 
+            <i class="las la-book"></i><a href="https://maiadd.github.io/" >Maia</a>
             <i class="las la-dice-d6"></i><a href="https://vilas.us/">Vilas</a>
           </p>
-
-            <!-- <div class="threecolentry">
-                <a href="https://maiadd.github.io/" target="_blank"><i class="las la-fw la-book"></i> Maia Darmon</a>
-                <a href="https://danielabreitman.github.io/" target="_blank"><i class="las la-fw la-satellite-dish"></i>
-                    Daniela Breitman</a>
-                <a href="http://luc.devroye.org/" target="_blank"><i class="lab la-fw la-pagelines"></i> Luc Devroye</a>
-                <a href="https://shereenelaidi.github.io/" target="_blank"><i class="las la-fw la-bicycle"></i> Shereen
-                    Elaidi</a>
-                <a href="https://dcxst.github.io/" target="_blank"><i class="las la-fw la-hourglass-half"></i> Stephen Fay</a>
-                <a href="https://marcelgoh.ca/" target="_blank"><i class="las la-fw la-camera-retro "></i> Marcel
-                    Goh</a>
-            </div>
-            <div class="threecolentry">
-                <a href="https://jadhamdan.github.io/" target="_blank"><i class="las la-fw la-coffee"></i> Jad
-                    Hamdan</a>
-                <a href="https://alexander.iannantuono.org/" target="_blank"><i class="las la-fw la-blender"></i> Alex
-                    Iannantuono</a>
-                <a href="https://jredondoyuste.github.io/" target="_blank"><i class="las la-fw la-fish"></i> Jaime Redondo-Y.</a>
-                <a href="https://atomyka.com/" target="_blank"><i class="las la-fw la-atom"></i> Anna Knörr</a>
-                <a href="https://claudiahleung.github.io/" target="_blank"><i class="las la-fw la-umbrella"></i> Claudia
-                    Leung</a>
-                <a href="https://diegolopez.me/" target="_blank"><i class="las la-fw la-pen"></i> Diego Lopez</a>
-                <a href="https://gabrielamp.github.io/" target="_blank"><i class="las la-fw la-chart-bar"></i> Gabriela
-                  Moisescu</a>
-            </div>
-            <div class="threecolentry">
-                <a href="https://opent03.github.io/" target="_blank"><i class="las la-fw la-kiwi-bird"></i> Viet
-                    Nguyen</a>
-                <a href="https://mytran2111.github.io/" target="_blank"><i class="las la-fw la-drumstick-bite"></i> Mia
-                    Tran</a>
-                <a href="https://www.marleyx.com/" target="_blank"><i class="las la-fw la-flask"></i> Marley Xiong</a>
-                <a href="https://tiffanyyong.github.io/" target="_blank"><i class="las la-fw la-fire"></i> Tiffany
-                    Yong</a>
-                <a href="http://daocheny.github.io/" target="_blank"><i class="las la-fw la-spa"></i> Dao Chen Yuan</a>
-            </div> -->
         </div>
     </div>
     <div id="footer" class="main">
-        &copy; july 2023
+        &copy; sept 2023
     </div>
 </body>
 
