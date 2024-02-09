@@ -29,48 +29,139 @@
     <div id="bgd-container">
       <img id="bgd" src="background-dark.jpg" onload="this.style.opacity=1" />
     </div>
+    <nav>
+      <ul class="nav nav-tabs">
+        <li class="active"><a id="home-tab" href="#home">home</a></li>
+        <li class=""><a id="research-tab" href="#research">research</a></li>
+        <li class=""><a id="projects-tab" href="#projects">projects</a></li>
+        <li class=""><a id="colophon-tab" href="#colophon">colophon</a></li>
+      </ul>
+      <!-- <b>home</b> - research - projects - colophon -->
+    </nav>
     <div class="text-div">
-      <nav><b>home</b> - research - projects - colophon</nav>
-      <section id="home">
-        <p style="padding-bottom: 4vh">
-          Anna Brandenberger <br />
-          MIT Mathematics
-        </p>
-        <p>
-          I'm currently a PhD candidate in the department of mathematics at MIT,
-          advised by
-          <a href="https://math.mit.edu/~elmos/">Elchanan Mossel</a>.
-        </p>
-        <p id="research-container"></p>
-        <div class="light-links padded-links smaller-text">
-          <ul>
-            <li>
-              <a href="https://arxiv.org/pdf/2309.05638"
-                >Combinative Cumulative Knowledge Processes</a
-              >. 2023.
-            </li>
-            <li>
-              <a href="https://arxiv.org/pdf/2105.03195.pdf"
-                >Universal height and width bounds for random trees</a
-              >. 2022.
-            </li>
-            <li>
-              <a href="https://arxiv.org/pdf/2007.05681.pdf"
-                >Root estimation in Galton-Watson trees</a
-              >. 2022.
-            </li>
-            <li>
+      <p class="heading">
+        Anna Brandenberger <br />
+        MIT Mathematics
+      </p>
+      <section>
+        <div class="tab-content">
+          <!-- HOME TAB -->
+          <div id="home" class="tab-pane active">
+            <p>
+              I'm currently a PhD candidate in the department of mathematics at
+              MIT, advised by
+              <a href="https://math.mit.edu/~elmos/">Elchanan Mossel</a>.
+            </p>
+            <p id="research-container"></p>
+            <div class="light-links padded-links smaller-text">
+              <ul class="plain-list">
+                <li>
+                  <a href="https://arxiv.org/pdf/2309.05638"
+                    >Combinative Cumulative Knowledge Processes</a
+                  >. 2023.
+                </li>
+                <li>
+                  <a href="https://arxiv.org/pdf/2105.03195.pdf"
+                    >Universal height and width bounds for random trees</a
+                  >. 2022.
+                </li>
+                <li>
+                  <a href="https://arxiv.org/pdf/2007.05681.pdf"
+                    >Root estimation in Galton-Watson trees</a
+                  >. 2022.
+                </li>
+                <li>
+                  <a
+                    href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-26/issue-none/The-HortonStrahler-number-of-conditioned-GaltonWatson-trees/10.1214/21-EJP678.full"
+                    target="_blank"
+                    >The Horton-Strahler number of conditioned Galton-Watson
+                    trees</a
+                  >. 2021.
+                </li>
+                <li><a id="see-more" href="#research">see more</a></li>
+              </ul>
+            </div>
+            <p id="enjoy-container"></p>
+          </div>
+
+          <!-- RESEARCH TAB -->
+          <div id="research" class="tab-pane">
+            <p>
+              Here are some relevant publications - for a complete list, see my
               <a
-                href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-26/issue-none/The-HortonStrahler-number-of-conditioned-GaltonWatson-trees/10.1214/21-EJP678.full"
-                target="_blank"
-                >The Horton-Strahler number of conditioned Galton-Watson
-                trees</a
-              >. 2021.
-            </li>
-            <li><a href="#research">see more</a></li>
-          </ul>
+                href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
+                >Google Scholar</a
+              >.
+            </p>
+            <ul class="plain-list">
+              <li>
+                <b>Brandenberger, A. M.</b>, Devroye, L., Goh, M.K. and Zhao, R.
+                Y.
+                <a href="https://arxiv.org/pdf/2105.12046.pdf" target="_blank"
+                  >Leaf multiplicity in a Bienaymé-Galton-Watson tree</a
+                >. <i>Discrete Mathematics & Theoretical Computer Science</i>
+                <b>24</b>:1 (2022).
+              </li>
+              <li>
+                Addario-Berry, L., <b>Brandenberger, A. M.</b>, Hamdan, J. and
+                Kerriou, C.
+                <a href="https://arxiv.org/pdf/2105.03195.pdf" target="_blank"
+                  >Universal height and width bounds for random trees</a
+                >. <i>Electronic Journal of Probability</i> <b>27</b>: 1-24
+                (2022).
+              </li>
+              <li>
+                <b>Brandenberger, A. M.</b>, Devroye, L. and Reddad, T.
+                <a
+                  href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-26/issue-none/The-HortonStrahler-number-of-conditioned-GaltonWatson-trees/10.1214/21-EJP678.full"
+                  target="_blank"
+                  >The Horton-Strahler number of conditioned Galton-Watson
+                  trees</a
+                >. <i>Electronic Journal of Probability</i> <b>26</b>: 1-29
+                (2021).
+              </li>
+              <li>
+                <b>Brandenberger, A. M.</b>, Devroye, L. and Goh, M. K.
+                <a href="https://arxiv.org/pdf/2007.05681.pdf" target="_blank"
+                  >Root estimation in Galton-Watson trees</a
+                >. <i>Random Structures & Algorithms</i> <b>61</b>: 520-542
+                (2022).
+              </li>
+              <!-- <li>
+                      Shi, R., Legrand, C. and <b>Brandenberger, A.</b> <a
+                          href="https://www.tandfonline.com/doi/abs/10.1080/10489223.2020.1776010" target="_blank"> Toddlers track
+                          hierarchical structure dependence</a>. <i>Language Acquisition</i> <b>27</b>: 397–409 (2020).
+                  </li> -->
+              <li>
+                Xiong, M., Hotter, R., Nadin, D., Patel, J., Tartakovsky, S.,
+                Wang, Y., Patel, H., Axon, C., Bosiljevac, H.,
+                <b>Brandenberger, A.</b> et. al.
+                <a
+                  href="https://ieeexplore.ieee.org/abstract/document/8914544/"
+                  target="_blank"
+                  >A low-cost, semi-autonomous wheelchair controlled by motor
+                  imagery and jaw muscle activation</a
+                >. In
+                <i
+                  >2019 IEEE International Conference on Systems, Man and
+                  Cybernetics (SMC)</i
+                >, 2180-2185 (2019).
+              </li>
+            </ul>
+          </div>
+          <!-- PROJECTS TAB -->
+          <div id="projects" class="tab-pane">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit (3!!!!).
+            </p>
+          </div>
+          <!-- COLOPHON TAB -->
+          <div id="colophon" class="tab-pane">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit (4!!!!).
+            </p>
+          </div>
         </div>
-        <p id="enjoy-container"></p>
       </section>
     </div>
   </body>

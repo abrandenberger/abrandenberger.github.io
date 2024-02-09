@@ -17,7 +17,7 @@ const enjoyContent = `
               * a flash of insight, 
                 * a <a href="https://www.automneboulangerie.com/">buttery</a> <a href="https://aukouingamann.com/">croissant</a>, 
                 * etc.
-                  * a well-curated <a href="https://louisiana.dk/en/">art</a> <a href="https://www.fotografiska.com/">museum</a>, 
+                  * a well-curated <a href="https://www.fotografiska.com/">art</a> <a href="https://louisiana.dk/en/">museum</a>, 
                   * etc.
                     * the hush before an orchestra begins to play, 
                       * the bite of crisp winter wind, 

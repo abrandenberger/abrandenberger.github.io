@@ -1,3 +1,63 @@
+window.addEventListener("load", function () {
+  // store tabs variable
+  var myTabs = document.querySelectorAll("ul.nav-tabs > li");
+  // hide all the panes
+  function deactivateAllTabs() {
+    for (var i = 0; i < myTabs.length; i++) {
+      myTabs[i].classList.remove("active");
+    }
+  }
+  function hideAllPanes() {
+    var myContentPanes = document.querySelectorAll(".tab-pane");
+    for (var i = 0; i < myContentPanes.length; i++) {
+      myContentPanes[i].classList.remove("active");
+    }
+  }
+  // tab click event
+  function myTabClicks(tabClickEvent) {
+    deactivateAllTabs();
+    var clickedTab = tabClickEvent.currentTarget;
+    clickedTab.classList.add("active");
+    // tabClickEvent.preventDefault();
+    hideAllPanes();
+    var anchorReference = tabClickEvent.target;
+    var activePaneId = anchorReference.getAttribute("href");
+    var activePane = document.querySelector(activePaneId);
+    activePane.classList.add("active");
+  }
+  // event listeners for all tabs
+  for (i = 0; i < myTabs.length; i++) {
+    myTabs[i].addEventListener("click", myTabClicks);
+  }
+  // see more link click event
+  seeMoreLink = document.getElementById("see-more");
+  function seeMoreClick(seeMoreClickEvent) {
+    // seeMoreClickEvent.preventDefault();
+    var activePaneId = seeMoreLink.getAttribute("href");
+    hideAllPanes();
+    var activePane = document.querySelector(activePaneId);
+    activePane.classList.add("active");
+  }
+  seeMoreLink.addEventListener("click", seeMoreClick);
+
+  if (window.location.hash) {
+    var activePaneId = window.location.hash;
+    var activeTabId = activePaneId + "-tab";
+    var activeTab = document.querySelector(activeTabId);
+    activeTab.click();
+  }
+});
+
+// window.addEventListener("DOMContentLoaded", () => {
+//   // get hash from url
+//   if (window.location.hash) {
+//     var activePaneId = window.location.hash;
+//     var activeTabId = activePaneId + "-tab";
+//     var activeTab = document.querySelector(activeTabId);
+//     activeTab.click();
+//   }
+// });
+
 // function insertCss(code) {
 //   let style = document.createElement("style");
 //   style.type = "text/css";

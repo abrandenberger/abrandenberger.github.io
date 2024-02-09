@@ -1,10 +1,10 @@
 :root {
-  --background: #070707;
+  --background: #0d0d0d;
   /* --telescope-highlight: #baead0;
   --telescope-highlight-hover: #8be4b3; */
   /* --telescope-text-color: #ffffff; */
-  --telescope-text-color: #fafafa;
-  --telescope-border: #fafafa;
+  --telescope-text-color: #eee;
+  --telescope-border: #888;
 }
 
 #telescope {
