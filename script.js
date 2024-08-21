@@ -1,29 +1,57 @@
 window.addEventListener("load", function () {
-  // store tabs variable
+  // ***** fix the link animations for chrome bug *****
+  isChrome = /Chrome/.test(navigator.userAgent);
+  // && !/Chromium/.test(navigator.userAgent);
+  if (isChrome) {
+    const links = document.querySelectorAll("a");
+    links.forEach((link) => {
+      link.style.setProperty("transition", "0s");
+    });
+  }
+  // ***** add the tab functionality *****
   var myTabs = document.querySelectorAll("ul.nav-tabs > li");
-  // hide all the panes
+  // hide all the tabs
   function deactivateAllTabs() {
     for (var i = 0; i < myTabs.length; i++) {
       myTabs[i].classList.remove("active");
     }
   }
+  // hide all the content panes
   function hideAllPanes() {
     var myContentPanes = document.querySelectorAll(".tab-pane");
     for (var i = 0; i < myContentPanes.length; i++) {
       myContentPanes[i].classList.remove("active");
     }
   }
-  // tab click event
-  function myTabClicks(tabClickEvent) {
+  function switchToTab(tab) {
     deactivateAllTabs();
-    var clickedTab = tabClickEvent.currentTarget;
-    clickedTab.classList.add("active");
-    // tabClickEvent.preventDefault();
+    tab.classList.add("active");
+  }
+  function switchToPaneId(activePaneId) {
     hideAllPanes();
-    var anchorReference = tabClickEvent.target;
-    var activePaneId = anchorReference.getAttribute("href");
     var activePane = document.querySelector(activePaneId);
     activePane.classList.add("active");
+    localStorage.setItem("activePaneId", activePaneId);
+  }
+  function switchTabAndPane(tab, paneId) {
+    // console.log("switched to" + paneId);
+    switchToTab(tab);
+    switchToPaneId(paneId);
+    document.location.hash = paneId;
+  }
+  // tab click event
+  function myTabClicks(tabClickEvent) {
+    var clickedTab = tabClickEvent.currentTarget;
+    var activePaneId = tabClickEvent.target.getAttribute("href");
+    tabClickEvent.preventDefault();
+    switchTabAndPane(clickedTab, activePaneId);
+  }
+  // initialize to local storage
+  var activePaneId = localStorage.getItem("activePaneId");
+  if (activePaneId) {
+    var activeTabId = activePaneId + "-tab";
+    var activeTabParent = document.querySelector(activeTabId).parentElement;
+    switchTabAndPane(activeTabParent, activePaneId);
   }
   // event listeners for all tabs
   for (i = 0; i < myTabs.length; i++) {
@@ -32,31 +60,44 @@ window.addEventListener("load", function () {
   // see more link click event
   seeMoreLink = document.getElementById("see-more");
   function seeMoreClick(seeMoreClickEvent) {
-    // seeMoreClickEvent.preventDefault();
-    var activePaneId = seeMoreLink.getAttribute("href");
-    hideAllPanes();
-    var activePane = document.querySelector(activePaneId);
-    activePane.classList.add("active");
-  }
-  seeMoreLink.addEventListener("click", seeMoreClick);
-
-  if (window.location.hash) {
-    var activePaneId = window.location.hash;
-    var activeTabId = activePaneId + "-tab";
+    seeMoreClickEvent.preventDefault();
+    var activeTabId = seeMoreLink.getAttribute("href") + "-tab";
     var activeTab = document.querySelector(activeTabId);
     activeTab.click();
   }
-});
+  seeMoreLink.addEventListener("click", seeMoreClick);
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   // get hash from url
-//   if (window.location.hash) {
-//     var activePaneId = window.location.hash;
-//     var activeTabId = activePaneId + "-tab";
-//     var activeTab = document.querySelector(activeTabId);
-//     activeTab.click();
-//   }
-// });
+  window.addEventListener("hashchange", function () {
+    // called when the hash changes (back button)
+    var activeTabId = document.location.hash + "-tab";
+    var activeTab = document.querySelector(activeTabId);
+    activeTab.click();
+  });
+
+  // ***** toggle light/dark theme *****
+  const lightToggle = document.getElementById("light-toggle");
+  const rootElement = document.documentElement; // <html>
+  // load theme preference from localStorage
+  const currentTheme = localStorage.getItem("theme") || "light";
+  const backgroundImg = document.getElementById("bgd");
+  const lightIcon = document.getElementById("lightIcon");
+  setTheme(currentTheme);
+
+  lightToggle.addEventListener("click", () => {
+    const newTheme =
+      rootElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+  });
+  function setTheme(theme) {
+    rootElement.setAttribute("data-theme", theme);
+    lightIcon.classList.toggle("la-moon");
+    lightIcon.classList.toggle("la-sun");
+    backgroundImg.src =
+      theme === "dark" ? "background-dark.jpg" : "background-light.jpg";
+    // save theme to local storage
+    localStorage.setItem("theme", theme);
+  }
+});
 
 // function insertCss(code) {
 //   let style = document.createElement("style");

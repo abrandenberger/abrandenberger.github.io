@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>anna</title>
     <link rel="shortcut icon" href="favicon.png" />
-    <!-- line awesome icons: https://icons8.com/line-awesome -->
     <link rel="stylesheet" href="icons/css/line-awesome.min.css" />
     <link rel="stylesheet" href="fonts.css" />
     <!-- google fonts  -->
@@ -27,7 +26,7 @@
 
   <body>
     <div id="bgd-container">
-      <img id="bgd" src="background-dark.jpg" onload="this.style.opacity=1" />
+      <img id="bgd" src="background-light.jpg" onload="this.style.opacity=1" />
     </div>
     <nav>
       <ul class="nav nav-tabs">
@@ -35,29 +34,30 @@
         <li class=""><a id="research-tab" href="#research">research</a></li>
         <li class=""><a id="projects-tab" href="#projects">projects</a></li>
         <li class=""><a id="colophon-tab" href="#colophon">colophon</a></li>
+        <button id="light-toggle"><i class="las la-sun" id="lightIcon"></i></button>
       </ul>
-      <!-- <b>home</b> - research - projects - colophon -->
     </nav>
     <div class="text-div">
       <p class="heading">
-        Anna Brandenberger <br />
-        MIT Mathematics
+        Anna Brandenberger<br />
+        MIT Mathematics<br />
       </p>
       <section>
         <div class="tab-content">
           <!-- HOME TAB -->
           <div id="home" class="tab-pane active">
             <p>
-              I'm currently a PhD candidate in the department of mathematics at
-              MIT, advised by
+              I'm currently a PhD candidate at MIT, advised by
               <a href="https://math.mit.edu/~elmos/">Elchanan Mossel</a>.
+              Contact me at abrande at mit dot edu!
             </p>
             <p id="research-container"></p>
             <div class="light-links padded-links smaller-text">
               <ul class="plain-list">
                 <li>
                   <a href="https://arxiv.org/pdf/2309.05638"
-                    >Combinative Cumulative Knowledge Processes</a
+                    >Errors are Robustly Tamed in Cumulative Knowledge
+                    Processes</a
                   >. 2023.
                 </li>
                 <li>
@@ -87,45 +87,47 @@
           <!-- RESEARCH TAB -->
           <div id="research" class="tab-pane">
             <p>
-              Here are some relevant publications - for a complete list, see my
+              Here are some relevant publications. For a complete list, see
               <a
                 href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
                 >Google Scholar</a
               >.
             </p>
-            <ul class="plain-list">
+            <ul class="plain-list spaced-list light-text">
               <li>
-                <b>Brandenberger, A. M.</b>, Devroye, L., Goh, M.K. and Zhao, R.
-                Y.
+                <a href="https://arxiv.org/abs/2309.05638" target="_blank">
+                  Errors are Robustly Tamed in Cumulative Knowledge Processes</a
+                >, with Cassandra Marcussen, Elchanan Mossel and Madhu Sudan.
+                <i>COLT</i> 2024.
+              </li>
+              <!-- <li>
                 <a href="https://arxiv.org/pdf/2105.12046.pdf" target="_blank"
                   >Leaf multiplicity in a Bienaymé-Galton-Watson tree</a
-                >. <i>Discrete Mathematics & Theoretical Computer Science</i>
+                >. <br />
+                with Luc Devroye, Marcel Goh and Rosie Zhao. <br />
+                <i>Discrete Mathematics & Theoretical Computer Science</i>
                 <b>24</b>:1 (2022).
-              </li>
+              </li> -->
               <li>
-                Addario-Berry, L., <b>Brandenberger, A. M.</b>, Hamdan, J. and
-                Kerriou, C.
                 <a href="https://arxiv.org/pdf/2105.03195.pdf" target="_blank"
                   >Universal height and width bounds for random trees</a
-                >. <i>Electronic Journal of Probability</i> <b>27</b>: 1-24
-                (2022).
+                >, with Louigi Addario-Berry, Jad Hamdan and Céline Kerriou.
+                <i>Electronic Journal of Probability</i> <b>27</b>: 1-24 (2022).
               </li>
               <li>
-                <b>Brandenberger, A. M.</b>, Devroye, L. and Reddad, T.
                 <a
                   href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-26/issue-none/The-HortonStrahler-number-of-conditioned-GaltonWatson-trees/10.1214/21-EJP678.full"
                   target="_blank"
                   >The Horton-Strahler number of conditioned Galton-Watson
                   trees</a
-                >. <i>Electronic Journal of Probability</i> <b>26</b>: 1-29
-                (2021).
+                >, with Luc Devroye and Tommy Reddad.
+                <i>Electronic Journal of Probability</i> <b>26</b>: 1-29 (2021).
               </li>
               <li>
-                <b>Brandenberger, A. M.</b>, Devroye, L. and Goh, M. K.
                 <a href="https://arxiv.org/pdf/2007.05681.pdf" target="_blank"
                   >Root estimation in Galton-Watson trees</a
-                >. <i>Random Structures & Algorithms</i> <b>61</b>: 520-542
-                (2022).
+                >, with Luc Devroye and Marcel Goh.
+                <i>Random Structures & Algorithms</i> <b>61</b>: 520-542 (2022).
               </li>
               <!-- <li>
                       Shi, R., Legrand, C. and <b>Brandenberger, A.</b> <a
@@ -133,15 +135,13 @@
                           hierarchical structure dependence</a>. <i>Language Acquisition</i> <b>27</b>: 397–409 (2020).
                   </li> -->
               <li>
-                Xiong, M., Hotter, R., Nadin, D., Patel, J., Tartakovsky, S.,
-                Wang, Y., Patel, H., Axon, C., Bosiljevac, H.,
-                <b>Brandenberger, A.</b> et. al.
                 <a
                   href="https://ieeexplore.ieee.org/abstract/document/8914544/"
                   target="_blank"
                   >A low-cost, semi-autonomous wheelchair controlled by motor
                   imagery and jaw muscle activation</a
-                >. In
+                >, with Marley Xiong, Raffi Hotter, Danielle Nadin, and others.
+                In
                 <i
                   >2019 IEEE International Conference on Systems, Man and
                   Cybernetics (SMC)</i
@@ -152,16 +152,137 @@
           <!-- PROJECTS TAB -->
           <div id="projects" class="tab-pane">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit (3!!!!).
+              Here are also
+              <a href="https://github.com/abrandenberger/course-notes"
+                >some introductory math/CS notes</a
+              >
+              and
+              <a href="https://github.com/abrandenberger/academic-resume"
+                >a LaTeX CV and resume template</a
+              >.
             </p>
           </div>
           <!-- COLOPHON TAB -->
           <div id="colophon" class="tab-pane">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit (4!!!!).
+              <b>Technical —</b> HTML, CSS and
+              <a href="http://vanilla-js.com/">Vanilla JS</a>. Hosted on Github
+              Pages. Expanding text uses the
+              <a href="https://github.com/jackyzha0/telescopic-text"
+                >telescoping text</a
+              >
+              library. Icons by Line Awesome.
+            </p>
+            <p>
+              <b>Typography —</b>
+              <a href="https://pangrampangram.com/products/neue-montreal"
+                >Neue Montreal</a
+              >
+              by Pangram Foundry.
+            </p>
+            <p><b>Photography —</b> by yours truly.</p>
+
+            <p style="margin-bottom: 0">
+              <b>Friends —</b> some homies with websites.
+            </p>
+            <div class="light-links padded-links" style="padding-bottom: 0">
+              <ul class="plain-list" style="margin-left: var(--line-px)">
+                <li>
+                  Canada. <i class="lab la-pagelines"></i
+                  ><a href="http://luc.devroye.org/">Luc</a>
+                  <i class="las la-bicycle"></i
+                  ><a href="https://shereenelaidi.github.io/">Shereen</a>
+                  <i class="las la-hourglass-half"></i
+                  ><a href="https://stephenfay.xyz/">Stephen</a>
+                  <i class="las la-camera-retro"></i
+                  ><a href="https://marcelgoh.ca/">Marcel</a>
+                  <i class="las la-chart-bar"></i
+                  ><a href="https://gabrielamp.github.io/">Gabriela</a>
+                  <i class="las la-kiwi-bird"></i
+                  ><a href="https://opent03.github.io/">Viet</a>
+                  <i class="las la-drumstick-bite"></i
+                  ><a href="https://mytran2111.github.io/">Mia</a>
+                  <i class="las la-fire"></i
+                  ><a href="https://tiffanyyong.net/">Tiffany</a>
+                  <i class="las la-spa"></i
+                  ><a href="http://daocheny.github.io/">Dao Chen</a>
+                  <i class="las la-feather-alt"></i
+                  ><a href="https://www.zhengzhou.page/">Zheng</a>
+                  <i class="las la-blender"></i
+                  ><a href="https://alexander.iannantuono.org/">Alex</a>
+                </li>
+                <li>
+                  Europe. <i class="las la-atom"></i
+                  ><a href="https://atomyka.com/">Anna</a>
+                  <i class="las la-fish"></i
+                  ><a href="https://jredondoyuste.github.io/">Jaime</a>
+                  <i class="las la-coffee"></i
+                  ><a href="https://jadhamdan.github.io/">Jad</a>
+                  <i class="las la-satellite-dish"></i
+                  ><a href="https://danielabreitman.github.io/">Daniela</a>
+                  <i class="las la-umbrella"></i
+                  ><a href="https://claudiahleung.github.io/">Claudia</a>
+                </li>
+                <li>
+                  Northeast. <i class="las la-golf-ball"></i
+                  ><a href="https://math.mit.edu/~byronc/">Byron</a>
+                  <i class="las la-cat"></i
+                  ><a href="https://norahtan.github.io/">Norah</a>
+                  <i class="las la-cog"></i
+                  ><a href="https://merny93.github.io/blog/">Simon</a>
+                </li>
+                <li>
+                  California. <i class="las la-pen"></i
+                  ><a href="https://diegolopez.me/">Diego</a>
+                  <i class="las la-meteor"></i
+                  ><a href="https://rhotter.github.io/">Raffi</a>
+                  <i class="las la-flask"></i
+                  ><a href="https://www.marleyx.com/">Marley</a>
+                  <i class="las la-mountain"></i
+                  ><a href="https://www.matthewfoxphysics.com/">Matthew</a>
+                  <i class="las la-book"></i
+                  ><a href="https://maiadd.github.io/">Maia</a>
+                  <i class="las la-dice-d6"></i
+                  ><a href="https://vilas.us/">Vilas</a>
+                </li>
+              </ul>
+            </div>
+            <p>
+              <b>Past academic homes —</b> Prior to MIT, I did a masters at the
+              <a href="https://perimeterinstitute.ca/psi-masters-program">
+                Perimeter Institute</a
+              >, working with
+              <a href="https://www.math.uwaterloo.ca/~a3jagann/"
+                >Aukosh Jagannath</a
+              >. Before that, I did my BSc at
+              <a href="https://www.mcgill.ca/">McGill University</a>, doing
+              research with <a href="http://luc.devroye.org/">Luc Devroye</a>,
+              <a href="https://problab.ca/louigi/">Louigi Addario-Berry</a>,
+              <a href="https://www.cs.mcgill.ca/~prakash/"
+                >Prakash Panangaden</a
+              >
+              and others.
+            </p>
+            <p>
+              <a href="mailto:abrande@mit.edu" disp-title="Email Me"><i
+                class="lar la-fw la-envelope "></i></a>
+              <!-- linkedin -->
+              <a href="https://www.linkedin.com/in/abrandenberger" disp-title="LinkedIn"><i
+                  class="lab la-fw la-linkedin"></i></a>
+              <!-- curius page -->
+              <a href="https://curius.app/anna-brandenberger" disp-title="Curius"><i 
+                  class="las la-fw la-chevron-circle-up"></i></a>
+              <!-- github -->
+              <a href="https://github.com/abrandenberger" disp-title="GitHub"><i
+                  class="lab la-fw la-github"></i></a>
+              <!-- google scholar -->
+              <a href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
+                  disp-title="Google Scholar"><i class="las la-fw la-graduation-cap"></i></i></a>
             </p>
           </div>
+          <!-- end colophon tab -->
         </div>
+        <!-- end tab-content -->
       </section>
     </div>
   </body>
