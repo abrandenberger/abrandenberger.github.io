@@ -81,7 +81,7 @@ body {
 
 section {
   max-width: var(--sec-width);
-  padding: var(--padding-lg) 0 0 var(--padding-lg);
+  padding: var(--padding-lg) 0 var(--padding-lg) var(--padding-lg);
   /* padding: var(--padding-top) 0 0 var(--padding-lg); */
 }
 
@@ -175,7 +175,7 @@ nav {
   margin-bottom: 0;
   padding: 0;
   color: var(--body-color-light);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Style for active nav item */
