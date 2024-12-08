@@ -14,34 +14,40 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,400;1,500;1,600&family=Inter:wght@200;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link href="newstyle.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="telestyle.css" rel="stylesheet" />
     <script src="https://unpkg.com/telescopic-text/lib/index.js"></script>
     <script src="telescoping-text.js"></script>
     <script src="script.js"></script>
-    <link rel="preload" href="background-dark.jpg" as="image" />
-    <link rel="preload" href="background-light.jpg" as="image" />
+    <!-- <link rel="preload" href="background-dark.jpg" as="image" />
+    <link rel="preload" href="background-light.jpg" as="image" /> -->
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   </head>
 
   <body>
-    <div id="bgd-container">
+    <!-- <div id="bgd-container">
       <img id="bgd" src="background-light.jpg" onload="this.style.opacity=1" />
-    </div>
-    <nav>
-      <ul class="nav nav-tabs">
-        <li class="active"><a id="home-tab" href="#home">home</a></li>
-        <li class=""><a id="research-tab" href="#research">research</a></li>
-        <li class=""><a id="projects-tab" href="#projects">projects</a></li>
-        <li class=""><a id="colophon-tab" href="#colophon">colophon</a></li>
-        <button id="light-toggle"><i class="las la-sun" id="lightIcon"></i></button>
-      </ul>
-    </nav>
+    </div> -->
+
     <div class="text-div">
-      <p class="heading">
-        Anna Brandenberger<br />
-        MIT Mathematics<br />
-      </p>
+      <div class="header-wrapper">
+        <p class="heading">
+          Anna Brandenberger<br />
+          MIT Mathematics<br /><br />
+          abrande[at]mit.edu <br />
+        </p>
+        <nav>
+          <ul class="nav nav-tabs">
+            <li class="active"><a id="home-tab" href="#home">home</a></li>
+            <li class=""><a id="research-tab" href="#research">research</a></li>
+            <li class=""><a id="projects-tab" href="#projects">projects</a></li>
+            <li class=""><a id="colophon-tab" href="#colophon">colophon</a></li>
+            <button id="light-toggle">
+              <i class="las la-sun" id="lightIcon"></i>
+            </button>
+          </ul>
+        </nav>
+      </div>
       <section>
         <div class="tab-content">
           <!-- HOME TAB -->
@@ -49,11 +55,15 @@
             <p>
               I'm currently a PhD candidate at MIT, advised by
               <a href="https://math.mit.edu/~elmos/">Elchanan Mossel</a>.
-              Contact me at abrande at mit dot edu!
             </p>
             <p id="research-container"></p>
             <div class="light-links padded-links smaller-text">
               <ul class="plain-list">
+                <li>
+                  <a href="https://arxiv.org/abs/2411.14336" target="_blank"
+                    >Finding the root in random nearest neighbor trees</a
+                  >. 2024.
+                </li>
                 <li>
                   <a href="https://arxiv.org/pdf/2309.05638"
                     >Errors are Robustly Tamed in Cumulative Knowledge
@@ -94,6 +104,18 @@
               >.
             </p>
             <ul class="plain-list spaced-list light-text">
+              <li>
+                <a href="https://arxiv.org/abs/2411.14336" target="_blank"
+                  >Finding the root in random nearest neighbor trees</a
+                >, with Cassandra Marcussen, Elchanan Mossel and Madhu Sudan.
+                Preprint. 2024.
+              </li>
+              <li>
+                <a href="https://arxiv.org/abs/2410.06481" target="_blank"
+                  >Leaf Stripping on Uniform Attachment Trees</a
+                >, with Louigi Addario-Berry, Simon Briend, Nicolas Broutin and
+                Gábor Lugosi. Preprint. 2024.
+              </li>
               <li>
                 <a href="https://arxiv.org/abs/2309.05638" target="_blank">
                   Errors are Robustly Tamed in Cumulative Knowledge Processes</a
@@ -152,44 +174,76 @@
           <!-- PROJECTS TAB -->
           <div id="projects" class="tab-pane">
             <p>
-              Here are also
-              <a href="https://github.com/abrandenberger/course-notes"
-                >some introductory math/CS notes</a
-              >
-              and
+              click
+              <a href="https://github.com/abrandenberger/course-notes">here</a>
+              for some introductory math/CS notes
+            </p>
+            <p>
+              click
               <a href="https://github.com/abrandenberger/academic-resume"
-                >a LaTeX CV and resume template</a
-              >.
+                >here</a
+              >
+              to spice up your resume with a fresh LaTeX template
+            </p>
+            <p>
+              click <a href="/random-trees">here</a> to generate some random
+              trees (make sure click on big tree! drag the branches around!)
+            </p>
+            <p>
+              click <a href="/mchacks-2021/">here</a> to see pretty animations
+              of orbits of matrix Lie groups (click on the question mark if
+              you're confused about what you're seeing!)
+            </p>
+            <p>
+              click
+              <a href="https://diegolopez.me/McGill-Physics-Hackathon-2020/"
+                >here</a
+              >
+              if you've ever wondered what electrodynamics on a flat torus could
+              be like (click to add charges! watch them spin!)
+            </p>
+            <p>
+              click
+              <a
+                href="https://neurotechx.com/milo-brain-controlled-wheelchair-1st-place-winners/"
+                >here</a
+              >
+              if want to hear about the brain-controlled wheelchair our group of
+              undergrads built
             </p>
           </div>
+
           <!-- COLOPHON TAB -->
           <div id="colophon" class="tab-pane">
             <p>
-              <b>Technical —</b> HTML, CSS and
-              <a href="http://vanilla-js.com/">Vanilla JS</a>. Hosted on Github
-              Pages. Expanding text uses the
+              <b>technical —</b> html, css,
+              <a href="http://vanilla-js.com/">vanilla js</a>. hosted on github
+              pages. expanding text uses the
               <a href="https://github.com/jackyzha0/telescopic-text"
                 >telescoping text</a
               >
-              library. Icons by Line Awesome.
+              library. icons by
+              <a href="https://icons8.com/line-awesome">line awesome</a>.
             </p>
             <p>
-              <b>Typography —</b>
+              <b>typography —</b>
               <a href="https://pangrampangram.com/products/neue-montreal"
-                >Neue Montreal</a
+                >neue montreal</a
               >
-              by Pangram Foundry.
+              by pangram foundry.
             </p>
-            <p><b>Photography —</b> by yours truly.</p>
-
             <p style="margin-bottom: 0">
-              <b>Friends —</b> some homies with websites.
+              <b>friends —</b> some homies with websites (with high probability,
+              some are missing; if so, with probability one, this is
+              unintentional).
             </p>
             <div class="light-links padded-links" style="padding-bottom: 0">
               <ul class="plain-list" style="margin-left: var(--line-px)">
                 <li>
                   Canada. <i class="lab la-pagelines"></i
                   ><a href="http://luc.devroye.org/">Luc</a>
+                  <i class="las la-beer"></i
+                  ><a href="https://problab.ca/louigi/">Louigi</a>
                   <i class="las la-bicycle"></i
                   ><a href="https://shereenelaidi.github.io/">Shereen</a>
                   <i class="las la-hourglass-half"></i
@@ -198,12 +252,12 @@
                   ><a href="https://marcelgoh.ca/">Marcel</a>
                   <i class="las la-chart-bar"></i
                   ><a href="https://gabrielamp.github.io/">Gabriela</a>
-                  <i class="las la-kiwi-bird"></i
-                  ><a href="https://opent03.github.io/">Viet</a>
+                  <span class="nowrap"
+                    ><i class="las la-kiwi-bird"></i
+                    ><a href="https://opent03.github.io/">Viet</a></span
+                  >
                   <i class="las la-drumstick-bite"></i
                   ><a href="https://mytran2111.github.io/">Mia</a>
-                  <i class="las la-fire"></i
-                  ><a href="https://tiffanyyong.net/">Tiffany</a>
                   <i class="las la-spa"></i
                   ><a href="http://daocheny.github.io/">Dao Chen</a>
                   <i class="las la-feather-alt"></i
@@ -212,9 +266,7 @@
                   ><a href="https://alexander.iannantuono.org/">Alex</a>
                 </li>
                 <li>
-                  Europe. <i class="las la-atom"></i
-                  ><a href="https://atomyka.com/">Anna</a>
-                  <i class="las la-fish"></i
+                  Europe. <i class="las la-fish"></i
                   ><a href="https://jredondoyuste.github.io/">Jaime</a>
                   <i class="las la-coffee"></i
                   ><a href="https://jadhamdan.github.io/">Jad</a>
@@ -224,18 +276,28 @@
                   ><a href="https://claudiahleung.github.io/">Claudia</a>
                 </li>
                 <li>
-                  Northeast. <i class="las la-golf-ball"></i
+                  Northeast. <i class="las la-atom"></i
+                  ><a href="https://atomyka.com/">Anna</a>
+                  <i class="las la-golf-ball"></i
                   ><a href="https://math.mit.edu/~byronc/">Byron</a>
                   <i class="las la-cat"></i
                   ><a href="https://norahtan.github.io/">Norah</a>
                   <i class="las la-cog"></i
                   ><a href="https://merny93.github.io/blog/">Simon</a>
+                  <i class="las la-fire"></i
+                  ><a href="https://tiffanyyong.net/">Tiffany</a>
+                  <i class="las la-compass"></i
+                  ><a href="https://travisadillon.com/">Travis</a>
+                  <span class="nowrap"
+                    ><i class="las la-chess-bishop"></i
+                    ><a href="https://axiomofchoice.dev/">Jacob</a></span
+                  >
                 </li>
                 <li>
                   California. <i class="las la-pen"></i
                   ><a href="https://diegolopez.me/">Diego</a>
                   <i class="las la-meteor"></i
-                  ><a href="https://rhotter.github.io/">Raffi</a>
+                  ><a href="https://rhotter.vercel.app/">Raffi</a>
                   <i class="las la-flask"></i
                   ><a href="https://www.marleyx.com/">Marley</a>
                   <i class="las la-mountain"></i
@@ -248,36 +310,35 @@
               </ul>
             </div>
             <p>
-              <b>Past academic homes —</b> Prior to MIT, I did a masters at the
+              <b>past academic homes —</b> prior to MIT, i evaded some geese
+              (did a masters) at the
               <a href="https://perimeterinstitute.ca/psi-masters-program">
-                Perimeter Institute</a
+                perimeter institute</a
               >, working with
               <a href="https://www.math.uwaterloo.ca/~a3jagann/"
-                >Aukosh Jagannath</a
-              >. Before that, I did my BSc at
-              <a href="https://www.mcgill.ca/">McGill University</a>, doing
-              research with <a href="http://luc.devroye.org/">Luc Devroye</a>,
-              <a href="https://problab.ca/louigi/">Louigi Addario-Berry</a>,
+                >aukosh jagannath</a
+              >. before that, i ate some bagels (did my BSc) at
+              <a href="https://www.mcgill.ca/">mcgill</a>, doing research with
+              <a href="http://luc.devroye.org/">luc devroye</a>,
+              <a href="https://problab.ca/louigi/">louigi addario-berry</a>,
               <a href="https://www.cs.mcgill.ca/~prakash/"
-                >Prakash Panangaden</a
+                >prakash panangaden</a
               >
               and others.
             </p>
             <p>
-              <a href="mailto:abrande@mit.edu" disp-title="Email Me"><i
-                class="lar la-fw la-envelope "></i></a>
-              <!-- linkedin -->
-              <a href="https://www.linkedin.com/in/abrandenberger" disp-title="LinkedIn"><i
-                  class="lab la-fw la-linkedin"></i></a>
-              <!-- curius page -->
-              <a href="https://curius.app/anna-brandenberger" disp-title="Curius"><i 
-                  class="las la-fw la-chevron-circle-up"></i></a>
-              <!-- github -->
-              <a href="https://github.com/abrandenberger" disp-title="GitHub"><i
-                  class="lab la-fw la-github"></i></a>
-              <!-- google scholar -->
-              <a href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
-                  disp-title="Google Scholar"><i class="las la-fw la-graduation-cap"></i></i></a>
+              <b>the academic links —</b>
+              <a
+                href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
+                >google scholar</a
+              >
+              . <a href="https://arxiv.org/a/brandenberger_a_1.html">arxiv</a> .
+              <a href="https://www.linkedin.com/in/abrandenberger">linkedin</a>
+              <br />
+              <b>the non-academic links —</b>
+              <a href="https://curius.app/anna-brandenberger">curius</a> .
+              <a href="https://github.com/abrandenberger">github</a> .
+              <a href="https://letterboxd.com/confvtatis/">letterboxd</a>
             </p>
           </div>
           <!-- end colophon tab -->
