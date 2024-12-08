@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 200;
+  font-style: normal;
+  src: url("neue-montreal/PPNeueMontreal-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 400;
+  font-style: normal;
+  src: url("neue-montreal/PPNeueMontreal-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 450;
+  font-style: italic;
+  src: url("neue-montreal/PPNeueMontreal-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 530;
+  font-style: normal;
+  src: url("neue-montreal/PPNeueMontreal-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 700;
+  font-style: italic;
+  src: url("neue-montreal/PPNeueMontreal-SemiBolditalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 800;
+  font-style: normal;
+  src: url("neue-montreal/PPNeueMontreal-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("tiempos/test-tiempos-headline-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("tiempos/test-tiempos-headline-regular-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("tiempos/test-tiempos-headline-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("tiempos/test-tiempos-headline-medium-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("tiempos/test-tiempos-headline-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("tiempos/test-tiempos-headline-semibold-italic.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("tiempos/test-tiempos-headline-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("tiempos/test-tiempos-headline-bold-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}

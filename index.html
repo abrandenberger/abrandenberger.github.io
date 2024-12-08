@@ -1,377 +1,350 @@
 <!DOCTYPE html>
 
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>anna</title>
-    <link rel="shortcut icon" href="favicon.png">
-    <!-- font awesome icons: https://fontawesome.com/v4.7.0/icons/  -->
-    <!-- line awesome icons: https://icons8.com/line-awesome -->
-    <link rel="stylesheet" href="icons/css/line-awesome.min.css">
-    <!-- computer modern font -->
-    <link rel="stylesheet" href="fonts/Serif/cmun-serif.css">
-    </link>
-    <link rel="stylesheet" href="fonts/Sans/cmun-sans.css">
-    </link>
-    <link rel="stylesheet" href="fonts/Bright/cmun-bright.css">
-    </link>
-    <link rel="stylesheet" href="fonts/Serif-Slanted/cmun-serif-slanted.css">
-    </link>
-    <link rel="stylesheet" href="fonts/Serif-Upright-Italic/cmun-upright-italic.css">
-    </link>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="icons/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="fonts.css" />
     <!-- google fonts  -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet"> 
-    <!-- KaTeX -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
-        integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
-        integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
-        crossorigin="anonymous"></script>
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
-        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
-        crossorigin="anonymous"></script>
-
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,400;1,500;1,600&family=Inter:wght@200;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="telestyle.css" rel="stylesheet" />
+    <script src="https://unpkg.com/telescopic-text/lib/index.js"></script>
+    <script src="telescoping-text.js"></script>
     <script src="script.js"></script>
-</head>
+    <!-- <link rel="preload" href="background-dark.jpg" as="image" />
+    <link rel="preload" href="background-light.jpg" as="image" /> -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  </head>
 
-<body class='noscroll'>
-    <div id="overlay" class="latetransition">
-        <div id="card">
-            <div id="titles">
-                <div id='name'> Anna Brandenberger </div>
-                <div id='position'> researcher and resident curious person
-                </div>
-                <div id='affiliation' class='affiliationtext'> math <i class="las la-at"></i> MIT </div>
-            </div>
-            <div class='links affiliationtext'>
-                <div class="contact">
-                    <!-- CONTACT -->
-                    <!-- email -->
-                    <a href="mailto:abrande@mit.edu" disp-title="Email Me"><i
-                        class="lar la-fw la-envelope "></i></a>
-                    <!-- linkedin -->
-                    <a href="https://www.linkedin.com/in/abrandenberger" disp-title="LinkedIn"><i
-                        class="lab la-fw la-linkedin"></i></a>
-                    <!-- curius page -->
-                    <a href="https://curius.app/anna-brandenberger" disp-title="Curius"><i 
-                        class="las la-fw la-chevron-circle-up"></i></a>
-                    <!-- github -->
-                    <a href="https://github.com/abrandenberger" disp-title="GitHub"><i
-                        class="lab la-fw la-github"></i></a>
-                    <!-- google scholar -->
-                    <a href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
-                        disp-title="Google Scholar"><i class="las la-fw la-graduation-cap"></i></i></a>
-                    <!-- substack -->
-                    <!-- <a href="link to substack" disp-title="Substack"><i 
-                      class="las la-bookmark"></i></a> -->
-                </div>
-                <button id="leavecard" class="affiliationtext" onclick="toggleout()">
-                    ENTER <i class='las la-fw la-chevron-right'></i>
-                </button>
-            </div>
-        </div>
-        <a id="inspo" href="http://ciralism.tumblr.com" target="_blank">inspiration</a>
-    </div>
+  <body>
+    <!-- <div id="bgd-container">
+      <img id="bgd" src="background-light.jpg" onload="this.style.opacity=1" />
+    </div> -->
 
-    <button id="returntocard" onclick="togglein()"><i class='las la-fw la-chevron-down'></i></button>
-    <div id="content" class="main">
-        <div id="header">
-            <h2> Anna Brandenberger
-                <!-- <span style="font-size: smaller;"> <i class="las la-leaf"></i></span> -->
-            </h2>
-            <div style="display: inline-block;">
-                <a href="mailto:abrande@mit.edu"><i class="las la-fw la-envelope "></i></a><a
-                    href="https://curius.app/anna-brandenberger"><i class="las la-fw la-chevron-circle-up"></i></a>
-            </div>
-        </div>
-        <p>I am a math PhD student at <a href="https://math.mit.edu/" target="_blank">MIT</a>, where my 
-          research interests are in probability (random discrete structures, probabilistic analysis 
-          of algorithms and more) and quantum information theory.
-          I'm also building <a href="https://curius.app/" target="_blank">Curius</a>, a social bookmarker - 
-          check it out! 
+    <div class="text-div">
+      <div class="header-wrapper">
+        <p class="heading">
+          Anna Brandenberger<br />
+          MIT Mathematics<br /><br />
+          abrande[at]mit.edu <br />
         </p>
-        <p>
-            Previously, I spent 10 months as a masters student at the <a href="https://perimeterinstitute.ca/psi-masters-program">
-              Perimeter Institute</a>, working with <a href="https://www.math.uwaterloo.ca/~a3jagann/">
-              Aukosh</a>. 
-            Even more distantly, I did my BSc at <a href="https://www.mcgill.ca/">McGill</a>, doing 
-            research with <a href="http://luc.devroye.org/" target="_blank">Luc</a>, <a href="https://problab.ca/louigi/" 
-            target="_blank">Louigi</a>, <a href="https://www.cs.mcgill.ca/~prakash/" target="_blank">Prakash</a> 
-            and others. 
-        </p>
-        <p class="lighter">
-            When I'm not scribbling mathematical nonsense, you can find me reading Dostoevsky, creating my next <a
-                href="https://open.spotify.com/playlist/0mgJc653Q2kYsSQEwfK7AT?si=C1_8FKzLSumn8wY-7F5C7g"
-                target="_blank">oddly</a> <a
-                href="https://open.spotify.com/playlist/3H1nr18GB6LPB6myTYek7c?si=IO34RAyIRjGXt_X_bGC5rQ"
-                target="_blank">specific</a> <a
-                href="https://open.spotify.com/playlist/5MxnqUCTDho9d1qU3rJDZT?si=F4TSkNhxTR6Cu7SlGjwCbQ"
-                taregt="_blank">Spotify</a> <a
-                href="https://open.spotify.com/playlist/2IudEQhWMGZI6ucYxl4rbD?si=zEw3BPzPRMu6q1imp911bw"
-                target="_blank">playlist</a> or playing piano and
-            cursing Rachmaninov's handspan.
-        </p>
-
-        <div style="height:10px"></div>
-
-        <div class="collapsible-wrapper">
-            <h3 class="collapsible">Research</h3>
-            <h3 class="collapsible">Projects</h3>
-            <h3 class="collapsible">Miscellaneous</h3>
-            <!-- <h3 class="collapsible">Course Notes</h3> -->
-        </div>
-
-        <div class="collapsible-content">
-            <p class="partopmargin">
-            Here are some relevant publications - for a complete list, see my <a
-                href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en">Google
-                Scholar</a>.
-            </p>
-            <ul class="projectlist">
-                <li>
-                  <b>Brandenberger, A. M.</b>, Devroye, L., Goh, M.K. and Zhao, R. Y. <a href="https://arxiv.org/pdf/2105.12046.pdf" target="_blank">Leaf 
-                      multiplicity in a Bienaymé-Galton-Watson tree</a>. <i>Discrete Mathematics & Theoretical Computer Science</i>
-                      <b>24</b>:1 (2022). 
-                </li>
-                <li>
-                    Addario-Berry, L., <b>Brandenberger, A. M.</b>, Hamdan, J. and Kerriou, C. <a
-                        href="https://arxiv.org/pdf/2105.03195.pdf" target="_blank">Universal height and width bounds for random trees</a>. 
-                        <i>Electronic Journal of Probability</i> <b>27</b>: 1-24 (2022).
-                </li>
-                <li>
-                    <b>Brandenberger, A. M.</b>, Devroye, L. and Reddad, T. <a
-                        href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-26/issue-none/The-HortonStrahler-number-of-conditioned-GaltonWatson-trees/10.1214/21-EJP678.full" target="_blank">The 
-                        Horton-Strahler number of conditioned Galton-Watson trees</a>. <i>Electronic Journal of Probability</i> 
-                        <b>26</b>: 1-29 (2021).
-                </li>
-                <li>
-                    <b>Brandenberger, A. M.</b>, Devroye, L. and Goh, M. K. <a
-                        href="https://arxiv.org/pdf/2007.05681.pdf" target="_blank">Root estimation in Galton-Watson trees</a>.
-                    <i>Random Structures & Algorithms</i> <b>61</b>: 520-542 (2022).
-                </li>
-                <!-- <li>
-                    Shi, R., Legrand, C. and <b>Brandenberger, A.</b> <a
-                        href="https://www.tandfonline.com/doi/abs/10.1080/10489223.2020.1776010" target="_blank"> Toddlers track
-                        hierarchical structure dependence</a>. <i>Language Acquisition</i> <b>27</b>: 397–409 (2020).
-                </li> -->
-                <li>
-                    Xiong, M., Hotter, R., Nadin, D., Patel, J., Tartakovsky, S., Wang, Y., Patel, H., Axon, C.,
-                    Bosiljevac, H., <b>Brandenberger, A.</b> et. al. <a
-                        href="https://ieeexplore.ieee.org/abstract/document/8914544/" target="_blank">A low-cost, semi-autonomous
-                        wheelchair controlled by motor imagery and jaw muscle activation</a>. In <i>2019 IEEE
-                        International Conference on Systems, Man and Cybernetics (SMC)</i>, 2180-2185 (2019).
-                </li>
-            </ul>
-        </div>
-
-        <div class="collapsible-content">
-            <ul class='projectlist'>
-                <li>
-                    <a href="/mchacks-2021/">Lie for Me</a>, built in January 2021 with <a
-                        href="https://diegolopez.me/">Diego</a> and <a
-                        href="https://gabrielamp.github.io/">Gabriela</a>. An animation of the orbits of Lie groups. <a
-                        href="https://github.com/abrandenberger/mchacks-2021"><i class='lab la-fw la-github'></i></a>
-                </li>
-                <li>
-                    <a href="http://inthestars.tech" target="_blank">In the Stars</a>, built in January 2021 with Simon
-                    and Jacob for Hack the North. Letting the stars answer your burning questions, using GPT-3 and the
-                    live feed of a radio telescope. <a href="https://github.com/merny93/bright-future" target="_blank"><i
-                            class='lab la-fw la-github'></i></a>
-                </li>
-                <li>
-                    <a href="https://diegolopez.me/McGill-Physics-Hackathon-2020/" target="_blank">Donut
-                        Electrodynamics</a>, built in November 2020 with <a href="https://diegolopez.me/">Diego</a>, <a
-                        href="https://shereenelaidi.github.io/">Shereen</a>, <a
-                        href="https://maiadd.github.io/">Maia</a> and <a
-                        href="https://gabrielamp.github.io/">Gabriela</a>. Simulating electrodynamics on a flat torus.
-                    Won 1st place at the McGill Physics Hackathon! <a
-                        href="https://github.com/Symmetries/McGill-Physics-Hackathon-2020" target="_blank"><i
-                            class='lab la-fw la-github'></i></a>
-                </li>
-                <li><a href="/random-trees">Random Trees</a>, built in summer 2020 with <a
-                        href="https://diegolopez.me/">Diego Lopez</a>. Animating the free tree structures of randomly
-                    generated Galton-Watson trees of various offspring distributions. <a
-                        href="https://github.com/abrandenberger/random-trees/" target="_blank"><i class='lab la-fw la-github'></i></a>
-                </li>
-                <li><a href="https://neurotechx.com/milo-brain-controlled-wheelchair-1st-place-winners/">MILO: the
-                        brain-controlled wheelchair</a>, built in winter 2019 with McGill NeuroTech. "Students from
-                    different backgrounds — including biology, computer science, hardware engineering, data collection,
-                    and machine learning — got together on their free-time to start a project to challenge themselves
-                    and improve the world around them. By gathering EEG bio-signals from the brain, they were able to
-                    process the data in order to direct the wheelchair forward, left, right, and stop. Over the course
-                    of the development, the students were able to create a wheelchair without using motor controls –
-                    just the control of the user’s mind – further improved with impressive semi-autonomous
-                    enhancements." <a href="https://github.com/NTX-McGill/NeuroTechX-McGill-2019" target="_blank"><i
-                            class='lab la-fw la-github'></i></a>
-                </li>
-            </ul>
-            <p style="margin-top: 0;">
-                For more samples of code written at 2am, see my <a href="https://github.com/abrandenberger">GitHub</a>.
-            </p>
-        </div>
-
-        <div class="collapsible-content">
-          <p class="partopmargin">
-            If you happen to be at McGill, check out the great folks at <a href="https://sumsmcgill.ca/">SUMS</a>, <a
-            href="https://reporter.mcgill.ca/meet-milo-mcgills-brain-powered-wheelchair/">McGill NeuroTech</a>, the 
-            <a href="https://sites.google.com/site/mcgillcmc/">Classical Music Club</a> and <a href="https://www.msurj.com/">
-              MSURJ</a>.
-          </p>
-          <p>
-            Here are a few things I’ve written for various classes on topics that I thought were cool, feel free to check them 
-            out (or not)
-          </p>
-          <ul class='projectlist'>
-            <li>
-              <a href="resources/thermo_negative_entropy.pdf">On the thermodynamic
-                  meaning of negative entropy</a>. Survey paper written for COMP 480: Independent Studies in
-              Computer Science, 18p (2020).
-            </li>
-            <li>
-              <a href="resources/fluctuation_dissipation_policy_grad.pdf">Extending fluctuation dissipation
-                relations to policy gradient methods in reinforcement learning</a>. Project report for COMP 599:
-              Mathematical Foundations of Machine Learning, 14p (2019).
-            </li>
-            <li>
-              <a href="resources/topology_loss_surface.pdf">On the study of the topology, geometry, and second order properties 
-                of the loss surface of deep neural networks</a>. Project report for COMP 598: Mathematical Foundations of 
-                Machine Learning (Statistical Learning Theory), 12p (2018).
-            </li>
+        <nav>
+          <ul class="nav nav-tabs">
+            <li class="active"><a id="home-tab" href="#home">home</a></li>
+            <li class=""><a id="research-tab" href="#research">research</a></li>
+            <li class=""><a id="projects-tab" href="#projects">projects</a></li>
+            <li class=""><a id="colophon-tab" href="#colophon">colophon</a></li>
+            <button id="light-toggle">
+              <i class="las la-sun" id="lightIcon"></i>
+            </button>
           </ul>
-          <p>
-            <a href="https://github.com/abrandenberger/course-notes" target="_blank">Some introductory math/CS notes</a> 
-            - drop a star if they're useful to you!
-            <br>
-            <a href="https://github.com/abrandenberger/academic-resume" target="_blank">A LaTeX CV and resume template</a>
-          </p>
-          <p style="margin-top: 0">An unordered and incomplete list of faves,</p>
-          <ul class="projectlist">
-            <li>
-              <b>Scripts.</b> Charles Baudelaire, Emily Brontë, Ted Chiang, Fyodor Dostoevsky, Elena Ferrante, 
-              Ágota Kristóf, Ursula Le Guin, Patrick Ness, V.E. Schwab
-            </li>
-            <li>
-              <b>Scenes.</b> Amadeus, 霸王别姬, 花样年华, The Wire, Amores Perros, The Prestige, Arrival, Chernobyl, 
-              Parasite, Queen's Gambit
-            </li>
-            <li>
-              <b>Sounds.</b> Rachmaninov, Shostakovich, Prokofiev, Ravel, Chopin, Radiohead, Lorde, Jacob Collier, 
-              King Princess
-            </li>
-          </ul>
-        </div>
-
-        <!-- <div class="collapsible-content">
-            <ul class='projectlist'>
-                <li><b>COMP 252: Honours Algorithms and Data Structures</b>.
-                    <i><a href='resources/AlgorithmComplexityAnalysis-2018-Brandenberger-Malakhveitchouk.pdf'>Algorithm
-                            Complexity Analysis</a></i> and <i><a
-                            href='resources/Divide+Conquer-I-2018-Brandenberger-Malakhveitchouk.pdf'>Divide and
-                            Conquer</a></i>, written with Anton Malakhveitchouk (Prof. Luc Devroye, winter 2018). <i><a
-                            href='resources/DynamicProgramming-2019-Brandenberger.pdf'>Dynamic Programming</a></i>
-                    (Prof. Luc Devroye, winter 2019).
-                </li>
-                <li><b>MATH 240: Discrete Structures</b>. <a href='resources/MATH-240-notes.pdf'>Full course notes</a>,
-                    written with Binyuan Sun (Prof. Benjamin Seamone, winter 2018).</li>
-                <li><b>MATH 247: Honours Applied Linear Algebra</b>. <a href='resources/MATH-247-notes.pdf'>Full course
-                        notes</a>, written with Daniela Breitman (Prof. Axel Hundemer, winter 2018).</li>
-                <li><b>MATH 323: Probability Theory</b>. <a href='resources/MATH-323-notes.pdf'>Full course notes</a>
-                    (Prof. David Stephens, fall 2018).
-                </li>
-            </ul>
-            <p style="margin-top: 0;">
-                Drop a star on the <a href="https://github.com/abrandenberger/course-notes">GitHub repo</a> if you found
-                these notes useful <span style="font-size: smaller;"><i class="las la-star"></i></span>
+        </nav>
+      </div>
+      <section>
+        <div class="tab-content">
+          <!-- HOME TAB -->
+          <div id="home" class="tab-pane active">
+            <p>
+              I'm currently a PhD candidate at MIT, advised by
+              <a href="https://math.mit.edu/~elmos/">Elchanan Mossel</a>.
             </p>
-        </div> -->
-
-        <h3 class="sectionhead collapsible">Friends</h3>
-        <div class='collapsible-content'>
-          <p class="partopmargin">
-            <b>Canada.</b> 
-            <i class="lab la-pagelines"></i><a href="http://luc.devroye.org/" target="_blank">Luc</a> 
-            <i class="las la-bicycle"></i><a href="https://shereenelaidi.github.io/" target="_blank">Shereen</a> 
-            <i class="las la-hourglass-half"></i><a href="https://stephenfay.xyz/" target="_blank">Stephen</a> 
-            <i class="las la-camera-retro"></i><a href="https://marcelgoh.ca/" target="_blank">Marcel</a> 
-            <i class="las la-pen"></i><a href="https://diegolopez.me/" target="_blank">Diego</a>
-            <i class="las la-chart-bar"></i><a href="https://gabrielamp.github.io/" target="_blank">Gabriela</a>
-            <i class="las la-kiwi-bird"></i><a href="https://opent03.github.io/" target="_blank">Viet</a>
-            <i class="las la-drumstick-bite"></i><a href="https://mytran2111.github.io/" target="_blank">Mia</a>
-            <i class="las la-fire"></i><a href="https://tiffanyyong.net/" target="_blank">Tiffany</a>
-            <i class="las la-spa"></i><a href="http://daocheny.github.io/" target="_blank">Dao Chen</a>
-            <i class="las la-feather-alt"></i><a href="https://www.zhengzhou.page/" target="_blank">Zheng</a>
-            <i class="las la-blender"></i><a href="https://alexander.iannantuono.org/" target="_blank">Alex</a>
-          </p>
-          <p>
-            <b>Europe.</b> 
-            <i class="las la-atom"></i><a href="https://atomyka.com/" target="_blank">Anna</a> 
-            <i class="las la-fish"></i><a href="https://jredondoyuste.github.io/" target="_blank">Jaime</a> 
-            <i class="las la-coffee"></i><a href="https://jadhamdan.github.io/" target="_blank">Jad</a>
-            <i class="las la-satellite-dish"></i><a href="https://danielabreitman.github.io/" 
-              target="_blank">Daniela</a>
-            <i class="las la-umbrella"></i><a href="https://claudiahleung.github.io/" target="_blank">Claudia</a>
-          </p>
-          <p>
-            <b>Northeast.</b> 
-            <i class="las la-meteor"></i><a href="https://rhotter.github.io/" target="_blank">Raffi</a> 
-            <i class="las la-flask"></i><a href="https://www.marleyx.com/" target="_blank">Marley</a> 
-            <i class="las la-cog"></i><a href="https://merny93.github.io/blog/" target="_blank">Simon</a>
-          </p>
-            <b>California.</b> 
-            <i class="las la-mountain"></i><a href="https://www.matthewfoxphysics.com/" 
-            target="_blank">Matthew</a> 
-            <i class="las la-book"></i><a href="https://maiadd.github.io/" target="_blank">Maia</a>
-            <i class="las la-dice-d6"></i><a href="https://vilas.us/">Vilas</a>
-          </p>
-
-            <!-- <div class="threecolentry">
-                <a href="https://maiadd.github.io/" target="_blank"><i class="las la-fw la-book"></i> Maia Darmon</a>
-                <a href="https://danielabreitman.github.io/" target="_blank"><i class="las la-fw la-satellite-dish"></i>
-                    Daniela Breitman</a>
-                <a href="http://luc.devroye.org/" target="_blank"><i class="lab la-fw la-pagelines"></i> Luc Devroye</a>
-                <a href="https://shereenelaidi.github.io/" target="_blank"><i class="las la-fw la-bicycle"></i> Shereen
-                    Elaidi</a>
-                <a href="https://dcxst.github.io/" target="_blank"><i class="las la-fw la-hourglass-half"></i> Stephen Fay</a>
-                <a href="https://marcelgoh.ca/" target="_blank"><i class="las la-fw la-camera-retro "></i> Marcel
-                    Goh</a>
+            <p id="research-container"></p>
+            <div class="light-links padded-links smaller-text">
+              <ul class="plain-list">
+                <li>
+                  <a href="https://arxiv.org/abs/2411.14336" target="_blank"
+                    >Finding the root in random nearest neighbor trees</a
+                  >. 2024.
+                </li>
+                <li>
+                  <a href="https://arxiv.org/pdf/2309.05638"
+                    >Errors are Robustly Tamed in Cumulative Knowledge
+                    Processes</a
+                  >. 2023.
+                </li>
+                <li>
+                  <a href="https://arxiv.org/pdf/2105.03195.pdf"
+                    >Universal height and width bounds for random trees</a
+                  >. 2022.
+                </li>
+                <li>
+                  <a href="https://arxiv.org/pdf/2007.05681.pdf"
+                    >Root estimation in Galton-Watson trees</a
+                  >. 2022.
+                </li>
+                <li>
+                  <a
+                    href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-26/issue-none/The-HortonStrahler-number-of-conditioned-GaltonWatson-trees/10.1214/21-EJP678.full"
+                    target="_blank"
+                    >The Horton-Strahler number of conditioned Galton-Watson
+                    trees</a
+                  >. 2021.
+                </li>
+                <li><a id="see-more" href="#research">see more</a></li>
+              </ul>
             </div>
-            <div class="threecolentry">
-                <a href="https://jadhamdan.github.io/" target="_blank"><i class="las la-fw la-coffee"></i> Jad
-                    Hamdan</a>
-                <a href="https://alexander.iannantuono.org/" target="_blank"><i class="las la-fw la-blender"></i> Alex
-                    Iannantuono</a>
-                <a href="https://jredondoyuste.github.io/" target="_blank"><i class="las la-fw la-fish"></i> Jaime Redondo-Y.</a>
-                <a href="https://atomyka.com/" target="_blank"><i class="las la-fw la-atom"></i> Anna Knörr</a>
-                <a href="https://claudiahleung.github.io/" target="_blank"><i class="las la-fw la-umbrella"></i> Claudia
-                    Leung</a>
-                <a href="https://diegolopez.me/" target="_blank"><i class="las la-fw la-pen"></i> Diego Lopez</a>
-                <a href="https://gabrielamp.github.io/" target="_blank"><i class="las la-fw la-chart-bar"></i> Gabriela
-                  Moisescu</a>
+            <p id="enjoy-container"></p>
+          </div>
+
+          <!-- RESEARCH TAB -->
+          <div id="research" class="tab-pane">
+            <p>
+              Here are some relevant publications. For a complete list, see
+              <a
+                href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
+                >Google Scholar</a
+              >.
+            </p>
+            <ul class="plain-list spaced-list light-text">
+              <li>
+                <a href="https://arxiv.org/abs/2411.14336" target="_blank"
+                  >Finding the root in random nearest neighbor trees</a
+                >, with Cassandra Marcussen, Elchanan Mossel and Madhu Sudan.
+                Preprint. 2024.
+              </li>
+              <li>
+                <a href="https://arxiv.org/abs/2410.06481" target="_blank"
+                  >Leaf Stripping on Uniform Attachment Trees</a
+                >, with Louigi Addario-Berry, Simon Briend, Nicolas Broutin and
+                Gábor Lugosi. Preprint. 2024.
+              </li>
+              <li>
+                <a href="https://arxiv.org/abs/2309.05638" target="_blank">
+                  Errors are Robustly Tamed in Cumulative Knowledge Processes</a
+                >, with Cassandra Marcussen, Elchanan Mossel and Madhu Sudan.
+                <i>COLT</i> 2024.
+              </li>
+              <!-- <li>
+                <a href="https://arxiv.org/pdf/2105.12046.pdf" target="_blank"
+                  >Leaf multiplicity in a Bienaymé-Galton-Watson tree</a
+                >. <br />
+                with Luc Devroye, Marcel Goh and Rosie Zhao. <br />
+                <i>Discrete Mathematics & Theoretical Computer Science</i>
+                <b>24</b>:1 (2022).
+              </li> -->
+              <li>
+                <a href="https://arxiv.org/pdf/2105.03195.pdf" target="_blank"
+                  >Universal height and width bounds for random trees</a
+                >, with Louigi Addario-Berry, Jad Hamdan and Céline Kerriou.
+                <i>Electronic Journal of Probability</i> <b>27</b>: 1-24 (2022).
+              </li>
+              <li>
+                <a
+                  href="https://projecteuclid.org/journals/electronic-journal-of-probability/volume-26/issue-none/The-HortonStrahler-number-of-conditioned-GaltonWatson-trees/10.1214/21-EJP678.full"
+                  target="_blank"
+                  >The Horton-Strahler number of conditioned Galton-Watson
+                  trees</a
+                >, with Luc Devroye and Tommy Reddad.
+                <i>Electronic Journal of Probability</i> <b>26</b>: 1-29 (2021).
+              </li>
+              <li>
+                <a href="https://arxiv.org/pdf/2007.05681.pdf" target="_blank"
+                  >Root estimation in Galton-Watson trees</a
+                >, with Luc Devroye and Marcel Goh.
+                <i>Random Structures & Algorithms</i> <b>61</b>: 520-542 (2022).
+              </li>
+              <!-- <li>
+                      Shi, R., Legrand, C. and <b>Brandenberger, A.</b> <a
+                          href="https://www.tandfonline.com/doi/abs/10.1080/10489223.2020.1776010" target="_blank"> Toddlers track
+                          hierarchical structure dependence</a>. <i>Language Acquisition</i> <b>27</b>: 397–409 (2020).
+                  </li> -->
+              <li>
+                <a
+                  href="https://ieeexplore.ieee.org/abstract/document/8914544/"
+                  target="_blank"
+                  >A low-cost, semi-autonomous wheelchair controlled by motor
+                  imagery and jaw muscle activation</a
+                >, with Marley Xiong, Raffi Hotter, Danielle Nadin, and others.
+                In
+                <i
+                  >2019 IEEE International Conference on Systems, Man and
+                  Cybernetics (SMC)</i
+                >, 2180-2185 (2019).
+              </li>
+            </ul>
+          </div>
+          <!-- PROJECTS TAB -->
+          <div id="projects" class="tab-pane">
+            <p>
+              click
+              <a href="https://github.com/abrandenberger/course-notes">here</a>
+              for some introductory math/CS notes
+            </p>
+            <p>
+              click
+              <a href="https://github.com/abrandenberger/academic-resume"
+                >here</a
+              >
+              to spice up your resume with a fresh LaTeX template
+            </p>
+            <p>
+              click <a href="/random-trees">here</a> to generate some random
+              trees (make sure click on big tree! drag the branches around!)
+            </p>
+            <p>
+              click <a href="/mchacks-2021/">here</a> to see pretty animations
+              of orbits of matrix Lie groups (click on the question mark if
+              you're confused about what you're seeing!)
+            </p>
+            <p>
+              click
+              <a href="https://diegolopez.me/McGill-Physics-Hackathon-2020/"
+                >here</a
+              >
+              if you've ever wondered what electrodynamics on a flat torus could
+              be like (click to add charges! watch them spin!)
+            </p>
+            <p>
+              click
+              <a
+                href="https://neurotechx.com/milo-brain-controlled-wheelchair-1st-place-winners/"
+                >here</a
+              >
+              if want to hear about the brain-controlled wheelchair our group of
+              undergrads built
+            </p>
+          </div>
+
+          <!-- COLOPHON TAB -->
+          <div id="colophon" class="tab-pane">
+            <p>
+              <b>technical —</b> html, css,
+              <a href="http://vanilla-js.com/">vanilla js</a>. hosted on github
+              pages. expanding text uses the
+              <a href="https://github.com/jackyzha0/telescopic-text"
+                >telescoping text</a
+              >
+              library. icons by
+              <a href="https://icons8.com/line-awesome">line awesome</a>.
+            </p>
+            <p>
+              <b>typography —</b>
+              <a href="https://pangrampangram.com/products/neue-montreal"
+                >neue montreal</a
+              >
+              by pangram foundry.
+            </p>
+            <p style="margin-bottom: 0">
+              <b>friends —</b> some homies with websites (with high probability,
+              some are missing; if so, with probability one, this is
+              unintentional).
+            </p>
+            <div class="light-links padded-links" style="padding-bottom: 0">
+              <ul class="plain-list" style="margin-left: var(--line-px)">
+                <li>
+                  Canada. <i class="lab la-pagelines"></i
+                  ><a href="http://luc.devroye.org/">Luc</a>
+                  <i class="las la-beer"></i
+                  ><a href="https://problab.ca/louigi/">Louigi</a>
+                  <i class="las la-bicycle"></i
+                  ><a href="https://shereenelaidi.github.io/">Shereen</a>
+                  <i class="las la-hourglass-half"></i
+                  ><a href="https://stephenfay.xyz/">Stephen</a>
+                  <i class="las la-camera-retro"></i
+                  ><a href="https://marcelgoh.ca/">Marcel</a>
+                  <i class="las la-chart-bar"></i
+                  ><a href="https://gabrielamp.github.io/">Gabriela</a>
+                  <span class="nowrap"
+                    ><i class="las la-kiwi-bird"></i
+                    ><a href="https://opent03.github.io/">Viet</a></span
+                  >
+                  <i class="las la-drumstick-bite"></i
+                  ><a href="https://mytran2111.github.io/">Mia</a>
+                  <i class="las la-spa"></i
+                  ><a href="http://daocheny.github.io/">Dao Chen</a>
+                  <i class="las la-feather-alt"></i
+                  ><a href="https://www.zhengzhou.page/">Zheng</a>
+                  <i class="las la-blender"></i
+                  ><a href="https://alexander.iannantuono.org/">Alex</a>
+                </li>
+                <li>
+                  Europe. <i class="las la-fish"></i
+                  ><a href="https://jredondoyuste.github.io/">Jaime</a>
+                  <i class="las la-coffee"></i
+                  ><a href="https://jadhamdan.github.io/">Jad</a>
+                  <i class="las la-satellite-dish"></i
+                  ><a href="https://danielabreitman.github.io/">Daniela</a>
+                  <i class="las la-umbrella"></i
+                  ><a href="https://claudiahleung.github.io/">Claudia</a>
+                </li>
+                <li>
+                  Northeast. <i class="las la-atom"></i
+                  ><a href="https://atomyka.com/">Anna</a>
+                  <i class="las la-golf-ball"></i
+                  ><a href="https://math.mit.edu/~byronc/">Byron</a>
+                  <i class="las la-cat"></i
+                  ><a href="https://norahtan.github.io/">Norah</a>
+                  <i class="las la-cog"></i
+                  ><a href="https://merny93.github.io/blog/">Simon</a>
+                  <i class="las la-fire"></i
+                  ><a href="https://tiffanyyong.net/">Tiffany</a>
+                  <i class="las la-compass"></i
+                  ><a href="https://travisadillon.com/">Travis</a>
+                  <span class="nowrap"
+                    ><i class="las la-chess-bishop"></i
+                    ><a href="https://axiomofchoice.dev/">Jacob</a></span
+                  >
+                </li>
+                <li>
+                  California. <i class="las la-pen"></i
+                  ><a href="https://diegolopez.me/">Diego</a>
+                  <i class="las la-meteor"></i
+                  ><a href="https://rhotter.vercel.app/">Raffi</a>
+                  <i class="las la-flask"></i
+                  ><a href="https://www.marleyx.com/">Marley</a>
+                  <i class="las la-mountain"></i
+                  ><a href="https://www.matthewfoxphysics.com/">Matthew</a>
+                  <i class="las la-book"></i
+                  ><a href="https://maiadd.github.io/">Maia</a>
+                  <i class="las la-dice-d6"></i
+                  ><a href="https://vilas.us/">Vilas</a>
+                </li>
+              </ul>
             </div>
-            <div class="threecolentry">
-                <a href="https://opent03.github.io/" target="_blank"><i class="las la-fw la-kiwi-bird"></i> Viet
-                    Nguyen</a>
-                <a href="https://mytran2111.github.io/" target="_blank"><i class="las la-fw la-drumstick-bite"></i> Mia
-                    Tran</a>
-                <a href="https://www.marleyx.com/" target="_blank"><i class="las la-fw la-flask"></i> Marley Xiong</a>
-                <a href="https://tiffanyyong.github.io/" target="_blank"><i class="las la-fw la-fire"></i> Tiffany
-                    Yong</a>
-                <a href="http://daocheny.github.io/" target="_blank"><i class="las la-fw la-spa"></i> Dao Chen Yuan</a>
-            </div> -->
+            <p>
+              <b>past academic homes —</b> prior to MIT, i evaded some geese
+              (did a masters) at the
+              <a href="https://perimeterinstitute.ca/psi-masters-program">
+                perimeter institute</a
+              >, working with
+              <a href="https://www.math.uwaterloo.ca/~a3jagann/"
+                >aukosh jagannath</a
+              >. before that, i ate some bagels (did my BSc) at
+              <a href="https://www.mcgill.ca/">mcgill</a>, doing research with
+              <a href="http://luc.devroye.org/">luc devroye</a>,
+              <a href="https://problab.ca/louigi/">louigi addario-berry</a>,
+              <a href="https://www.cs.mcgill.ca/~prakash/"
+                >prakash panangaden</a
+              >
+              and others.
+            </p>
+            <p>
+              <b>the academic links —</b>
+              <a
+                href="https://scholar.google.com/citations?user=vMostWMAAAAJ&hl=en"
+                >google scholar</a
+              >
+              . <a href="https://arxiv.org/a/brandenberger_a_1.html">arxiv</a> .
+              <a href="https://www.linkedin.com/in/abrandenberger">linkedin</a>
+              <br />
+              <b>the non-academic links —</b>
+              <a href="https://curius.app/anna-brandenberger">curius</a> .
+              <a href="https://github.com/abrandenberger">github</a> .
+              <a href="https://letterboxd.com/confvtatis/">letterboxd</a>
+            </p>
+          </div>
+          <!-- end colophon tab -->
         </div>
+        <!-- end tab-content -->
+      </section>
     </div>
-    <div id="footer" class="main">
-        &copy; july 2023
-    </div>
-</body>
-
+  </body>
 </html>
