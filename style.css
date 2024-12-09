@@ -22,7 +22,7 @@
   --body-color: #eee;
   --body-color-light: #c2c2c2;
   --text-border: #aaa;
-  --accent-color: #eee;
+  --accent-color: #c2c2c2;
 }
 [data-theme="light"] {
   --background: #eee;
@@ -117,16 +117,16 @@ li {
   color: var(--body-color-light);
 }
 .light-links ul a {
-  color: var(--body-color-light);
+  color: var(--accent-color);
   text-decoration: none;
 }
 .light-links ul a:hover {
-  /* [data-theme="light"] & { */
-  color: var(--accent-color);
-  /* } */
-  /* [data-theme="dark"] & {
+  [data-theme="light"] & {
+    color: var(--body-color-light);
+  }
+  [data-theme="dark"] & {
     color: var(--body-color);
-  } */
+  }
 }
 .padded-links {
   padding: 12px 0;
