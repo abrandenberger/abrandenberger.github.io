@@ -190,49 +190,7 @@ nav {
   text-decoration: underline;
   text-underline-offset: -4px;
 }
-/* nav {
-  padding: var(--padding-med) 0 0 var(--padding-lg);
-  z-index: 3;
-}
 
-.nav-tabs {
-  margin: 0;
-  list-style-type: none;
-
-  > li {
-    float: left;
-    padding: 0;
-
-    > a {
-      float: left;
-      margin-right: var(--padding-links);
-      padding: 0 var(--padding-links);
-      text-decoration: none;
-      color: var(--body-color-light);
-    }
-    > a:hover {
-      color: var(--body-color);
-      text-decoration: underline;
-      text-underline-offset: -4px;
-    }
-
-    &.active {
-      > a,
-      > a:hover,
-      > a:focus {
-        [data-theme="dark"] & {
-          font-weight: 530;
-          color: var(--body-color);
-        }
-        cursor: default;
-        text-decoration-color: transparent;
-        [data-theme="light"] & {
-          color: var(--accent-color);
-        }
-      }
-    }
-  }
-} */
 #home-tab {
   padding-left: 0;
 }
@@ -248,4 +206,22 @@ nav {
   > .active {
     display: block;
   }
+}
+
+.booklist {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 15px 0 var(--padding-med) 0;
+}
+.library-nav {
+  margin-bottom: var(--line-px);
+  padding-bottom: calc(var(--line-px) * 0.5);
+  flex-direction: row;
+}
+.library-nav a {
+  padding-right: 10px;
+}
+.up {
+  position: relative;
+  top: -1.5px;
 }
