@@ -34,10 +34,10 @@ window.addEventListener("load", function () {
     localStorage.setItem("activePaneId", activePaneId);
   }
   function switchTabAndPane(tab, paneId) {
-    // console.log("switched to" + paneId);
     switchToTab(tab);
     switchToPaneId(paneId);
-    document.location.hash = paneId;
+    // Set hash without triggering scroll
+    history.replaceState(null, null, paneId);
   }
   // tab click event
   function myTabClicks(tabClickEvent) {
@@ -52,6 +52,9 @@ window.addEventListener("load", function () {
     var activeTabId = activePaneId + "-tab";
     var activeTabParent = document.querySelector(activeTabId).parentElement;
     switchTabAndPane(activeTabParent, activePaneId);
+    setTimeout(() => {
+      document.body.scrollTo(0, 0); // avoid scrolling down behaviour
+    }, 1);
   }
   // event listeners for all tabs
   for (i = 0; i < myTabs.length; i++) {
@@ -67,8 +70,9 @@ window.addEventListener("load", function () {
   }
   seeMoreLink.addEventListener("click", seeMoreClick);
 
-  window.addEventListener("hashchange", function () {
+  window.addEventListener("hashchange", function (event) {
     // called when the hash changes (back button)
+    event.preventDefault();
     var activeTabId = document.location.hash + "-tab";
     var activeTab = document.querySelector(activeTabId);
     activeTab.click();
