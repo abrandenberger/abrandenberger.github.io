@@ -224,4 +224,5 @@ nav {
 .up {
   position: relative;
   top: -1.5px;
+  color: var(--accent-color);
 }
