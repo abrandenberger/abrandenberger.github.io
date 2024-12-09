@@ -29,4 +29,7 @@ window.addEventListener("load", function () {
     // save theme to local storage
     localStorage.setItem("theme", theme);
   }
+  setTimeout(() => {
+    document.body.scrollTo(0, 0); // avoid scrolling down behaviour
+  }, 1);
 });

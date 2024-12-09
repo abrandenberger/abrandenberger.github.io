@@ -222,7 +222,10 @@ nav {
   padding-right: 10px;
 }
 .up {
-  position: relative;
-  top: -1.5px;
+  font-size: smaller;
   color: var(--accent-color);
+}
+i .la-heart {
+  position: relative;
+  top: -0.5px;
 }
