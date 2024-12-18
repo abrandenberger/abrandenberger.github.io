@@ -221,11 +221,11 @@ nav {
 .library-nav a {
   padding-right: 10px;
 }
-.up {
+.accent {
   font-size: smaller;
   color: var(--accent-color);
 }
-i .la-heart {
+.up {
   position: relative;
   top: -0.5px;
 }
