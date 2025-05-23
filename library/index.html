@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link href="/style.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
+    <script src="/script.js" async></script>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   </head>
 
@@ -120,8 +120,7 @@
               </li>
               <li>
                 OPEN WATER by Caleb Azumah Nelson, 2021
-                <i class="accent up lar la-heart"></i
-                ><i class="accent las la-sign-out-alt"></i>
+                <i class="accent up lar la-heart"></i>
               </li>
               <li>AN ORCHESTRA OF MINORITIES by Chigozie Obioma, 2019</li>
               <li>LITTLE FIRES EVERYWHERE by Celeste Ng, 2017</li>
@@ -134,6 +133,7 @@
               </li>
               <li>A TREE GROWS IN BROOKLYN by Betty Smith, 1943</li>
               <li>WHITE TEETH by Zadie Smith, 2000</li>
+              <li>EAST OF EDEN by John Steinbeck, 1952</li>
               <li>THE GOLDFINCH by Donna Tartt, 2013</li>
               <li>
                 FLIGHTS by Olga Tokarczuk, 2007
@@ -178,4 +178,12 @@
       </section>
     </div>
   </body>
+
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(() => {
+        document.body.scrollTo(0, 0); // avoid scrolling down behaviour
+      }, 1);
+    });
+  </script>
 </html>
