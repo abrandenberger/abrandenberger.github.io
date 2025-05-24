@@ -2,11 +2,14 @@
   --padding-quotes: 1rem;
 }
 
+section {
+  padding-bottom: 0 !important;
+}
+
 .lined-list {
   list-style: none;
-  margin: var(--padding-med) 10px;
-  margin-bottom: var(--padding-med);
-  padding: 0 0 var(--padding-med) var(--padding-quotes);
+  margin: var(--padding-med) 10px 0 10px;
+  padding: 0 0 var(--padding-top) var(--padding-quotes);
   position: relative;
 }
 
