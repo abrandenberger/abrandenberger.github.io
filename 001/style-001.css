@@ -1,0 +1,52 @@
+:root {
+  --padding-quotes: 1rem;
+}
+
+.lined-list {
+  list-style: none;
+  margin: var(--padding-med) 10px;
+  margin-bottom: var(--padding-med);
+  padding: 0 0 var(--padding-med) var(--padding-quotes);
+  position: relative;
+}
+
+.lined-list::before {
+  content: "";
+  position: absolute;
+  left: var(--padding-quotes);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #aaa;
+}
+
+.lined-list li {
+  position: relative;
+  padding: 6px 0 6px var(--padding-quotes);
+}
+
+/* bullet */
+.lined-list li::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: calc(50% - 1px);
+  width: 5px;
+  height: 5px;
+  background: #aaa;
+  border-radius: 50%;
+}
+
+/* date on the left */
+.lined-list .date {
+  position: absolute;
+  font-size: 12px;
+  width: 35px;
+  text-align: right;
+  left: calc(-35px - var(--padding-quotes));
+  /* left: 0; */
+  top: 0;
+  top: calc(50% - var(--line-height) * 12px / 2 + 1px);
+  color: #aaa;
+  white-space: nowrap; /* prevents date from breaking lines */
+}
