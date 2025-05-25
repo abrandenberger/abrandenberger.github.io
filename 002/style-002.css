@@ -1,0 +1,38 @@
+:root {
+  --orange: rgb(196, 160, 116);
+  --blue: rgb(108, 134, 183);
+}
+
+.lined-list .date {
+  width: 60px;
+  left: calc(-60px - var(--padding-quotes));
+}
+
+.color-n-cl {
+  color: var(--orange) !important;
+}
+.color-cl {
+  color: var(--blue) !important;
+}
+
+.lined-list {
+  margin-left: 35px;
+}
+
+.lined-list .fave::before {
+  /* content: "♥"; */
+  content: "★";
+  font-size: 12px;
+  position: absolute;
+  left: -4.5px;
+  top: calc(50% - 7px);
+  width: 0;
+  height: 0;
+}
+
+.lined-list .fave.cl::before {
+  color: var(--blue);
+}
+.lined-list .fave.n-cl::before {
+  color: var(--orange);
+}

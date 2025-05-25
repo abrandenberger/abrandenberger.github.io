@@ -20,7 +20,7 @@ section {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #aaa;
+  background: #ccc;
 }
 
 .lined-list li {
@@ -36,7 +36,7 @@ section {
   top: calc(50% - 1px);
   width: 5px;
   height: 5px;
-  background: #aaa;
+  background: #ccc;
   border-radius: 50%;
 }
 
@@ -44,10 +44,11 @@ section {
 .lined-list .date {
   position: absolute;
   font-size: 12px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
   width: 35px;
   text-align: right;
   left: calc(-35px - var(--padding-quotes));
-  /* left: 0; */
   top: 0;
   top: calc(50% - var(--line-height) * 12px / 2 + 1px);
   color: #aaa;
