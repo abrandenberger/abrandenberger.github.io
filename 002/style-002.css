@@ -24,10 +24,13 @@
   content: "★";
   font-size: 12px;
   position: absolute;
-  left: -4.5px;
+  left: -5px;
   top: calc(50% - 7px);
-  width: 0;
+  width: 11px;
   height: 0;
+  display: block;
+  text-align: center;
+  background: none;
 }
 
 .lined-list .fave.cl::before {
