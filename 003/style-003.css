@@ -1,0 +1,81 @@
+/* overlay for lightbox effect */
+.photo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+/* enlarged photo */
+.photo-expanded {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s ease-in-out;
+  cursor: zoom-out;
+}
+
+.text-div {
+  padding-bottom: var(--padding-lg);
+  height: auto;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  padding: var(--line-px) 0;
+  width: min(750px, calc(100vw - var(--padding-lg) * 2));
+}
+
+.photo-grid img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+.photo-grid-vertical {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  padding: var(--line-px) 0;
+  width: min(750px, calc(100vw - var(--padding-lg) * 2));
+}
+
+/* vertical photos: 2:3 aspect ratio */
+.photo-grid-vertical img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+/* query for screen width being between 620px and 790 px */
+@media (min-width: 620px) and (max-width: 790px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+  }
+  .photo-grid-vertical {
+    max-width: 500px;
+  }
+}
+/* query for screen width being less than 620px */
+@media (max-width: 620px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+  .photo-grid-vertical {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+}

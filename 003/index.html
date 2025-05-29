@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>photos</title>
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="stylesheet" href="/icons/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="/fonts.css" />
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link href="/001/style-001.css" rel="stylesheet" type="text/css" />
+    <link href="style-003.css" rel="stylesheet" type="text/css" />
+    <script src="/script.js" async></script>
+    <script src="light-toggle.js" async></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  </head>
+
+  <body>
+    <div class="text-div">
+      <div class="header-wrapper">
+        <p class="heading">
+          <b>film rolls</b><br />
+          2023 –<br />
+        </p>
+        <nav class="library-nav nav-tabs">
+          <a href="/" style="font-size: smaller">home</a>
+          <button id="light-toggle">
+            <i class="las la-sun" id="lightIcon"></i>
+          </button>
+        </nav>
+      </div>
+      <section style="padding-bottom: 50px">
+        <p>a collection of photos, shot on 35mm film using a pentax k1000.</p>
+        <div class="photo-grid">
+          <img src="assets/nyc1.jpeg" alt="NYC 1" loading="lazy" />
+          <img src="assets/nyc3.jpeg" alt="NYC 3" loading="lazy" />
+          <img src="assets/berk1.jpeg" alt="Berkeley 1" loading="lazy" />
+          <img src="assets/bos1.jpeg" alt="Boston 1" loading="lazy" />
+          <img src="assets/cph2.jpeg" alt="Copenhagen 2" loading="lazy" />
+          <img src="assets/swi1.jpeg" alt="Switzerland 1" loading="lazy" />
+          <img src="assets/swi2.jpeg" alt="Switzerland 2" loading="lazy" />
+          <img src="assets/cph1.jpeg" alt="Copenhagen 1" loading="lazy" />
+        </div>
+        <p>
+          summer 2023. nyc, berkeley, boston, copenhagen, ticino.
+          <span class="light-text">[fujifilm 400]</span>
+        </p>
+        <div class="photo-grid">
+          <img src="assets/nor1.jpeg" alt="Norway 1" loading="lazy" />
+          <img src="assets/nor3.jpeg" alt="Norway 3" loading="lazy" />
+          <img src="assets/par1.jpeg" alt="Paris 1" loading="lazy" />
+          <img src="assets/nor2.jpeg" alt="Norway 2" loading="lazy" />
+          <img src="assets/mtl2.jpeg" alt="Montreal 2" loading="lazy" />
+          <img src="assets/mtl1.jpeg" alt="Montreal 1" loading="lazy" />
+          <img src="assets/sb1.jpeg" alt="Santa Barbara 1" loading="lazy" />
+          <img src="assets/rio1.jpeg" alt="Rio 1" loading="lazy" />
+        </div>
+        <p>
+          summer 2024. norway, giverny, montreal, santa barbara, rio de janeiro.
+          <span class="light-text">[kodak ultramax 400, kodak gold 200]</span>
+        </p>
+        <div class="photo-grid">
+          <img src="assets/nh3.jpeg" alt="New Hampshire 3" loading="lazy" />
+          <img src="assets/nh2.jpeg" alt="New Hampshire 2" loading="lazy" />
+          <img src="assets/nh4.jpeg" alt="New Hampshire 4" loading="lazy" />
+          <img src="assets/nh1.jpeg" alt="New Hampshire 1" loading="lazy" />
+        </div>
+        <p>
+          fall 2024. new hampshire.
+          <span class="light-text">[kodak portra 400]</span>
+        </p>
+        <div class="photo-grid">
+          <img src="assets/bw/macro4.jpeg" loading="lazy" />
+          <img src="assets/bw/macro2.jpeg" loading="lazy" />
+          <img src="assets/bw/macro3.jpeg" loading="lazy" />
+          <img src="assets/bw/macro1.jpeg" loading="lazy" />
+        </div>
+        <p>winter 2025. macro. <span class="light-text">[ilford hp5]</span></p>
+        <div class="photo-grid-vertical">
+          <img src="assets/vert/swi.jpeg" loading="lazy" />
+          <img src="assets/vert/bt.jpeg" loading="lazy" />
+          <img src="assets/vert/aymx.jpeg" loading="lazy" />
+          <img src="assets/vert/dg.jpeg" loading="lazy" />
+          <img src="assets/vert/jry.jpeg" loading="lazy" />
+          <img src="assets/vert/ml.jpeg" loading="lazy" />
+          <img src="assets/vert/gl.jpeg" loading="lazy" />
+          <img src="assets/vert/jp.jpeg" loading="lazy" />
+          <img src="assets/vert/berg.jpeg" loading="lazy" />
+          <img src="assets/vert/kh.jpeg" loading="lazy" />
+          <img src="assets/vert/td.jpeg" loading="lazy" />
+          <img src="assets/vert/bso.jpeg" loading="lazy" />
+        </div>
+        <p>
+          portraits.
+          <span class="light-text"
+            >[fujifilm 400, kodak ektar 100, kodak portra 400, ilford hp5]</span
+          >
+        </p>
+      </section>
+    </div>
+  </body>
+
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(() => {
+        document.body.scrollTo(0, 0); // avoid scrolling down behaviour
+      }, 1);
+    });
+  </script>
+</html>
