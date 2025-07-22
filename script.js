@@ -25,8 +25,13 @@ window.addEventListener("load", function () {
   });
   function setTheme(theme) {
     rootElement.setAttribute("data-theme", theme);
-    lightIcon.classList.toggle("la-moon");
-    lightIcon.classList.toggle("la-sun");
+    if (theme === "light") {
+      lightIcon.classList.add("la-moon");
+      lightIcon.classList.remove("la-sun");
+    } else {
+      lightIcon.classList.add("la-sun");
+      lightIcon.classList.remove("la-moon");
+    }
     if (backgroundImg) {
       backgroundImg.src =
         theme === "dark" ? "background-dark.jpg" : "background-light.jpg";
