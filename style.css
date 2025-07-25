@@ -19,6 +19,7 @@
 [data-theme="dark"] {
   --background: #0d0d0d;
   --background-none: #0d0d0d00;
+  --background-pale: #1a1a1a;
   --body-color: #eee;
   --body-color-light: #c2c2c2;
   --text-border: #aaa;
@@ -26,6 +27,7 @@
 }
 [data-theme="light"] {
   --background: #eee;
+  --background-pale: #ddd;
   --background-none: #eeeeee00;
   --body-color: #0d0d0d;
   --body-color-light: #555;

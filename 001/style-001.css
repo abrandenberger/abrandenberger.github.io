@@ -21,6 +21,7 @@ section {
   bottom: 0;
   width: 1px;
   background: #ccc;
+  z-index: 1;
 }
 
 .lined-list li {
