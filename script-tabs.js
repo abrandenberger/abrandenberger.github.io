@@ -19,9 +19,14 @@ window.addEventListener("load", function () {
     tab.classList.add("active");
   }
   function switchToPaneId(activePaneId) {
+    console.log(`Switching to pane: ${activePaneId}`);
     hideAllPanes();
     var activePane = document.querySelector(activePaneId);
     activePane.classList.add("active");
+    if (document.location.href.indexOf("004/") > -1) {
+      // if url contains 004, do not set local storage
+      return;
+    }
     localStorage.setItem("activePaneId", activePaneId);
   }
   function switchTabAndPane(tab, paneId) {
@@ -37,15 +42,17 @@ window.addEventListener("load", function () {
     tabClickEvent.preventDefault();
     switchTabAndPane(clickedTab, activePaneId);
   }
-  // initialize to local storage
-  var activePaneId = localStorage.getItem("activePaneId");
-  if (activePaneId) {
-    var activeTabId = activePaneId + "-tab";
-    var activeTabParent = document.querySelector(activeTabId).parentElement;
-    switchTabAndPane(activeTabParent, activePaneId);
-    setTimeout(() => {
-      document.body.scrollTo(0, 0); // avoid scrolling down behaviour
-    }, 1);
+  // initialize to local storage if url does not contain 004
+  if (document.location.href.indexOf("004/") <= -1) {
+    var activePaneId = localStorage.getItem("activePaneId");
+    if (activePaneId) {
+      var activeTabId = activePaneId + "-tab";
+      var activeTabParent = document.querySelector(activeTabId).parentElement;
+      switchTabAndPane(activeTabParent, activePaneId);
+      setTimeout(() => {
+        document.body.scrollTo(0, 0); // avoid scrolling down behaviour
+      }, 1);
+    }
   }
   // event listeners for all tabs
   for (i = 0; i < myTabs.length; i++) {
@@ -53,14 +60,15 @@ window.addEventListener("load", function () {
   }
   // see more link click event
   seeMoreLink = document.getElementById("see-more");
-  function seeMoreClick(seeMoreClickEvent) {
-    seeMoreClickEvent.preventDefault();
-    var activeTabId = seeMoreLink.getAttribute("href") + "-tab";
-    var activeTab = document.querySelector(activeTabId);
-    activeTab.click();
+  if (seeMoreLink) {
+    function seeMoreClick(seeMoreClickEvent) {
+      seeMoreClickEvent.preventDefault();
+      var activeTabId = seeMoreLink.getAttribute("href") + "-tab";
+      var activeTab = document.querySelector(activeTabId);
+      activeTab.click();
+    }
+    seeMoreLink.addEventListener("click", seeMoreClick);
   }
-  seeMoreLink.addEventListener("click", seeMoreClick);
-
   window.addEventListener("hashchange", function (event) {
     // called when the hash changes (back button)
     event.preventDefault();

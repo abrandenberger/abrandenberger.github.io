@@ -1,0 +1,151 @@
+:root {
+  --padding-quotes: 1rem;
+  --accent-both-bw: #0d5d37;
+}
+
+.video-wrapper {
+  /* fixed position to the right of the text */
+  width: 300px;
+  aspect-ratio: 16 / 9;
+  margin: auto;
+  margin-bottom: var(--line-px);
+  position: fixed;
+  top: calc(var(--padding-top) + var(--padding-lg) + 10 * var(--line-px));
+  left: calc(var(--sec-width) + 1.5 * var(--padding-lg));
+}
+/* .video-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+} */
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.library-nav {
+  width: 65px;
+  margin-bottom: 0;
+}
+
+.library-nav a {
+  display: block;
+  margin-bottom: 0;
+  color: var(--body-color-light);
+  text-decoration: none !important;
+}
+.library-nav a:hover {
+  color: var(--body-color);
+}
+
+.tab-pane {
+  padding-bottom: var(--padding-lg);
+}
+
+/* classical, pop etc tab name styling */
+.nav-tabs {
+  display: flex;
+  overflow: hidden;
+  width: fit-content;
+  margin: var(--padding-med) auto var(--line-px) auto;
+}
+.nav-tabs li {
+  flex: 1 1 auto;
+  cursor: pointer;
+}
+.nav-tabs li a {
+  font-variant: small-caps;
+  padding: 0 var(--padding-quotes);
+  padding-bottom: 2px; /* visual effect */
+  text-align: center;
+  height: 100%; /* fixes weird bug if li is larger than a */
+}
+
+.nav-tabs li.active a {
+  background-color: var(--accent-both-bw);
+  color: #eee; /* light theme body color */
+  font-weight: normal;
+  padding: 0 calc(2 * var(--padding-quotes));
+}
+
+.nav-tabs a:hover {
+  background-color: var(--background-pale);
+}
+
+/* LIST STUFF */
+.lined-list {
+  margin: 0 0 0 calc(var(--padding-med) + 5px);
+  padding: 0 0 0 var(--padding-quotes);
+}
+
+.lined-list li:last-child {
+  border-bottom: 2px solid transparent;
+  /* visual spacing effect, so bottom doesn't seem smaller than top */
+}
+
+.lined-list li:hover {
+  background: var(--background-pale);
+  /* color: var(--background); */
+  cursor: pointer;
+}
+
+.lined-list .date {
+  color: var(--accent-color);
+}
+
+.lined-list li a {
+  z-index: 100;
+}
+
+.song p {
+  margin-bottom: calc(0.5 * var(--line-px));
+}
+.song {
+  /* border-bottom: 1px solid #ccc; */
+  margin-bottom: calc(0.5 * var(--line-px));
+  position: relative;
+}
+/* border bottom that covers half width of element */
+.song .lined-list::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--padding-med) - 5px);
+  width: calc(var(--padding-med) + 5px + var(--padding-quotes));
+  height: calc(100% - 2px);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* side video stops working */
+@media (max-width: 910px) {
+  /* .video-wrapper {
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: var(--padding-lg);
+    margin-bottom: var(--padding-lg);
+  } */
+}
+/* smaller screens */
+@media (max-width: 768px) {
+  .nav-tabs {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* flex-wrap: wrap;
+    justify-content: center; */
+    width: 80%;
+  }
+  .nav-tabs li.active a {
+    padding: 0 var(--padding-quotes);
+  }
+}
