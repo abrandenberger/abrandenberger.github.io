@@ -47,8 +47,10 @@
           vaguely by impact.
         </p>
         <p>
-          click on any description to play the corresponding music. <br />
-          press space to play/pause. best viewed on desktop.
+          <i class="las la-volume-up"></i> click on any description to play the
+          corresponding music. <br />
+          <i class="las la-volume-off"></i> press space to play/pause. <br />
+          <i class="las la-laptop"></i> best viewed on desktop.
         </p>
         <ul class="nav-tabs">
           <li class="active"><a id="cl-tab" href="#cl">classical</a></li>
@@ -58,6 +60,21 @@
         </ul>
         <div class="video-wrapper">
           <div id="player"></div>
+          <div
+            id="video-controls"
+            onclick="event.stopPropagation();playPauseVideo();"
+          >
+            <span class="video-icon play"><i class="las la-play"></i></span>
+            <span class="video-icon pause off"
+              ><i class="las la-pause"></i
+            ></span>
+          </div>
+        </div>
+        <div id="playing-icon" class="off">
+          <span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span><span class="bar"></span>
         </div>
         <div class="tab-content">
           <!-- CLASSICAL MUSIC TAB -->
@@ -116,8 +133,8 @@
               <!-- 6lvBQJjxw4c -->
               <p>beethoven, piano concerto no. 4 in g major</p>
               <ul class="lined-list">
-                <li onclick="checkSeek('6lvBQJjxw4c', 6)">
-                  <span class="date">0:06</span>
+                <li onclick="checkSeek('6lvBQJjxw4c', 12)">
+                  <span class="date">0:12</span>
                   the solo piano opening line, which is then echoed and lifted
                   up by the entrance of the orchestra. crazy how the same rhythm
                   pattern as the main theme of beethoven 5 (which sounds

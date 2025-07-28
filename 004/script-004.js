@@ -1,5 +1,4 @@
 let player;
-let currentActionId = 0;
 let stopTimeout = null;
 
 // Called by the API after it's downloaded
@@ -14,21 +13,24 @@ function onYouTubeIframeAPIReady() {
       modestbranding: 1, // Minimal YouTube branding
       enablejsapi: 1, // Enable JavaScript API
     },
-    events: {},
+    events: {
+      onReady: updatePlayPauseIcon,
+      onStateChange: updatePlayPauseIcon, // update the play/pause icon whenever the player state changes
+    },
   });
 }
 
 function seekToTime(seconds) {
-  if (player && typeof player.seekTo === "function") {
-    player.seekTo(seconds, true);
-    if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
-      player.playVideo();
-    }
+  // only gets called inside checkSeek
+  player.seekTo(seconds, true);
+  if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
+    player.playVideo();
   }
 }
 
 function changeVideo(videoId, startTime) {
   if (player && typeof player.loadVideoById === "function") {
+    console.log(`Changing video to ${videoId} at ${startTime} seconds`);
     player.loadVideoById(videoId, startTime || 0, "default");
   }
 }
@@ -59,21 +61,67 @@ function checkSeek(videoId, startTime, stopTime = null) {
   }
 }
 
-// on space click, toggle play/pause
-document.addEventListener("keydown", function (event) {
-  if (event.code === "Space") {
-    event.preventDefault(); // prevent scrolling
-    if (stopTimeout) {
-      // clear any existing timeout
-      console.log("Clearing previous timeout");
-      clearTimeout(stopTimeout);
-    }
-    if (player && typeof player.playVideo === "function") {
-      if (player.getPlayerState() === YT.PlayerState.PLAYING) {
-        player.pauseVideo();
+function playPauseVideo() {
+  if (stopTimeout) {
+    // clear any existing timeout
+    console.log("clearing previous timeout");
+    clearTimeout(stopTimeout);
+  }
+  console.log("toggling play/pause state");
+  if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+    player.pauseVideo();
+  } else {
+    player.playVideo();
+  }
+}
+
+function updatePlayPauseIcon() {
+  console.log("Updating play/pause icon based on player state");
+  const videoControls = document.getElementById("video-controls");
+  const playIcon = document.querySelector("#video-controls .video-icon.play");
+  const pauseIcon = document.querySelector("#video-controls .video-icon.pause");
+  const playingBars = document.getElementById("playing-icon");
+  if (
+    !player ||
+    typeof player.getPlayerState !== "function" ||
+    !playIcon ||
+    !pauseIcon ||
+    !videoControls ||
+    !playingBars
+  ) {
+    return; // exit if not ready
+  }
+
+  const playerState = player.getPlayerState();
+
+  if (playerState === YT.PlayerState.PLAYING) {
+    // if the video is playing, show the pause icon and hide the play icon
+    videoControls.classList.add("on");
+    playIcon.classList.add("off");
+    pauseIcon.classList.remove("off");
+    playingBars.classList.remove("off");
+  } else {
+    // if the video is paused, ended, or in any other state, show the play icon
+    videoControls.classList.remove("on");
+    playIcon.classList.remove("off");
+    pauseIcon.classList.add("off");
+    playingBars.classList.add("off");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // on space click, toggle play/pause
+  const videoWrapper = document.querySelector(".video-wrapper");
+  const afterContent = getComputedStyle(videoWrapper, "::after").content;
+
+  document.addEventListener("keydown", function (event) {
+    if (event.code === "Space") {
+      if (player && typeof player.playVideo === "function") {
+        event.preventDefault(); // prevent scrolling
+        playPauseVideo();
       } else {
-        player.playVideo();
+        console.warn("YouTube player is not ready yet.");
       }
     }
-  }
+  });
 });

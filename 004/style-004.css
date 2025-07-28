@@ -10,19 +10,17 @@
   margin: auto;
   margin-bottom: var(--line-px);
   position: fixed;
-  top: calc(var(--padding-top) + var(--padding-lg) + 10 * var(--line-px));
+  top: calc(
+    min(50%, var(--padding-top) + var(--padding-lg) + 10 * var(--line-px))
+  );
   left: calc(var(--sec-width) + 1.5 * var(--padding-lg));
 }
-/* .video-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 1;
-} */
+#video-controls {
+  display: none;
+}
+#playing-icon {
+  display: none;
+}
 
 .video-wrapper iframe {
   position: absolute;
@@ -128,13 +126,114 @@
 
 /* side video stops working */
 @media (max-width: 910px) {
-  /* .video-wrapper {
-    position: static;
+  .video-wrapper {
+    bottom: 0;
+    right: 0;
+    top: auto;
+    left: auto;
+    width: var(--padding-med);
+    aspect-ratio: 1/1;
+    margin: var(--padding-quotes);
+    border-radius: 100%;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .video-wrapper iframe {
+    border-radius: 100%;
+  }
+  #video-controls {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0 auto;
-    margin-top: var(--padding-lg);
-    margin-bottom: var(--padding-lg);
+    height: 100%;
+    border-radius: 100%;
+    color: var(--background);
+    background: var(--body-color);
+    text-align: center;
+    z-index: 3;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #video-controls:hover {
+    background: var(--accent-both-bw);
+  }
+  #video-controls.on {
+    background: var(--accent-both-bw);
+  }
+  #video-controls .video-icon.off {
+    display: none;
+  }
+  #video-controls .video-icon.play {
+    padding-left: 1px;
+    line-height: calc(var(--padding-med) - 1px);
+  }
+  #video-controls .video-icon.pause {
+    padding-left: 0;
+    line-height: calc(var(--padding-med) - 1px);
+  }
+
+  #playing-icon {
+    width: calc(var(--padding-med) + 2 * var(--padding-quotes));
+    height: var(--padding-med);
+    display: flex;
+    justify-content: space-between; /* Evenly space the bars */
+    align-items: flex-end; /* Align bars to the bottom */
+    box-sizing: border-box; /* Ensures padding/border are included in the size */
+    position: fixed;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    bottom: 0;
+    right: calc(0.5 * var(--padding-med) + 2px);
+  }
+
+  /* Individual bars */
+  #playing-icon .bar {
+    width: 5px; /* Width of each bar */
+    height: 100%; /* Take full height of the container */
+    background-color: var(--body-color); /* Color of the bars */
+    display: inline-block;
+    /* animation defined here only run when the 'off' class is NOT present */
+    animation: bounce 1.2s ease-in-out infinite;
+    animation-play-state: paused;
+    transform: scaleY(0.2);
+  }
+  #playing-icon:not(.off) .bar {
+    animation-play-state: running;
+    background-color: var(--accent-both-bw);
+  }
+  #playing-icon .bar:nth-child(2) {
+    animation-delay: -0.4s;
+  }
+  #playing-icon .bar:nth-child(3) {
+    animation-delay: -0.2s;
+  }
+  #playing-icon .bar:nth-child(4) {
+    animation-delay: -0.4s;
+  }
+  /* #playing-icon .bar:nth-child(5) {
+    animation-delay: 0s;
   } */
+  #playing-icon .bar:nth-child(6) {
+    animation-delay: -0.4s;
+  }
+  #playing-icon .bar:nth-child(7) {
+    animation-delay: -0.2s;
+  }
+  #playing-icon .bar:nth-child(8) {
+    animation-delay: -0.4s;
+  }
+  @keyframes bounce {
+    0%,
+    40%,
+    100% {
+      transform: scaleY(0.2); /* Shortest height */
+    }
+    20% {
+      transform: scaleY(1); /* Tallest height */
+    }
+  }
 }
 /* smaller screens */
 @media (max-width: 768px) {
