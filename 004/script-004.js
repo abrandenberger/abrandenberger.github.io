@@ -30,12 +30,12 @@ function seekToTime(seconds) {
 
 function changeVideo(videoId, startTime) {
   if (player && typeof player.loadVideoById === "function") {
-    console.log(`Changing video to ${videoId} at ${startTime} seconds`);
+    console.log(`changing video to ${videoId} at ${startTime} seconds`);
     player.loadVideoById(videoId, startTime || 0, "default");
   }
 }
 
-function checkSeek(videoId, startTime, stopTime = null) {
+function checkSeek(element, videoId, startTime, stopTime = null) {
   // if no player, return
   console.log(`startTime: ${startTime}, stopTime: ${stopTime}`);
   if (stopTimeout) {
@@ -52,6 +52,17 @@ function checkSeek(videoId, startTime, stopTime = null) {
   } else {
     // if a different video, change the video and then seek
     changeVideo(videoId, startTime);
+  }
+  if (element) {
+    const songElements = document.querySelectorAll(".lined-list");
+    songElements.forEach((songElement) => {
+      const liChildren = songElement.querySelectorAll("li");
+      liChildren.forEach((li) => {
+        li.classList.remove("playing");
+      });
+    });
+    // add playing class to the clicked element
+    element.classList.add("playing");
   }
   if (stopTime !== null) {
     const duration = (stopTime - startTime) * 1000;
@@ -76,7 +87,7 @@ function playPauseVideo() {
 }
 
 function updatePlayPauseIcon() {
-  console.log("Updating play/pause icon based on player state");
+  console.log("updating play/pause icon based on player state");
   const videoControls = document.getElementById("video-controls");
   const playIcon = document.querySelector("#video-controls .video-icon.play");
   const pauseIcon = document.querySelector("#video-controls .video-icon.pause");

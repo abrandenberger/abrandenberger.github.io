@@ -84,7 +84,9 @@
   margin: 0 0 0 calc(var(--padding-med) + 5px);
   padding: 0 0 0 var(--padding-quotes);
 }
-
+.lined-list li.playing {
+  background: var(--background-pale);
+}
 .lined-list li:last-child {
   border-bottom: 2px solid transparent;
   /* visual spacing effect, so bottom doesn't seem smaller than top */
