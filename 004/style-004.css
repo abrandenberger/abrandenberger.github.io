@@ -158,8 +158,10 @@
     font-size: 16px;
     cursor: pointer;
   }
-  #video-controls:hover {
-    background: var(--accent-both-bw);
+  @media (hover: hover) {
+    #video-controls:hover {
+      background: var(--accent-both-bw);
+    }
   }
   #video-controls.on {
     background: var(--accent-both-bw);
