@@ -86,11 +86,14 @@ function playPauseVideo() {
   }
 }
 
-function updatePlayPauseIcon() {
-  console.log("updating play/pause icon based on player state");
+function updatePlayPauseIcon(event) {
+  console.log("updating play/pause icon based on player state", event.data);
   const videoControls = document.getElementById("video-controls");
   const playIcon = document.querySelector("#video-controls .video-icon.play");
   const pauseIcon = document.querySelector("#video-controls .video-icon.pause");
+  const loadingIcon = document.querySelector(
+    "#video-controls .video-icon.loading"
+  );
   const playingBars = document.getElementById("playing-icon");
   if (
     !player ||
@@ -102,20 +105,27 @@ function updatePlayPauseIcon() {
   ) {
     return; // exit if not ready
   }
-
-  const playerState = player.getPlayerState();
-
-  if (playerState === YT.PlayerState.PLAYING) {
+  // -1 = unstarted, 0 = ended, 1 = playing, 2 = paused, 3 = buffering, 5 = video cued
+  if (event.data === 1) {
     // if the video is playing, show the pause icon and hide the play icon
     videoControls.classList.add("on");
     playIcon.classList.add("off");
+    loadingIcon.classList.add("off");
     pauseIcon.classList.remove("off");
+    playingBars.classList.remove("off");
+  } else if (event.data === 3 || event.data === -1) {
+    // if the video is buffering, show the loading icon
+    videoControls.classList.add("on");
+    loadingIcon.classList.remove("off");
+    playIcon.classList.add("off");
+    pauseIcon.classList.add("off");
     playingBars.classList.remove("off");
   } else {
     // if the video is paused, ended, or in any other state, show the play icon
     videoControls.classList.remove("on");
     playIcon.classList.remove("off");
     pauseIcon.classList.add("off");
+    loadingIcon.classList.add("off");
     playingBars.classList.add("off");
   }
 }

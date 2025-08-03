@@ -166,16 +166,14 @@
   #video-controls.on {
     background: var(--accent-both-bw);
   }
+  #video-controls .video-icon {
+    line-height: calc(var(--padding-med) - 1px);
+  }
   #video-controls .video-icon.off {
     display: none;
   }
   #video-controls .video-icon.play {
     padding-left: 1px;
-    line-height: calc(var(--padding-med) - 1px);
-  }
-  #video-controls .video-icon.pause {
-    padding-left: 0;
-    line-height: calc(var(--padding-med) - 1px);
   }
 
   #playing-icon {
