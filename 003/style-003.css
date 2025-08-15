@@ -70,6 +70,12 @@
     max-width: 500px;
   }
 }
+
+@media (min-width: 1000px) {
+  :root {
+    --header-width: 100px;
+  }
+}
 /* query for screen width being less than 620px */
 @media (max-width: 620px) {
   .photo-grid {

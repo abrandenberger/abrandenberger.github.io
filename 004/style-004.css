@@ -127,7 +127,7 @@
 }
 
 /* side video stops working */
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
   .video-wrapper {
     bottom: 0;
     right: 0;
@@ -237,8 +237,17 @@
     }
   }
 }
+
+@media (min-width: 1000px) {
+  :root {
+    --header-width: 300px;
+  }
+  .video-wrapper {
+    left: var(--padding-lg);
+  }
+}
 /* smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .nav-tabs {
     display: grid;
     grid-template-columns: auto auto;

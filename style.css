@@ -8,7 +8,7 @@
   --offset: calc(-1 * var(--line-px) + 4px);
   /* --line-px-small: calc(var(--line-height) * var(--sidebar-size)); */
   --body-weight: 400;
-  --sec-width: min(500px, 80vw);
+  --sec-width: min(550px, 80vw);
   --header-width: min(350px, 80vw);
   --padding-med: 30px;
   --padding-med-l: 45px;
@@ -66,7 +66,7 @@ body {
 }
 .text-div {
   position: absolute;
-  width: calc(var(--sec-width) + var(--padding-lg) + 100px);
+  width: calc(var(--sec-width) + var(--padding-lg));
   height: 100%;
   left: 0px;
   top: 0px;
@@ -230,4 +230,27 @@ nav {
 .up {
   position: relative;
   top: -0.5px;
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --header-width: 200px;
+  }
+  .text-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(var(--sec-width) + var(--header-width) + 2 * var(--padding-lg));
+  }
+  .header-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  section {
+    padding-top: var(--padding-top);
+  }
+  nav {
+    margin-top: var(--padding-med) !important;
+  }
 }
