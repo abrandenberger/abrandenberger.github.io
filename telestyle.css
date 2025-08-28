@@ -1,5 +1,4 @@
 [data-theme="dark"] {
-  --background: #0d0d0d;
   /* --telescope-highlight: #baead0;
   --telescope-highlight-hover: #8be4b3; */
   /* --telescope-text-color: #ffffff; */
@@ -7,7 +6,6 @@
   --telescope-border: #888;
 }
 [data-theme="light"] {
-  --background: #eee;
   --telescope-text-color: #0d0d0d;
   --telescope-border: #888;
 }

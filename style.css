@@ -17,7 +17,7 @@
   --padding-links: 4px;
 }
 [data-theme="dark"] {
-  --background: #0d0d0d;
+  --background: #04342f;
   --background-none: #0d0d0d00;
   --background-pale: #1a1a1a;
   --body-color: #eee;
@@ -31,7 +31,7 @@
   --background-none: #eeeeee00;
   --body-color: #0d0d0d;
   --body-color-light: #555;
-  --accent-color: #0d5d37;
+  --accent-color: #0b6b62; /* #0d5d37; */
 }
 
 html,
