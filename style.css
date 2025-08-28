@@ -224,7 +224,6 @@ nav {
   padding-right: 10px;
 }
 .accent {
-  font-size: smaller;
   color: var(--accent-color);
 }
 .up {
