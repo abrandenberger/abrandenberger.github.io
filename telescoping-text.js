@@ -36,13 +36,13 @@ const enjoyContent = `
 const enjoyConfig = { textMode: TextMode.Html };
 const enjoyNode = createTelescopicTextFromBulletedList(
   enjoyContent,
-  enjoyConfig
+  enjoyConfig,
 );
 
 const researchContent = `
 * My research interests lie in 
 * probability theory, 
-  * probability theory (random discrete structures, probabilistic analysis of algorithms, statistical mechanics), 
+  * probability theory (discrete probability,  detection and inference in random networks, combinatorial and high-dimensional statistics), 
 * theoretical computer science and quantum information theory.`;
 const researchNode = createTelescopicTextFromBulletedList(researchContent);
 
