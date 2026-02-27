@@ -1,5 +1,9 @@
-:root {
+[data-theme="light"] {
   --orange: rgb(196, 160, 116);
+  --blue: rgb(108, 134, 183);
+}
+[data-theme="dark"] {
+  --orange: rgb(113, 182, 175);
   --blue: rgb(108, 134, 183);
 }
 
@@ -32,6 +36,9 @@
   text-align: center;
   background: none;
   z-index: 1;
+  text-shadow:
+    0px 1px 0.5px var(--background),
+    0px -2px 0.8px var(--background);
 }
 
 .lined-list .fave.cl::before {
