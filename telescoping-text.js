@@ -28,10 +28,11 @@ const enjoyContent = `
                                   * concert crowds,
                                     * weird calendar invites,
                                       * delightful interactions,
-                                        * warm lighting,
-                                          * working public transit,
-                                            * yuzu-flavoured anything,
-                                              * the plateau,
+                                        * midnight conversations,
+                                          * warm lighting,
+                                            * working public transit,
+                                              * yuzu-flavoured anything,
+                                                * the plateau,
 * and more.`;
 const enjoyConfig = { textMode: TextMode.Html };
 const enjoyNode = createTelescopicTextFromBulletedList(
