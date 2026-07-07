@@ -22,6 +22,7 @@
   --background-pale: #1a1a1a;
   --body-color: #eee;
   --body-color-light: #c2c2c2;
+  --body-color-lighter: #638e89;
   --text-border: #aaa;
   --accent-color: #c2c2c2;
 }
@@ -31,6 +32,7 @@
   --background-none: #eeeeee00;
   --body-color: #0d0d0d;
   --body-color-light: #555;
+  --body-color-lighter: #888;
   --accent-color: #0b6b62; /* #0d5d37; */
 }
 
@@ -116,7 +118,7 @@ li {
   padding: var(--padding-links) 0;
 }
 .light-text {
-  color: var(--body-color-light);
+  color: var(--body-color-lighter);
 }
 .light-links ul a {
   color: var(--accent-color);
