@@ -1,6 +1,7 @@
 :root {
   --padding-quotes: 1rem;
   --accent-both-bw: #0d5d37;
+  --body-size: 16px;
 }
 
 .video-wrapper {

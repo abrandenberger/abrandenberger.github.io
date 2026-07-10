@@ -1,3 +1,6 @@
+:root {
+  --body-size: 16px;
+}
 /* overlay for lightbox effect */
 .photo-overlay {
   position: fixed;

@@ -1,15 +1,15 @@
 :root {
   --body-font: Neue Montreal, sans-serif;
   --line-height: 1.18;
-  --body-size: 16px;
+  --body-size: 17px;
   /* --sidebar-size: 13px; */
   --line-px: calc(var(--line-height) * var(--body-size));
   --line-px-minus: calc(var(--line-px) - 2px);
   --offset: calc(-1 * var(--line-px) + 4px);
   /* --line-px-small: calc(var(--line-height) * var(--sidebar-size)); */
   --body-weight: 400;
-  --sec-width: min(550px, 80vw);
-  --header-width: min(350px, 80vw);
+  --sec-width: min(570px, 80vw);
+  --header-width: min(400px, 80vw);
   --padding-med: 30px;
   --padding-med-l: 45px;
   --padding-lg: min(60px, 10vw);
@@ -27,13 +27,13 @@
   --accent-color: #c2c2c2;
 }
 [data-theme="light"] {
-  --background: #eee;
+  --background: #f5f5f5;
   --background-pale: #ddd;
-  --background-none: #eeeeee00;
+  --background-none: #f5f5f500;
   --body-color: #0d0d0d;
   --body-color-light: #555;
   --body-color-lighter: #888;
-  --accent-color: #0b6b62; /* #0d5d37; */
+  --accent-color: #6b100b; /* #0b6b62; #0d5d37; */
 }
 
 html,
@@ -140,20 +140,38 @@ li {
 }
 .spaced-list {
   margin: 0;
+  padding-bottom: var(--padding-med);
 }
 .spaced-list li {
   padding-bottom: var(--line-px);
 }
 .smaller-text {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .nowrap {
   white-space: nowrap;
 }
+
+/* header and photo */
+.heading {
+  margin-bottom: calc(0.87 * var(--line-px));
+  order: 1;
+}
+
+.portrait {
+  height: calc(5 * var(--line-px));
+  margin-bottom: 0;
+  padding: 0 var(--padding-links) 0 var(--padding-lg);
+  order: 2;
+  [data-theme="dark"] & {
+    filter: grayscale(1) contrast(1.1);
+  }
+}
 /* nav bar links stuff */
 nav {
-  padding: 0 0 0 var(--padding-links);
+  order: 3;
+  padding: 0 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -253,5 +271,29 @@ nav {
   }
   nav {
     margin-top: var(--padding-med) !important;
+  }
+  .heading {
+    order: 2;
+    margin-bottom: var(--line-px); /* back to normal */
+  }
+  .portrait {
+    order: 1;
+    width: 75%;
+    height: auto;
+    margin-bottom: calc(2 * var(--line-px));
+    padding: 0;
+  }
+}
+
+/* smaller font on phones */
+@media (max-width: 500px) {
+  :root {
+    --body-size: 16px;
+  }
+  .heading {
+    min-width: 142px;
+  }
+  .portrait {
+    padding-left: 18px;
   }
 }

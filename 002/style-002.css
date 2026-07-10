@@ -1,3 +1,6 @@
+:root {
+  --body-size: 16px;
+}
 [data-theme="light"] {
   --orange: rgb(196, 160, 116);
   --blue: rgb(108, 134, 183);
