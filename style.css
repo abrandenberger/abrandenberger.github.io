@@ -78,6 +78,7 @@ body {
   width: var(--header-width);
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
   padding: var(--padding-top) 0 0 var(--padding-lg);
@@ -162,7 +163,6 @@ li {
 .portrait {
   height: calc(5 * var(--line-px));
   margin-bottom: 0;
-  padding: 0 var(--padding-links) 0 var(--padding-lg);
   order: 2;
   [data-theme="dark"] & {
     filter: grayscale(1) contrast(1.1);
@@ -171,7 +171,9 @@ li {
 /* nav bar links stuff */
 nav {
   order: 3;
+  width: 100%;
   padding: 0 0 0 0;
+  margin-top: var(--padding-med);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -182,8 +184,11 @@ nav {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 65px;
-  /* text-align: right; */
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Style each list item */
@@ -263,6 +268,7 @@ nav {
   }
   .header-wrapper {
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -271,6 +277,11 @@ nav {
   }
   nav {
     margin-top: var(--padding-med) !important;
+    width: auto;
+  }
+  .nav-tabs {
+    display: block;
+    width: 65px;
   }
   .heading {
     order: 2;
@@ -291,9 +302,12 @@ nav {
     --body-size: 16px;
   }
   .heading {
-    min-width: 142px;
+    margin-bottom: 0;
   }
   .portrait {
-    padding-left: 18px;
+    aspect-ratio: 1 / 1;
+    height: calc(4 * var(--line-px));
+    object-fit: cover;
+    object-position: 0 45%;
   }
 }
