@@ -164,6 +164,8 @@ li {
   height: calc(5 * var(--line-px));
   margin-bottom: 0;
   order: 2;
+  min-width: 0;
+  min-height: 0;
   [data-theme="dark"] & {
     filter: grayscale(1) contrast(1.1);
   }
@@ -289,7 +291,7 @@ nav {
   }
   .portrait {
     order: 1;
-    width: 75%;
+    max-width: 75%;
     height: auto;
     margin-bottom: calc(2 * var(--line-px));
     padding: 0;
